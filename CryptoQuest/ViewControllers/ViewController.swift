@@ -14,6 +14,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
+    // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,12 +23,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = true
-        
-        // Create a new scene
-        let scene = SCNScene(named: "art.scnassets/ship.scn")!
-        
-        // Set the scene to the view
-        sceneView.scene = scene
+        sceneView.session.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -46,35 +42,48 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
+}
 
-    // MARK: - ARSCNViewDelegate
-    
-/*
-    // Override to create and configure nodes for anchors added to the view's session.
-    func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
-        let node = SCNNode()
-     
-        return node
+
+extension ViewController: ARSessionDelegate {
+    func session(_ session: ARSession, didUpdate frame: ARFrame) {
+//        guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
+//            return
+//        }
+//        print(cameraVector.direction * 100)
     }
-*/
-    
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        // Present an error message to the user
-        
+}
+
+
+// MARK: - UIResponder
+extension ViewController {
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
+        throwTheBall()
+//        guard let touchLocation = touches.first?.location(in: sceneView) else { return }
+//        let results = sceneView.hitTest(touchLocation, options: [.boundingBoxOnly: true])
+//        guard let result = results.first else { return }
     }
-    
-    func sessionWasInterrupted(_ session: ARSession) {
-        // Inform the user that the session has been interrupted, for example, by presenting an overlay
-        
-    }
-    
-    func sessionInterruptionEnded(_ session: ARSession) {
-        // Reset tracking and/or remove existing anchors if consistent tracking is required
-        
+}
+
+
+// MARK: - Private Instance Methods
+private extension ViewController {
+    func throwTheBall() {
+        guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
+            return
+        }
+//        let direction = SCNVector3(10.0, 10.0, -10.0)
+        let ball = BallNode()
+        ball.position = cameraVector.position
+        sceneView.scene.rootNode.addChildNode(ball)
+        let gravity = sceneView.scene.physicsWorld.gravity
+        let forceVector = ball.position.forceVector(
+            to: cameraVector.direction * 10,
+            by: 1,
+            with: gravity
+        )
+        ball.physicsBody?.applyForce(forceVector, asImpulse: true)
+        print(forceVector)
     }
 }
