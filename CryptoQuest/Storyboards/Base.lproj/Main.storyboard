@@ -26,18 +26,31 @@
             </objects>
             <point key="canvasLocation" x="476" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Map View Controller-->
         <scene sceneID="HHJ-SY-Y7f">
             <objects>
-                <viewController id="8am-CK-VGm" sceneMemberID="viewController">
+                <viewController id="8am-CK-VGm" customClass="MapViewController" customModule="CryptoQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D52-7G-1Fk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LzK-Ej-DaV" customClass="GMSMapView">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LzK-Ej-DaV" firstAttribute="trailing" secondItem="VDC-TX-qMr" secondAttribute="trailing" id="9h0-nA-QPQ"/>
+                            <constraint firstItem="LzK-Ej-DaV" firstAttribute="leading" secondItem="VDC-TX-qMr" secondAttribute="leading" id="gwH-tp-lve"/>
+                            <constraint firstItem="LzK-Ej-DaV" firstAttribute="bottom" secondItem="VDC-TX-qMr" secondAttribute="bottom" id="kRU-9e-y2P"/>
+                            <constraint firstItem="LzK-Ej-DaV" firstAttribute="top" secondItem="D52-7G-1Fk" secondAttribute="top" id="tKy-Nm-oQk"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="VDC-TX-qMr"/>
                     </view>
                     <navigationItem key="navigationItem" id="6x2-3M-m9x"/>
                     <connections>
+                        <outlet property="mapView" destination="LzK-Ej-DaV" id="6ym-eI-zbX"/>
                         <segue destination="BV1-FR-VrT" kind="show" id="37l-Sb-9Ew"/>
                     </connections>
                 </viewController>
