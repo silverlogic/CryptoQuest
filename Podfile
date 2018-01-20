@@ -7,11 +7,16 @@ target 'CryptoQuest' do
 
   # Pods for CryptoQuest
   pod 'GoogleMaps'
+  pod 'Starscream'
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|
           target.build_configurations.each do |config|
-              config.build_settings['SWIFT_VERSION'] = '3.2'
+              if target.name == 'Starscream'
+                  config.build_settings['SWIFT_VERSION'] = '4.0'
+              else
+                  config.build_settings['SWIFT_VERSION'] = '3.2'
+              end
           end
       end
   end

@@ -22,6 +22,13 @@
 		8826A9DA2013AF0D000DC63D /* DynamicBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9D92013AF0D000DC63D /* DynamicBinder.swift */; };
 		8826A9DD2013C97E000DC63D /* mapstyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 8826A9DC2013C97E000DC63D /* mapstyle.json */; };
 		8826A9E02013D03E000DC63D /* UserLocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9DF2013D03E000DC63D /* UserLocationMarker.swift */; };
+		8826A9E22013E25A000DC63D /* Socket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9E12013E25A000DC63D /* Socket.swift */; };
+		8826A9E42013E881000DC63D /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9E32013E881000DC63D /* Location.swift */; };
+		8826A9E62013E9DA000DC63D /* Coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9E52013E9DA000DC63D /* Coin.swift */; };
+		8826A9E82013EADB000DC63D /* Faucet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9E72013EADB000DC63D /* Faucet.swift */; };
+		8826A9ED2013EBFA000DC63D /* Spawn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9EC2013EBFA000DC63D /* Spawn.swift */; };
+		8826A9F12013F760000DC63D /* SpawnManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9F02013F760000DC63D /* SpawnManager.swift */; };
+		8826A9F3201403B5000DC63D /* CryptoCreatureMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9F2201403B5000DC63D /* CryptoCreatureMarker.swift */; };
 		FA26671C39EA3F9159D7B983 /* Pods_CryptoQuest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F722A759A14007FEA11BEF /* Pods_CryptoQuest.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +52,13 @@
 		8826A9D92013AF0D000DC63D /* DynamicBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBinder.swift; sourceTree = "<group>"; };
 		8826A9DC2013C97E000DC63D /* mapstyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mapstyle.json; sourceTree = "<group>"; };
 		8826A9DF2013D03E000DC63D /* UserLocationMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationMarker.swift; sourceTree = "<group>"; };
+		8826A9E12013E25A000DC63D /* Socket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Socket.swift; sourceTree = "<group>"; };
+		8826A9E32013E881000DC63D /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		8826A9E52013E9DA000DC63D /* Coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coin.swift; sourceTree = "<group>"; };
+		8826A9E72013EADB000DC63D /* Faucet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Faucet.swift; sourceTree = "<group>"; };
+		8826A9EC2013EBFA000DC63D /* Spawn.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spawn.swift; sourceTree = "<group>"; };
+		8826A9F02013F760000DC63D /* SpawnManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpawnManager.swift; sourceTree = "<group>"; };
+		8826A9F2201403B5000DC63D /* CryptoCreatureMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCreatureMarker.swift; sourceTree = "<group>"; };
 		B4ADFDC56604BBB1391DCBDF /* Pods-CryptoQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoQuest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -145,6 +159,8 @@
 		8826A9CF20139F68000DC63D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				8826A9EF2013F71D000DC63D /* EntityModels */,
+				8826A9EE2013F716000DC63D /* BusinessClasses */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -162,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				8826A9D62013ADF6000DC63D /* LocationTracker.swift */,
+				8826A9E12013E25A000DC63D /* Socket.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -186,8 +203,28 @@
 			isa = PBXGroup;
 			children = (
 				8826A9DF2013D03E000DC63D /* UserLocationMarker.swift */,
+				8826A9F2201403B5000DC63D /* CryptoCreatureMarker.swift */,
 			);
 			path = GMSMarkers;
+			sourceTree = "<group>";
+		};
+		8826A9EE2013F716000DC63D /* BusinessClasses */ = {
+			isa = PBXGroup;
+			children = (
+				8826A9F02013F760000DC63D /* SpawnManager.swift */,
+			);
+			path = BusinessClasses;
+			sourceTree = "<group>";
+		};
+		8826A9EF2013F71D000DC63D /* EntityModels */ = {
+			isa = PBXGroup;
+			children = (
+				8826A9EC2013EBFA000DC63D /* Spawn.swift */,
+				8826A9E72013EADB000DC63D /* Faucet.swift */,
+				8826A9E52013E9DA000DC63D /* Coin.swift */,
+				8826A9E32013E881000DC63D /* Location.swift */,
+			);
+			path = EntityModels;
 			sourceTree = "<group>";
 		};
 		D2EBAF953FC116665DB1A420 /* Frameworks */ = {
@@ -295,9 +332,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -330,14 +370,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D7496062013A8E300E104D5 /* BaseNode.swift in Sources */,
+				8826A9F12013F760000DC63D /* SpawnManager.swift in Sources */,
 				8826A9BE20139F41000DC63D /* ViewController.swift in Sources */,
+				8826A9F3201403B5000DC63D /* CryptoCreatureMarker.swift in Sources */,
 				4D74960B2013AB2200E104D5 /* BallNode.swift in Sources */,
 				8826A9BA20139F41000DC63D /* AppDelegate.swift in Sources */,
 				8826A9D72013ADF6000DC63D /* LocationTracker.swift in Sources */,
 				8826A9E02013D03E000DC63D /* UserLocationMarker.swift in Sources */,
+				8826A9E22013E25A000DC63D /* Socket.swift in Sources */,
 				4D7496042013A45400E104D5 /* Utilities.swift in Sources */,
+				8826A9E62013E9DA000DC63D /* Coin.swift in Sources */,
 				8826A9D42013A9DC000DC63D /* MapViewController.swift in Sources */,
 				8826A9D22013A795000DC63D /* Constants.swift in Sources */,
+				8826A9E82013EADB000DC63D /* Faucet.swift in Sources */,
+				8826A9ED2013EBFA000DC63D /* Spawn.swift in Sources */,
+				8826A9E42013E881000DC63D /* Location.swift in Sources */,
 				8826A9DA2013AF0D000DC63D /* DynamicBinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -1,0 +1,129 @@
+//
+//  Socket.swift
+//  CryptoQuest
+//
+//  Created by Emanuel  Guerrero on 1/20/18.
+//  Copyright © 2018 SilverLogic, LLC. All rights reserved.
+//
+
+import Foundation
+import Starscream
+
+// MARK: - Socket Error Enum
+enum SocketError: Error {
+    case byteStream
+    case eventTypeNotDetermined
+    case eventDataNotPresent
+    case spawnEventDataNotPresent
+}
+
+
+// MARK: - Socket Event Enum
+enum SocketEvent: String {
+    case spawnList = "spawn_list"
+}
+
+
+// MARK: - Socket
+final class Socket {
+    
+    // MARK: - Shared Instance
+    static let shared = Socket()
+    
+    
+    // MARK: - Private Instance Attributes
+    private var webSocket: WebSocket
+    
+    
+    // MARK: - Public Instance Attributes
+    var didReceiveSpawnList: DynamicBinder<Data?>
+    var socketError: DynamicBinder<Error?>
+    
+    
+    // MARK: - Initializers
+    private init() {
+        let url = URL(string: BASE_SOCKET)!
+        let urlRequest = URLRequest(url: url)
+        webSocket = WebSocket(request: urlRequest)
+        didReceiveSpawnList = DynamicBinder(nil)
+        socketError = DynamicBinder(nil)
+        setupBindings()
+    }
+}
+
+
+// MARK: - Public Instance Methods
+extension Socket {
+    func connect() {
+        webSocket.connect()
+    }
+    
+    func disconnect() {
+        webSocket.disconnect()
+    }
+}
+
+
+// MARK: - Private Instance Methods For Socket Bindings
+private extension Socket {
+    func setupBindings() {
+        webSocket.onConnect = {
+            print("Client is connected")
+        }
+        webSocket.onDisconnect = { [weak self] (error) in
+            guard error != nil else {
+                print("Error with socket: \(error?.localizedDescription ?? "unknown")")
+                self?.connect()
+                return
+            }
+            print("Client is disconnected")
+        }
+        webSocket.onText = { [weak self] in
+            print("Text received: \($0)")
+            self?.processEvent(from: $0)
+        }
+    }
+}
+
+
+// MARK: - Private Instance Methods For Socket Event Processing
+private extension Socket {
+    func processEvent(from text: String) {
+        guard let textData = text.data(using: .utf8) else {
+            print("Error converting text to byte stream")
+            socketError.value = SocketError.byteStream
+            return
+        }
+        do {
+            guard let dataDic = try JSONSerialization.jsonObject(with: textData, options: []) as? [String: Any] else {
+                print("Error converting byte stream to JSON")
+                socketError.value = SocketError.byteStream
+                return
+            }
+            guard let type = dataDic["type"] as? String,
+                  let socketEvent = SocketEvent(rawValue: type) else {
+                    print("Error figuring out socket event")
+                    socketError.value = SocketError.eventTypeNotDetermined
+                    return
+            }
+            guard let socketData = dataDic["data"] as? [String: Any] else {
+                print("Error retrieving socket data")
+                socketError.value = SocketError.eventDataNotPresent
+                return
+            }
+            switch socketEvent {
+            case .spawnList:
+                guard let spawnList = socketData["spawns"] as? [AnyObject] else {
+                    print("Spawn event data not present")
+                    socketError.value = SocketError.spawnEventDataNotPresent
+                    return
+                }
+                let spawnData = try JSONSerialization.data(withJSONObject: spawnList, options: [])
+                didReceiveSpawnList.value = spawnData
+            }
+        } catch {
+            print("Error occured with serialization: \(error)")
+            socketError.value = error
+        }
+    }
+}
