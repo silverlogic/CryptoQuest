@@ -21,6 +21,11 @@ extension SCNVector3 {
         return sqrtf(x * x + y * y + z * z)
     }
     
+    func normalized() -> SCNVector3 {
+        let length = self.length()
+        return SCNVector3(x / length, y / length, z / length)
+    }
+    
     func distanceFromVector(_ vector: SCNVector3) -> Float {
         return (self - vector).length()
     }
@@ -32,6 +37,21 @@ extension SCNVector3 {
         case .vertical:
             return CGPoint(x: CGFloat(x), y: CGFloat(y))
         }
+    }
+    
+    func forceVector(to target: SCNVector3, by time: Float, with gravity: SCNVector3) -> SCNVector3 {
+        guard time > 0 else {
+            return SCNVector3Zero
+        }
+        var vector = target - self
+        let y = vector.y
+        vector.y = 0
+        let xz = vector.length()
+        let v0y = y / time + 0.3 * gravity.length() * time
+        let v0xz = xz / time
+        var result = vector.normalized() * v0xz
+        result.y = v0y
+        return result
     }
 }
 
@@ -218,5 +238,16 @@ extension ARFrame {
             return nil
         }
         return testResult.worldTransform
+    }
+}
+
+
+// MARK: - ARFrame
+extension ARFrame {
+    func cameraVector() -> (direction: SCNVector3, position: SCNVector3) {
+        let matrix = SCNMatrix4(camera.transform) // 4x4 transform matrix describing camera in world space
+        let direction = SCNVector3(-1 * matrix.m31, -1 * matrix.m32, -1 * matrix.m33) // orientation of camera in world space
+        let position = SCNVector3(matrix.m41, matrix.m42, matrix.m43) // location of camera in world space
+        return (direction, position)
     }
 }
