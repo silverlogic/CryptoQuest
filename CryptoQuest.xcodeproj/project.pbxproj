@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4D7496042013A45400E104D5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7496032013A45400E104D5 /* Utilities.swift */; };
+		4D7496062013A8E300E104D5 /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7496052013A8E300E104D5 /* BaseNode.swift */; };
 		8826A9BA20139F41000DC63D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9B920139F41000DC63D /* AppDelegate.swift */; };
 		8826A9BC20139F41000DC63D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8826A9BB20139F41000DC63D /* art.scnassets */; };
 		8826A9BE20139F41000DC63D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9BD20139F41000DC63D /* ViewController.swift */; };
@@ -21,6 +22,7 @@
 		173F7D2B0A145AEAF4E11F31 /* Pods-CryptoQuest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoQuest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest.debug.xcconfig"; sourceTree = "<group>"; };
 		44F722A759A14007FEA11BEF /* Pods_CryptoQuest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoQuest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7496032013A45400E104D5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		4D7496052013A8E300E104D5 /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
 		8826A9B620139F41000DC63D /* CryptoQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8826A9B920139F41000DC63D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8826A9BB20139F41000DC63D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -51,6 +53,14 @@
 				B4ADFDC56604BBB1391DCBDF /* Pods-CryptoQuest.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4D7495FF2013A37300E104D5 /* Nodes */ = {
+			isa = PBXGroup;
+			children = (
+				4D7496052013A8E300E104D5 /* BaseNode.swift */,
+			);
+			path = Nodes;
 			sourceTree = "<group>";
 		};
 		4D7496022013A3DD00E104D5 /* Extensions */ = {
@@ -98,6 +108,7 @@
 		8826A9CD20139F5A000DC63D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4D7495FF2013A37300E104D5 /* Nodes */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -261,6 +272,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D7496062013A8E300E104D5 /* BaseNode.swift in Sources */,
 				8826A9BE20139F41000DC63D /* ViewController.swift in Sources */,
 				8826A9BA20139F41000DC63D /* AppDelegate.swift in Sources */,
 				4D7496042013A45400E104D5 /* Utilities.swift in Sources */,
