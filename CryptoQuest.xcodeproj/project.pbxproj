@@ -16,6 +16,12 @@
 		8826A9C120139F41000DC63D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8826A9BF20139F41000DC63D /* Main.storyboard */; };
 		8826A9C320139F41000DC63D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8826A9C220139F41000DC63D /* Assets.xcassets */; };
 		8826A9C620139F41000DC63D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8826A9C420139F41000DC63D /* LaunchScreen.storyboard */; };
+		8826A9D22013A795000DC63D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9D12013A795000DC63D /* Constants.swift */; };
+		8826A9D42013A9DC000DC63D /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9D32013A9DC000DC63D /* MapViewController.swift */; };
+		8826A9D72013ADF6000DC63D /* LocationTracker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9D62013ADF6000DC63D /* LocationTracker.swift */; };
+		8826A9DA2013AF0D000DC63D /* DynamicBinder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9D92013AF0D000DC63D /* DynamicBinder.swift */; };
+		8826A9DD2013C97E000DC63D /* mapstyle.json in Resources */ = {isa = PBXBuildFile; fileRef = 8826A9DC2013C97E000DC63D /* mapstyle.json */; };
+		8826A9E02013D03E000DC63D /* UserLocationMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9DF2013D03E000DC63D /* UserLocationMarker.swift */; };
 		FA26671C39EA3F9159D7B983 /* Pods_CryptoQuest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F722A759A14007FEA11BEF /* Pods_CryptoQuest.framework */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +39,12 @@
 		8826A9C220139F41000DC63D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8826A9C520139F41000DC63D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8826A9C720139F41000DC63D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8826A9D12013A795000DC63D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		8826A9D32013A9DC000DC63D /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		8826A9D62013ADF6000DC63D /* LocationTracker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationTracker.swift; sourceTree = "<group>"; };
+		8826A9D92013AF0D000DC63D /* DynamicBinder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicBinder.swift; sourceTree = "<group>"; };
+		8826A9DC2013C97E000DC63D /* mapstyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mapstyle.json; sourceTree = "<group>"; };
+		8826A9DF2013D03E000DC63D /* UserLocationMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserLocationMarker.swift; sourceTree = "<group>"; };
 		B4ADFDC56604BBB1391DCBDF /* Pods-CryptoQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoQuest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -95,15 +107,19 @@
 		8826A9B820139F41000DC63D /* CryptoQuest */ = {
 			isa = PBXGroup;
 			children = (
+				8826A9DB2013C95F000DC63D /* Resources */,
 				4D7496022013A3DD00E104D5 /* Extensions */,
 				8826A9D020139F75000DC63D /* Storyboards */,
 				8826A9CD20139F5A000DC63D /* Views */,
 				8826A9CE20139F5F000DC63D /* ViewControllers */,
 				8826A9CF20139F68000DC63D /* Models */,
+				8826A9D52013ADDC000DC63D /* Utilities */,
+				8826A9D82013AE66000DC63D /* Helpers */,
 				8826A9B920139F41000DC63D /* AppDelegate.swift */,
 				8826A9BB20139F41000DC63D /* art.scnassets */,
 				8826A9C220139F41000DC63D /* Assets.xcassets */,
 				8826A9C720139F41000DC63D /* Info.plist */,
+				8826A9D12013A795000DC63D /* Constants.swift */,
 			);
 			path = CryptoQuest;
 			sourceTree = "<group>";
@@ -111,6 +127,7 @@
 		8826A9CD20139F5A000DC63D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				8826A9DE2013D013000DC63D /* GMSMarkers */,
 				4D7495FF2013A37300E104D5 /* Nodes */,
 			);
 			path = Views;
@@ -120,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				8826A9BD20139F41000DC63D /* ViewController.swift */,
+				8826A9D32013A9DC000DC63D /* MapViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -138,6 +156,38 @@
 				8826A9C420139F41000DC63D /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		8826A9D52013ADDC000DC63D /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				8826A9D62013ADF6000DC63D /* LocationTracker.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		8826A9D82013AE66000DC63D /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8826A9D92013AF0D000DC63D /* DynamicBinder.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8826A9DB2013C95F000DC63D /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8826A9DC2013C97E000DC63D /* mapstyle.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8826A9DE2013D013000DC63D /* GMSMarkers */ = {
+			isa = PBXGroup;
+			children = (
+				8826A9DF2013D03E000DC63D /* UserLocationMarker.swift */,
+			);
+			path = GMSMarkers;
 			sourceTree = "<group>";
 		};
 		D2EBAF953FC116665DB1A420 /* Frameworks */ = {
@@ -213,6 +263,7 @@
 				8826A9BC20139F41000DC63D /* art.scnassets in Resources */,
 				8826A9C620139F41000DC63D /* LaunchScreen.storyboard in Resources */,
 				8826A9C320139F41000DC63D /* Assets.xcassets in Resources */,
+				8826A9DD2013C97E000DC63D /* mapstyle.json in Resources */,
 				8826A9C120139F41000DC63D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -226,9 +277,12 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -279,7 +333,12 @@
 				8826A9BE20139F41000DC63D /* ViewController.swift in Sources */,
 				4D74960B2013AB2200E104D5 /* BallNode.swift in Sources */,
 				8826A9BA20139F41000DC63D /* AppDelegate.swift in Sources */,
+				8826A9D72013ADF6000DC63D /* LocationTracker.swift in Sources */,
+				8826A9E02013D03E000DC63D /* UserLocationMarker.swift in Sources */,
 				4D7496042013A45400E104D5 /* Utilities.swift in Sources */,
+				8826A9D42013A9DC000DC63D /* MapViewController.swift in Sources */,
+				8826A9D22013A795000DC63D /* Constants.swift in Sources */,
+				8826A9DA2013AF0D000DC63D /* DynamicBinder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -187,6 +187,14 @@ extension UIColor {
         let blueValue = ((CGFloat)(hexValue & 0xFF)) / 255.0
         return UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: alpha)
     }
+    
+    @nonobjc static var darkOrangeHexValue: UInt = 0xF05223
+    @nonobjc static var limeGreenHexValue: UInt = 0xC0CB33
+    @nonobjc static var bitcoinOrangeHexValue: UInt = 0xF7931A
+    
+    static var darkOrange: UIColor { return colorFromHexValue(darkOrangeHexValue) }
+    static var lineGreen: UIColor { return colorFromHexValue(limeGreenHexValue) }
+    static var bitcoinOrange: UIColor { return colorFromHexValue(bitcoinOrangeHexValue) }
 }
 
 
@@ -249,5 +257,22 @@ extension ARFrame {
         let direction = SCNVector3(-1 * matrix.m31, -1 * matrix.m32, -1 * matrix.m33) // orientation of camera in world space
         let position = SCNVector3(matrix.m41, matrix.m42, matrix.m43) // location of camera in world space
         return (direction, position)
+    }
+}
+
+// MARK: - UIView
+extension UIView {
+    func animateShow() {
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.alpha = 1
+        }
+    }
+    
+    func animateHide() {
+        UIView.animate(withDuration: 0.5) { [weak self] in
+            guard let strongSelf = self else { return }
+            strongSelf.alpha = 0
+        }
     }
 }
