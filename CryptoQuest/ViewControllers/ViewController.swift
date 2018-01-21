@@ -207,7 +207,9 @@ private extension ViewController {
             if self?.coinsAround == 0 {
                 DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
                     self?.navigationController?.popViewController(animated: true)
-                    self?.coinCaptured?()
+                    if self?.isWarning == false {
+                        self?.coinCaptured?()
+                    }
                 }
             }
         }
