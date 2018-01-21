@@ -49,7 +49,9 @@ final class UserManager {
     
     
     // MARK: - Initializers
-    private init() {}
+    private init() {
+        setupSocketBindings()
+    }
 }
 
 

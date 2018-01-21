@@ -28,10 +28,10 @@ extension User {
             userId: 1,
             bitcoinAmount: 0.0012892,
             bitcoinCashAmount: 0.00210707,
-            veztAmount: 0.0,
+            veztAmount: 2.9891344961,
             ethereumAmount: 0.00358395,
             litecoinAmount: 0.01985001,
-            neoAmount: 0.0
+            neoAmount: 0.03507049
         )
     }
     
