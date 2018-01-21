@@ -14,6 +14,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     // MARK: - Public Instance Attributes
     var spawn: Spawn!
+    var isWarning: Bool = false
     
 
     // MARK: - Private Instance Attributes
@@ -25,6 +26,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     private var minimumExposure: CGFloat = -1
     private var isSceneSetupFinished: Bool = false
     private weak var walletImageView: UIImageView!
+    private weak var warningView: WarningView!
     
     
     // MARK: - Lifecycle
@@ -54,6 +56,10 @@ extension ViewController: ARSessionDelegate {
             return
         }
         isSceneSetupFinished = true
+        guard !isWarning else {
+            shitCoinsAttack()
+            return
+        }
         guard let typeName = spawn.cryptoCreatureMarker?.cryptoName,
               let type = CryptoCreatureName(rawValue: typeName) else {
             return
@@ -135,6 +141,14 @@ private extension ViewController {
         )
         view.addSubview(imageView)
         walletImageView = imageView
+        // Setup warning view.
+        let warningView = WarningView(frame: view.bounds)
+        view.addSubview(warningView)
+        view.bringSubview(toFront: warningView)
+        self.warningView = warningView
+        if isWarning {
+            warningView.startAlarming()
+        }
     }
     
     func throwTheBall() {
