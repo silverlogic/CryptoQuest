@@ -39,6 +39,7 @@
 		88839EAC201468AC004304A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EAB201468AC004304A1 /* User.swift */; };
 		88839EAE20146BB7004304A1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EAD20146BB7004304A1 /* UserManager.swift */; };
 		88839EB020146E18004304A1 /* CryptoDexCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EAF20146E18004304A1 /* CryptoDexCollectionViewCell.swift */; };
+		88839EB220147A56004304A1 /* CryptoDexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EB120147A56004304A1 /* CryptoDexViewController.swift */; };
 		FA26671C39EA3F9159D7B983 /* Pods_CryptoQuest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F722A759A14007FEA11BEF /* Pods_CryptoQuest.framework */; };
 /* End PBXBuildFile section */
 
@@ -80,6 +81,7 @@
 		88839EAB201468AC004304A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		88839EAD20146BB7004304A1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		88839EAF20146E18004304A1 /* CryptoDexCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDexCollectionViewCell.swift; sourceTree = "<group>"; };
+		88839EB120147A56004304A1 /* CryptoDexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDexViewController.swift; sourceTree = "<group>"; };
 		B4ADFDC56604BBB1391DCBDF /* Pods-CryptoQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoQuest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -181,6 +183,7 @@
 			children = (
 				8826A9BD20139F41000DC63D /* ViewController.swift */,
 				8826A9D32013A9DC000DC63D /* MapViewController.swift */,
+				88839EB120147A56004304A1 /* CryptoDexViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -465,6 +468,7 @@
 				4D7496042013A45400E104D5 /* Utilities.swift in Sources */,
 				8826A9E62013E9DA000DC63D /* Coin.swift in Sources */,
 				8826A9D42013A9DC000DC63D /* MapViewController.swift in Sources */,
+				88839EB220147A56004304A1 /* CryptoDexViewController.swift in Sources */,
 				8826A9D22013A795000DC63D /* Constants.swift in Sources */,
 				8826A9E82013EADB000DC63D /* Faucet.swift in Sources */,
 				8826A9ED2013EBFA000DC63D /* Spawn.swift in Sources */,

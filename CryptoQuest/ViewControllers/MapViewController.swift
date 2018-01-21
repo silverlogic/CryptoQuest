@@ -25,9 +25,12 @@ final class MapViewController: UIViewController {
     private var userLocationMarker = UserLocationMarker()
     
     
-    
     // MARK: - Private Instance Variables Location Tracking
     private var locationTracker = LocationTracker()
+    
+    
+    // MARK: - Private Instance Variables UITiming
+    private var timeInterval = 0.5
     
     
     // MARK: - Lifecycle
@@ -38,7 +41,9 @@ final class MapViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        showActivityIndicator()
+        if mapView.alpha == 0 {
+            showActivityIndicator()
+        }
         requestLocationPermission()
     }
     
@@ -57,6 +62,16 @@ final class MapViewController: UIViewController {
             arController.spawn = spawn
         default:
             break
+        }
+    }
+}
+
+
+// MARK: - IBActions
+private extension MapViewController {
+    @IBAction func cryptoDexButtonTapped(sender: BouncyButton) {
+        _ = Timer.scheduledTimer(withTimeInterval: timeInterval, repeats: false) { [weak self] _ in
+            self?.goToCryptoDexView()
         }
     }
 }
@@ -178,5 +193,9 @@ private extension MapViewController {
     
     func requestLocationPermission() {
         locationTracker.requestPermission()
+    }
+    
+    func goToCryptoDexView() {
+        performSegue(withIdentifier: "goToCryptoDex", sender: nil)
     }
 }

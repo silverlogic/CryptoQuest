@@ -11,7 +11,7 @@ import Foundation
 final class CryptoDexVerticalFlowLayout: UICollectionViewFlowLayout {
     
     // MARK: - Instance Attributes
-    var numberOfItemsPerRow: Int = 3 {
+    var numberOfItemsPerRow: Int = 2 {
         didSet {
             invalidateLayout()
         }
