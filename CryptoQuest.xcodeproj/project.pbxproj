@@ -16,6 +16,7 @@
 		4D74961320140D5E00E104D5 /* HealthBarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74961220140D5E00E104D5 /* HealthBarNode.swift */; };
 		4DC3C45920148A580009D623 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3C45820148A580009D623 /* WarningView.swift */; };
 		4DC3C45B2014A0D30009D623 /* alarmsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DC3C45A2014A0D30009D623 /* alarmsound.mp3 */; };
+		4DC3C45D2014D4CB0009D623 /* QRScannerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3C45C2014D4CB0009D623 /* QRScannerViewController.swift */; };
 		880AB2822014CB88001CD613 /* QrCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880AB2812014CB88001CD613 /* QrCode.swift */; };
 		880AB2842014D2A0001CD613 /* QrCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 880AB2832014D2A0001CD613 /* QrCodeViewController.swift */; };
 		8826A9BA20139F41000DC63D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9B920139F41000DC63D /* AppDelegate.swift */; };
@@ -62,6 +63,7 @@
 		4D74961220140D5E00E104D5 /* HealthBarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBarNode.swift; sourceTree = "<group>"; };
 		4DC3C45820148A580009D623 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
 		4DC3C45A2014A0D30009D623 /* alarmsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarmsound.mp3; sourceTree = "<group>"; };
+		4DC3C45C2014D4CB0009D623 /* QRScannerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerViewController.swift; sourceTree = "<group>"; };
 		880AB2812014CB88001CD613 /* QrCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCode.swift; sourceTree = "<group>"; };
 		880AB2832014D2A0001CD613 /* QrCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrCodeViewController.swift; sourceTree = "<group>"; };
 		8826A9B620139F41000DC63D /* CryptoQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -201,6 +203,7 @@
 				8826A9D32013A9DC000DC63D /* MapViewController.swift */,
 				88839EB120147A56004304A1 /* CryptoDexViewController.swift */,
 				88839EB6201493D2004304A1 /* CryptoDexDetailsViewController.swift */,
+				4DC3C45C2014D4CB0009D623 /* QRScannerViewController.swift */,
 				880AB2832014D2A0001CD613 /* QrCodeViewController.swift */,
 			);
 			path = ViewControllers;
@@ -433,6 +436,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BRYSerialAnimationQueue/BRYSerialAnimationQueue.framework",
 				"${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework",
+				"${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework",
 				"${BUILT_PRODUCTS_DIR}/SSBouncyButton/SSBouncyButton.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 				"${BUILT_PRODUCTS_DIR}/UIColor-Hex/UIColor_Hex.framework",
@@ -442,6 +446,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/BRYSerialAnimationQueue.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/LTMorphingLabel.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/QRCodeReader.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SSBouncyButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UIColor_Hex.framework",
@@ -502,6 +507,7 @@
 				4D7496042013A45400E104D5 /* Utilities.swift in Sources */,
 				88839EB92014A974004304A1 /* BitStopMarker.swift in Sources */,
 				8826A9E62013E9DA000DC63D /* Coin.swift in Sources */,
+				4DC3C45D2014D4CB0009D623 /* QRScannerViewController.swift in Sources */,
 				8826A9D42013A9DC000DC63D /* MapViewController.swift in Sources */,
 				88839EB220147A56004304A1 /* CryptoDexViewController.swift in Sources */,
 				8826A9D22013A795000DC63D /* Constants.swift in Sources */,
