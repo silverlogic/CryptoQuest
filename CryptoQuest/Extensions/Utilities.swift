@@ -222,6 +222,30 @@ extension SCNMaterial {
         diffuse.contents = image
         specular.contents = specularColor
     }
+    
+    static func invertedByX(image: UIImage) -> SCNMaterial {
+        let material = SCNMaterial(image: image)
+        material.diffuse.contentsTransform = SCNMatrix4MakeScale(-1.0, 1.0, 1.0)
+        material.diffuse.wrapT = .repeat
+        material.diffuse.wrapS = .repeat
+        return material
+    }
+
+    static func invertedByY(image: UIImage) -> SCNMaterial {
+        let material = SCNMaterial(image: image)
+        material.diffuse.contentsTransform = SCNMatrix4MakeScale(1.0, -1.0, 1.0)
+        material.diffuse.wrapT = .repeat
+        material.diffuse.wrapS = .repeat
+        return material
+    }
+    
+    static func invertedByZ(image: UIImage) -> SCNMaterial {
+        let material = SCNMaterial(image: image)
+        material.diffuse.contentsTransform = SCNMatrix4MakeScale(1.0, 1.0, -1.0)
+        material.diffuse.wrapT = .repeat
+        material.diffuse.wrapS = .repeat
+        return material
+    }
 }
 
 
@@ -286,6 +310,14 @@ extension UIView {
             strongSelf.alpha = 0
         }
     }
+    
+    func shake() {
+        let animation = CAKeyframeAnimation(keyPath: "transform.translation.x")
+        animation.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionLinear)
+        animation.duration = 0.6
+        animation.values = [-30.0, 30.0, -20.0, 20.0, -10.0, 10.0, -5.0, 5.0, 0.0 ]
+        layer.add(animation, forKey: "shake")
+    }
 }
 
 
@@ -314,5 +346,16 @@ extension UIViewController {
         guard let activityIndicatorView = view.subviews.first(where: { $0.tag == 99 }) else { return }
         activityIndicatorView.animateHide()
         activityIndicatorView.removeFromSuperview()
+    }
+}
+
+
+// MARK: UIImage
+extension UIImage {
+    func flippedHorizontal() -> UIImage {
+        guard let cgImage = cgImage else {
+            return self
+        }
+        return UIImage(cgImage: cgImage, scale: scale, orientation: .upMirrored)
     }
 }
