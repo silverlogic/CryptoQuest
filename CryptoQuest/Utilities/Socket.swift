@@ -26,6 +26,7 @@ enum SocketEvent: String {
     case shoot = "shoot"
     case spawnCaptured = "spawn_captured"
     case newSpawn = "spawn_new"
+    case sessionStart = "session_start"
 }
 
 

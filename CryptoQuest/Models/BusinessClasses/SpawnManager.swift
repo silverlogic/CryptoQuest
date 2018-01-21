@@ -44,10 +44,18 @@ extension SpawnManager {
 
 // MARK: - Public Instance Methods For Attacking
 extension SpawnManager {
-    func attackCryptoCreature(spawn: Spawn) {
+    
+    /// Attacks a crypto.
+    ///
+    /// - Note: For EG, the id should be 1. For VM, the id should be 2.
+    ///
+    /// - Parameters:
+    ///   - spawn: A `Spawn` containing the crypto creature to attack.
+    ///   - userId: A `Int` representing the id of the user that performed the attack.
+    func attackCryptoCreature(spawn: Spawn, userId: Int) {
         let socketEventData: [String: Any] = [
             "spawn_id": spawn.spawnId,
-            "user_id": 1
+            "user_id": userId
         ]
         let socketEventInfo: [String: Any] = [
             "type": SocketEvent.shoot.rawValue,
@@ -58,6 +66,32 @@ extension SpawnManager {
             Socket.shared.write(with: socketData)
         } catch {
             print("Error serialization spawn attack socket data")
+        }
+    }
+}
+
+
+// MARK: - Public Instance Methods For Starting Session
+extension SpawnManager {
+    
+    /// Starts a session for the user.
+    ///
+    /// - Note: For EG, the id should be 1. For VM, the id should be 2.
+    ///
+    /// - Parameter userId: A `Int` representing the id of the user.
+    func startSession(for userId: Int) {
+        let socketEventData: [String: Any] = [
+            "user_id": userId
+        ]
+        let socketEventInfo: [String: Any] = [
+            "type": SocketEvent.sessionStart.rawValue,
+            "data": socketEventData
+        ]
+        do {
+            let socketData = try JSONEncoder().encode(socketEventInfo)
+            Socket.shared.write(with: socketData)
+        } catch {
+            print("Error serialization start session socket data")
         }
     }
 }
