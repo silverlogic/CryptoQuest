@@ -251,7 +251,6 @@ private extension ViewController {
     }
     
     func shitCoinsAttack() {
-        coinsAround += 5
         addFlyingCoin(with: .shitCoin, xOffset: -2.0, yOffset: 2.0, zOffset: -6.0)
         addFlyingCoin(with: .shitCoin, xOffset: -2.0, yOffset: -2.0, zOffset: -6.0)
         addFlyingCoin(with: .shitCoin, xOffset: 2.0, yOffset: 2.0, zOffset: -6.0)
