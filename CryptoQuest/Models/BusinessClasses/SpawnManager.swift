@@ -36,8 +36,12 @@ final class SpawnManager {
 
 // MARK: - Public Instance Methods For Retrieval
 extension SpawnManager {
-    func spawn(with index: Int) -> Spawn? {
+    func spawn(at index: Int) -> Spawn? {
         return spawns[safe: index]
+    }
+    
+    func spawn(with id: Int) -> Spawn? {
+        return spawns.first(where: { $0.spawnId == id })
     }
 }
 

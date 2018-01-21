@@ -12,6 +12,11 @@ import ARKit
 
 class ViewController: UIViewController, ARSCNViewDelegate {
 
+    // MARK: - Public Instance Attributes
+    var spawn: Spawn!
+    
+
+    // MARK: - Private Instance Attributes
     @IBOutlet var sceneView: ARSCNView!
     private weak var lightNode: SCNNode!
     private weak var cameraLightNode: SCNNode!
@@ -20,7 +25,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     private var minimumExposure: CGFloat = -1
     private var isSceneSetupFinished: Bool = false
     private weak var walletImageView: UIImageView!
-
+    
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,19 +35,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
-        // Create a session configuration
         let configuration = ARWorldTrackingConfiguration()
-
-        // Run the view's session
         sceneView.session.run(configuration)
-//        addFlyingCoin()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
-        // Pause the view's session
         sceneView.session.pause()
     }
 }
@@ -55,8 +54,13 @@ extension ViewController: ARSessionDelegate {
             return
         }
         isSceneSetupFinished = true
-        addFlyingCoin()
+        guard let typeName = spawn.cryptoCreatureMarker?.cryptoName,
+              let type = CryptoCreatureName(rawValue: typeName) else {
+            return
+        }
+        addFlyingCoin(with: type)
     }
+    
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
 //        guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
 //            return
@@ -139,6 +143,7 @@ private extension ViewController {
         }
         let ball = BallNode()
         ball.position = cameraVector.position
+        ball.eulerAngles = SCNVector3(0.0, CGFloat.pi * 0.5, 0.0)
         let forceVector = ball.position.forceVector(
             to: cameraVector.direction * 10,
             by: 1.0,
@@ -148,16 +153,21 @@ private extension ViewController {
         ball.physicsBody?.applyForce(forceVector, asImpulse: true)
     }
     
-    func addFlyingCoin(with type: CryptoCreatureName = .bitcoin) {
-        guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
-            return
-        }
-        let bubble = EvilBubbleNode(type)
+    func addFlyingCoin(with type: CryptoCreatureName = .bitcoin, xOffset: Float = 0.0, yOffset: Float = 0.0, zOffset: Float = -6.0, isMegaShit: Bool = false) {
+//        guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
+//            return
+//        }
+        let bubble = EvilBubbleNode(type, isMegaShit: isMegaShit)
         bubble.position = SCNVector3(
-            cameraVector.direction.x * (4.0 + Float(arc4random_uniform(800)) / 100),
-            cameraVector.direction.y,
-            cameraVector.direction.z * (4.0 + Float(arc4random_uniform(800)) / 100)
+            xOffset,
+            yOffset,
+            zOffset
         )
+//        bubble.position = SCNVector3(
+//            cameraVector.direction.x * (4.0 + Float(arc4random_uniform(800)) / 100),
+//            cameraVector.direction.y,
+//            cameraVector.direction.z * (4.0 + Float(arc4random_uniform(800)) / 100)
+//        )
         sceneView.scene.rootNode.addChildNode(bubble)
         bubble.startFlyingRandomly()
         bubble.healthBar.look(at: sceneView.pointOfView!, offset: nil)
@@ -202,5 +212,15 @@ private extension ViewController {
             return
         }
         showWalletView()
+    }
+    
+    func shitCoinsAttack() {
+        addFlyingCoin(with: .shitCoin, xOffset: -2.0, yOffset: 2.0, zOffset: -6.0)
+        addFlyingCoin(with: .shitCoin, xOffset: -2.0, yOffset: -2.0, zOffset: -6.0)
+        addFlyingCoin(with: .shitCoin, xOffset: 2.0, yOffset: 2.0, zOffset: -6.0)
+        addFlyingCoin(with: .shitCoin, xOffset: 2.0, yOffset: -2.0, zOffset: -6.0)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [weak self] in
+            self?.addFlyingCoin(with: .shitCoin, xOffset: 0.0, yOffset: 0.0, zOffset: -6.0, isMegaShit: true)
+        }
     }
 }

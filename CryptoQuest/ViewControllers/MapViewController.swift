@@ -41,14 +41,34 @@ final class MapViewController: UIViewController {
         showActivityIndicator()
         requestLocationPermission()
     }
+    
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let identifier = segue.identifier else {
+            return
+        }
+        switch identifier {
+        case "goToAR":
+            guard let arController = segue.destination as? ViewController,
+                  let spawn = sender as? Spawn else {
+                break
+            }
+            arController.spawn = spawn
+        default:
+            break
+        }
+    }
 }
 
 
 // MARK: - GMSMapViewDelegate
 extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        guard let creatureMarker = marker as? CryptoCreatureMarker else { return true }
+        guard let creatureMarker = marker as? CryptoCreatureMarker,
+              let spawn = SpawnManager.shared.spawn(with: creatureMarker.spawnId) else { return true }
         print("Crypto creature tapped")
+        performSegue(withIdentifier: "goToAR", sender: spawn)
         return true
     }
 }
