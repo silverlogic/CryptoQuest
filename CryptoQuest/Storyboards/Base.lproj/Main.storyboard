@@ -1,17 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XbT-jB-t53">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina5_9" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
         <array key="AvenirNext.ttc">
             <string>AvenirNext-Bold</string>
+            <string>AvenirNext-DemiBold</string>
         </array>
     </customFonts>
     <scenes>
@@ -20,7 +22,7 @@
             <objects>
                 <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="CryptoQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <arscnView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="BrB-h1-WRS">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </arscnView>
                     <connections>
@@ -36,22 +38,22 @@
             <objects>
                 <viewController id="8am-CK-VGm" customClass="MapViewController" customModule="CryptoQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="D52-7G-1Fk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LzK-Ej-DaV" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="778"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-bitcoin-amount" translatesAutoresizingMaskIntoConstraints="NO" id="hs9-Ex-3Ew">
-                                <rect key="frame" x="18" y="48" width="50" height="50"/>
+                                <rect key="frame" x="18" y="72" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="AYV-RH-E1J"/>
                                     <constraint firstAttribute="height" constant="50" id="W5R-EW-d5e"/>
                                 </constraints>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRl-nD-nxQ" customClass="BouncyButton" customModule="CryptoQuest" customModuleProvider="target">
-                                <rect key="frame" x="309" y="609" width="50" height="50"/>
+                                <rect key="frame" x="309" y="720" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0SR-4y-v9m"/>
                                     <constraint firstAttribute="width" constant="50" id="w2b-8G-XGG"/>
@@ -59,7 +61,7 @@
                                 <state key="normal" image="icon-cryptodex"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B90-8Z-GN7" customClass="BouncyButton" customModule="CryptoQuest" customModuleProvider="target">
-                                <rect key="frame" x="309" y="48" width="50" height="50"/>
+                                <rect key="frame" x="309" y="72" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="HGh-74-Z3w"/>
                                     <constraint firstAttribute="height" constant="50" id="KLn-Nm-Tjt"/>
@@ -67,7 +69,7 @@
                                 <state key="normal" image="icon-send-bitcoin"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculating..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHp-Op-AUk" customClass="MorphingLabel" customModule="CryptoQuest" customModuleProvider="target">
-                                <rect key="frame" x="68" y="49" width="233" height="50"/>
+                                <rect key="frame" x="68" y="73" width="233" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DJu-x9-Tf1"/>
                                 </constraints>
@@ -102,11 +104,172 @@
                         <outlet property="mapView" destination="LzK-Ej-DaV" id="6ym-eI-zbX"/>
                         <outlet property="sendBitcoinButton" destination="B90-8Z-GN7" id="rm4-q5-Ruc"/>
                         <segue destination="BV1-FR-VrT" kind="show" id="37l-Sb-9Ew"/>
+                        <segue destination="fIX-4q-oPV" kind="show" id="frq-aQ-VEF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhB-V9-3Yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-292" y="133.5832083958021"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="U9j-PD-DqW">
+            <objects>
+                <viewController id="fIX-4q-oPV" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Ky-6z-N6d">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-cryptodex-top" translatesAutoresizingMaskIntoConstraints="NO" id="8ny-eh-DY0">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="266"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="266" id="eK7-YU-GeH"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="PdN-y3-ZVA">
+                                <rect key="frame" x="16" y="94" width="343" height="95"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-cryptodex-headerart" translatesAutoresizingMaskIntoConstraints="NO" id="3th-X8-nQX">
+                                        <rect key="frame" x="0.0" y="0.0" width="138.66666666666666" height="95"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="95" id="JD8-Ym-Y8j"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-cryptodex-title" translatesAutoresizingMaskIntoConstraints="NO" id="9Ri-ls-equ">
+                                        <rect key="frame" x="138.66666666666663" y="0.0" width="204.33333333333337" height="95"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="9Ri-ls-equ" firstAttribute="height" secondItem="3th-X8-nQX" secondAttribute="height" id="5Qe-Bq-BhX"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QXz-Dr-taP">
+                                <rect key="frame" x="16" y="44" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="doh-oe-DP9"/>
+                                    <constraint firstAttribute="width" constant="50" id="f6z-1r-RfK"/>
+                                </constraints>
+                                <state key="normal" image="icon-backarrow-cryptodex"/>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rkm-cK-jZZ">
+                                <rect key="frame" x="0.0" y="266" width="375" height="418"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xG5-Gs-D3z">
+                                    <size key="itemSize" width="165" height="205"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CryptoDexCollectionViewCell" id="XXS-fR-3Vj" customClass="CryptoDexCollectionViewCell" customModule="CryptoQuest" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="165" height="205"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="165" height="205"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-bitcoin-cryptodex" translatesAutoresizingMaskIntoConstraints="NO" id="lRA-pD-sfx">
+                                                    <rect key="frame" x="27.666666666666671" y="0.0" width="110.00000000000001" height="128"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="2vf-7S-d6K"/>
+                                                        <constraint firstAttribute="width" constant="110" id="zP8-rP-MtS"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkG-aQ-q2R">
+                                                    <rect key="frame" x="20" y="143" width="125" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="Bc0-YH-mHq"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0003223" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4S-Jq-qcu">
+                                                    <rect key="frame" x="20" y="178" width="125" height="27"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="27" id="fs7-aD-Y2e"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <color key="textColor" red="0.94117647058823528" green="0.32156862745098036" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="x4S-Jq-qcu" firstAttribute="leading" secondItem="XXS-fR-3Vj" secondAttribute="leadingMargin" constant="12" id="4JP-sv-uth"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="GkG-aQ-q2R" secondAttribute="trailing" constant="12" id="7wd-Gl-JLU"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="x4S-Jq-qcu" secondAttribute="trailing" constant="12" id="Biq-7W-794"/>
+                                            <constraint firstItem="GkG-aQ-q2R" firstAttribute="leading" secondItem="XXS-fR-3Vj" secondAttribute="leadingMargin" constant="12" id="Ub5-pV-tSJ"/>
+                                            <constraint firstItem="GkG-aQ-q2R" firstAttribute="top" secondItem="lRA-pD-sfx" secondAttribute="bottom" constant="15" id="dmp-iO-UL6"/>
+                                            <constraint firstItem="x4S-Jq-qcu" firstAttribute="top" secondItem="GkG-aQ-q2R" secondAttribute="bottom" constant="8" id="ljl-ob-VFA"/>
+                                            <constraint firstItem="lRA-pD-sfx" firstAttribute="centerX" secondItem="XXS-fR-3Vj" secondAttribute="centerX" id="n5p-4v-0d3"/>
+                                            <constraint firstItem="lRA-pD-sfx" firstAttribute="top" secondItem="XXS-fR-3Vj" secondAttribute="top" id="q1K-1b-zeG"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="cryptoAmountLabel" destination="x4S-Jq-qcu" id="Q3Q-5e-iur"/>
+                                            <outlet property="cryptoCreatureImageView" destination="lRA-pD-sfx" id="RHS-I9-nit"/>
+                                            <outlet property="cryptoCreatureNameLabel" destination="GkG-aQ-q2R" id="ESR-hW-UGG"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YvT-7F-tes">
+                                <rect key="frame" x="0.0" y="684" width="375" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jd-ec-xOt">
+                                        <rect key="frame" x="51.666666666666657" y="6" width="271.66666666666674" height="80"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-bitcoin-amount" translatesAutoresizingMaskIntoConstraints="NO" id="MsJ-iT-Lwk">
+                                                <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="80" id="4sZ-vg-u0N"/>
+                                                    <constraint firstAttribute="height" constant="80" id="5ed-VB-PlK"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0012892" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-pv-0Z3" customClass="MorphingLabel" customModule="CryptoQuest" customModuleProvider="target">
+                                                <rect key="frame" x="79.999999999999986" y="0.0" width="191.66666666666663" height="80"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="RKj-pv-0Z3" firstAttribute="height" secondItem="MsJ-iT-Lwk" secondAttribute="height" id="lCj-gH-WWu"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.75294117647058822" green="0.79607843137254897" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="Djh-bh-Ga6"/>
+                                    <constraint firstItem="8jd-ec-xOt" firstAttribute="top" secondItem="YvT-7F-tes" secondAttribute="top" constant="6" id="EkA-wk-GzS"/>
+                                    <constraint firstItem="8jd-ec-xOt" firstAttribute="centerX" secondItem="YvT-7F-tes" secondAttribute="centerX" id="dvK-WU-L4c"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.99215686274509807" green="0.91764705882352937" blue="0.82352941176470584" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="PdN-y3-ZVA" firstAttribute="leading" secondItem="55u-nO-WBi" secondAttribute="leading" constant="16" id="0Hr-wi-15Z"/>
+                            <constraint firstItem="PdN-y3-ZVA" firstAttribute="top" secondItem="55u-nO-WBi" secondAttribute="top" constant="50" id="7rJ-hh-mYm"/>
+                            <constraint firstAttribute="bottom" secondItem="YvT-7F-tes" secondAttribute="bottom" id="Ctb-MU-rUo"/>
+                            <constraint firstItem="YvT-7F-tes" firstAttribute="trailing" secondItem="55u-nO-WBi" secondAttribute="trailing" id="I5w-GT-yru"/>
+                            <constraint firstItem="YvT-7F-tes" firstAttribute="top" secondItem="rkm-cK-jZZ" secondAttribute="bottom" id="IYl-lU-NC0"/>
+                            <constraint firstItem="rkm-cK-jZZ" firstAttribute="leading" secondItem="55u-nO-WBi" secondAttribute="leading" id="JGM-3c-fDY"/>
+                            <constraint firstItem="rkm-cK-jZZ" firstAttribute="trailing" secondItem="55u-nO-WBi" secondAttribute="trailing" id="Jdz-fy-ZTl"/>
+                            <constraint firstItem="8ny-eh-DY0" firstAttribute="top" secondItem="1Ky-6z-N6d" secondAttribute="top" id="Nsi-iH-LwY"/>
+                            <constraint firstItem="QXz-Dr-taP" firstAttribute="top" secondItem="55u-nO-WBi" secondAttribute="top" id="YKC-0m-2n6"/>
+                            <constraint firstItem="8ny-eh-DY0" firstAttribute="trailing" secondItem="55u-nO-WBi" secondAttribute="trailing" id="Z7M-SE-f7k"/>
+                            <constraint firstItem="YvT-7F-tes" firstAttribute="leading" secondItem="55u-nO-WBi" secondAttribute="leading" id="exi-XR-JFQ"/>
+                            <constraint firstItem="QXz-Dr-taP" firstAttribute="leading" secondItem="55u-nO-WBi" secondAttribute="leading" constant="16" id="lge-Yp-yTb"/>
+                            <constraint firstAttribute="trailing" secondItem="PdN-y3-ZVA" secondAttribute="trailing" constant="16" id="opf-3O-Ru5"/>
+                            <constraint firstItem="rkm-cK-jZZ" firstAttribute="top" secondItem="8ny-eh-DY0" secondAttribute="bottom" id="yf2-DF-QGO"/>
+                            <constraint firstItem="8ny-eh-DY0" firstAttribute="leading" secondItem="55u-nO-WBi" secondAttribute="leading" id="z1i-Z8-Z5J"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="55u-nO-WBi"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="koD-vW-xQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-292" y="915.51724137931035"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gzr-Jg-2Re">
@@ -127,8 +290,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-backarrow-cryptodex" width="115" height="115"/>
         <image name="icon-bitcoin-amount" width="73" height="73"/>
+        <image name="icon-bitcoin-cryptodex" width="240" height="314"/>
         <image name="icon-cryptodex" width="73" height="73"/>
+        <image name="icon-cryptodex-headerart" width="403" height="282"/>
+        <image name="icon-cryptodex-title" width="594" height="144"/>
+        <image name="icon-cryptodex-top" width="1125" height="611"/>
         <image name="icon-send-bitcoin" width="73" height="73"/>
     </resources>
 </document>
