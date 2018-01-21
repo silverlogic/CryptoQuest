@@ -30,6 +30,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     private var coinsAround: Int = 0
     
     
+    // MARK: - Public Instance Attributes
+    var coinCaptured: (() -> Void)?
+    
+    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -194,6 +198,10 @@ private extension ViewController {
             self?.walletImageView.shake()
             self?.hideWalletView()
             self?.warningView.layer.removeAllAnimations()
+            if self?.coinsAround == 0 {
+                self?.navigationController?.popViewController(animated: true)
+                self?.coinCaptured?()
+            }
         }
     }
     

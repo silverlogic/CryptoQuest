@@ -60,6 +60,14 @@ final class MapViewController: UIViewController {
                 break
             }
             arController.spawn = spawn
+            arController.coinCaptured = { [weak self] in
+                let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                guard let cryptoDetailViewController = storyboard.instantiateViewController(withIdentifier: "CryptoDexDetailsViewController") as? CryptoDexDetailsViewController else {
+                    return
+                }
+                cryptoDetailViewController.shouldShowCongrats = true
+                self?.navigationController?.pushViewController(cryptoDetailViewController, animated: true)
+            }
         default:
             break
         }
