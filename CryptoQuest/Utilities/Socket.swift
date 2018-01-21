@@ -15,12 +15,17 @@ enum SocketError: Error {
     case eventTypeNotDetermined
     case eventDataNotPresent
     case spawnEventDataNotPresent
+    case capturedSpawnEventDataNotPresent
+    case newSpawnEventDataNotPresent
 }
 
 
 // MARK: - Socket Event Enum
 enum SocketEvent: String {
     case spawnList = "spawn_list"
+    case shoot = "shoot"
+    case spawnCaptured = "spawn_captured"
+    case newSpawn = "spawn_new"
 }
 
 
@@ -37,6 +42,8 @@ final class Socket {
     
     // MARK: - Public Instance Attributes
     var didReceiveSpawnList: DynamicBinder<Data?>
+    var didCaptureSpawn: DynamicBinder<Data?>
+    var newSpawnReceived: DynamicBinder<Data?>
     var socketError: DynamicBinder<Error?>
     
     
@@ -46,13 +53,15 @@ final class Socket {
         let urlRequest = URLRequest(url: url)
         webSocket = WebSocket(request: urlRequest)
         didReceiveSpawnList = DynamicBinder(nil)
+        didCaptureSpawn = DynamicBinder(nil)
         socketError = DynamicBinder(nil)
+        newSpawnReceived = DynamicBinder(nil)
         setupBindings()
     }
 }
 
 
-// MARK: - Public Instance Methods
+// MARK: - Public Instance Methods For Connecting/Disconnecting
 extension Socket {
     func connect() {
         webSocket.connect()
@@ -60,6 +69,14 @@ extension Socket {
     
     func disconnect() {
         webSocket.disconnect()
+    }
+}
+
+
+// MARK: - Public Instance Methods For Sending Data
+extension Socket {
+    func write(with data: Data) {
+        webSocket.write(data: data)
     }
 }
 
@@ -120,6 +137,16 @@ private extension Socket {
                 }
                 let spawnData = try JSONSerialization.data(withJSONObject: spawnList, options: [])
                 didReceiveSpawnList.value = spawnData
+            case .spawnCaptured:
+                let capturedSpawn = socketData["spawn"] as AnyObject
+                let capturedSpawnData = try JSONSerialization.data(withJSONObject: capturedSpawn, options: [])
+                didCaptureSpawn.value = capturedSpawnData
+            case .newSpawn:
+                let newSpawn = socketData["spawn"] as AnyObject
+                let newSpawnData = try JSONSerialization.data(withJSONObject: newSpawn, options: [])
+                newSpawnReceived.value = newSpawnData
+            default:
+                print("Event not being handled!")
             }
         } catch {
             print("Error occured with serialization: \(error)")
