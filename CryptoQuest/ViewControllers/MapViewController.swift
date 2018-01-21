@@ -21,7 +21,7 @@ final class MapViewController: UIViewController {
     
     // MARK: - Private Instance Variables Maps
     private let zoomLevel: Float = 18.0
-    private var mapMarkers: [GMSMarker] = []
+    private var mapMarkers: [CryptoCreatureMarker] = []
     private var userLocationMarker = UserLocationMarker()
     
     
@@ -181,6 +181,7 @@ private extension MapViewController {
                 markers.forEach {
                     $0.map = self?.mapView
                 }
+                self?.mapMarkers.append(contentsOf: markers)
             }
         }, for: self)
         SpawnManager.shared.newSpawnReceived.bind({ [weak self] (spawn) in
@@ -190,11 +191,14 @@ private extension MapViewController {
                 marker.map = self?.mapView
             }
         }, for: self)
-        SpawnManager.shared.spawnCaptured.bind({ (spawn) in
+        SpawnManager.shared.spawnCaptured.bind({ [weak self] (spawn) in
             guard let capturedSpawn = spawn,
                   let marker = capturedSpawn.cryptoCreatureMarker else { return }
             DispatchQueue.main.async {
-                marker.map = nil
+                guard let cachedMarker = self?.mapMarkers.first(where: {$0.position == marker.position}) else {
+                    return
+                }
+                cachedMarker.map = nil
             }
         }, for: self)
     }

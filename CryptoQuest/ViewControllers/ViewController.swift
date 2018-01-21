@@ -154,6 +154,9 @@ private extension ViewController {
         if isWarning {
             warningView.startAlarming()
         }
+        SpawnManager.shared.spawnCaptured.bind({ [weak self] _ in
+            self?.showWalletView()
+        }, for: self)
     }
     
     func throwTheBall() {
@@ -199,8 +202,10 @@ private extension ViewController {
             self?.hideWalletView()
             self?.warningView.layer.removeAllAnimations()
             if self?.coinsAround == 0 {
-                self?.navigationController?.popViewController(animated: true)
-                self?.coinCaptured?()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.2) {
+                    self?.navigationController?.popViewController(animated: true)
+                    self?.coinCaptured?()
+                }
             }
         }
     }
@@ -234,10 +239,7 @@ private extension ViewController {
             return
         }
         evilBubble.hitted(sceneView.pointOfView!)
-        guard evilBubble.healthBar.livesLeft == 0 else {
-            return
-        }
-        showWalletView()
+        SpawnManager.shared.attackCryptoCreature(spawn: spawn)
     }
     
     func shitCoinsAttack() {

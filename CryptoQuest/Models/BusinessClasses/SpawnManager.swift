@@ -55,19 +55,22 @@ extension SpawnManager {
     ///
     /// - Parameters:
     ///   - spawn: A `Spawn` containing the crypto creature to attack.
-    ///   - userId: A `Int` representing the id of the user that performed the attack.
-    func attackCryptoCreature(spawn: Spawn, userId: Int) {
+    func attackCryptoCreature(spawn: Spawn) {
         let socketEventData: [String: Any] = [
             "spawn_id": spawn.spawnId,
-            "user_id": userId
+            "user_id": UserManager.shared.userId
         ]
         let socketEventInfo: [String: Any] = [
             "type": SocketEvent.shoot.rawValue,
             "data": socketEventData
         ]
         do {
-            let socketData = try JSONEncoder().encode(socketEventInfo)
-            Socket.shared.write(with: socketData)
+            let socketData = try JSONSerialization.data(withJSONObject: socketEventInfo,
+                                                        options: .prettyPrinted)
+            guard let socketDataString = String(data: socketData, encoding: .utf8) else {
+                return
+            }
+            Socket.shared.write(with: socketDataString)
         } catch {
             print("Error serialization spawn attack socket data")
         }
@@ -92,8 +95,12 @@ extension SpawnManager {
             "data": socketEventData
         ]
         do {
-            let socketData = try JSONEncoder().encode(socketEventInfo)
-            Socket.shared.write(with: socketData)
+            let socketData = try JSONSerialization.data(withJSONObject: socketEventInfo,
+                                                        options: .prettyPrinted)
+            guard let socketDataString = String(data: socketData, encoding: .utf8) else {
+                return
+            }
+            Socket.shared.write(with: socketDataString)
         } catch {
             print("Error serialization start session socket data")
         }

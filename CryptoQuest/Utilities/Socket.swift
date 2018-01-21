@@ -76,8 +76,8 @@ extension Socket {
 
 // MARK: - Public Instance Methods For Sending Data
 extension Socket {
-    func write(with data: Data) {
-        webSocket.write(data: data)
+    func write(with string: String) {
+        webSocket.write(string: string)
     }
 }
 

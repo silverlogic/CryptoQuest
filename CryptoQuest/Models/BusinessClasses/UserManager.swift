@@ -43,6 +43,9 @@ final class UserManager {
     var neoAmount: Float {
         return currentUser.neoAmount
     }
+    var userId: Int {
+        return currentUser.userId
+    }
     
     
     // MARK: - Initializers

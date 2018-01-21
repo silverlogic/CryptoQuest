@@ -7,6 +7,7 @@
 //
 
 import ARKit
+import CoreLocation
 import SceneKit
 import UIKit
 
@@ -56,7 +57,7 @@ extension SCNVector3 {
 }
 
 
-// MARK: - Operator Overloads
+// MARK: - Operator Overloads SceneKit
 func - (lhs: SCNVector3, rhs: SCNVector3) -> SCNVector3 {
     return SCNVector3Make(lhs.x - rhs.x, lhs.y - rhs.y, lhs.z - rhs.z)
 }
@@ -75,6 +76,12 @@ func == (lhs: SCNVector3, rhs: SCNVector3) -> Bool {
 
 func != (lhs: SCNVector3, rhs: SCNVector3) -> Bool {
     return !(lhs == rhs)
+}
+
+
+// MARK: - Operator Overloads CLLocationCoordinate2D
+func == (lhs: CLLocationCoordinate2D, rhs: CLLocationCoordinate2D) -> Bool {
+    return lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
 }
 
 
