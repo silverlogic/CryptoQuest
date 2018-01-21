@@ -155,7 +155,7 @@ private extension ViewController {
             warningView.startAlarming()
         }
         SpawnManager.shared.spawnCaptured.bind({ [weak self] _ in
-            self?.showWalletView()
+//            self?.showWalletView()
         }, for: self)
     }
     
@@ -240,6 +240,9 @@ private extension ViewController {
         }
         evilBubble.hitted(sceneView.pointOfView!)
         SpawnManager.shared.attackCryptoCreature(spawn: spawn)
+        if evilBubble.healthBar.livesLeft == 0 {
+            showWalletView()
+        }
     }
     
     func shitCoinsAttack() {
