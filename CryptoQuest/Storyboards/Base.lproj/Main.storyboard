@@ -9,6 +9,11 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tXr-a1-R10">
@@ -36,15 +41,56 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LzK-Ej-DaV" customClass="GMSMapView">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-bitcoin-amount" translatesAutoresizingMaskIntoConstraints="NO" id="hs9-Ex-3Ew">
+                                <rect key="frame" x="18" y="48" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="AYV-RH-E1J"/>
+                                    <constraint firstAttribute="height" constant="50" id="W5R-EW-d5e"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRl-nD-nxQ">
+                                <rect key="frame" x="309" y="609" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="0SR-4y-v9m"/>
+                                    <constraint firstAttribute="width" constant="50" id="w2b-8G-XGG"/>
+                                </constraints>
+                                <state key="normal" image="icon-cryptodex"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B90-8Z-GN7">
+                                <rect key="frame" x="309" y="48" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="HGh-74-Z3w"/>
+                                    <constraint firstAttribute="height" constant="50" id="KLn-Nm-Tjt"/>
+                                </constraints>
+                                <state key="normal" image="icon-send-bitcoin"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00071152" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHp-Op-AUk">
+                                <rect key="frame" x="68" y="49" width="233" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="DJu-x9-Tf1"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="27"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="hs9-Ex-3Ew" firstAttribute="top" secondItem="VDC-TX-qMr" secondAttribute="top" constant="28" id="2JG-YN-byY"/>
+                            <constraint firstItem="VDC-TX-qMr" firstAttribute="bottom" secondItem="QRl-nD-nxQ" secondAttribute="bottom" constant="8" id="38A-e7-Vm8"/>
+                            <constraint firstItem="VDC-TX-qMr" firstAttribute="trailing" secondItem="B90-8Z-GN7" secondAttribute="trailing" constant="16" id="49m-Rg-aeV"/>
+                            <constraint firstItem="VDC-TX-qMr" firstAttribute="trailing" secondItem="QRl-nD-nxQ" secondAttribute="trailing" constant="16" id="5zV-Lx-W0l"/>
                             <constraint firstItem="LzK-Ej-DaV" firstAttribute="trailing" secondItem="VDC-TX-qMr" secondAttribute="trailing" id="9h0-nA-QPQ"/>
+                            <constraint firstItem="aHp-Op-AUk" firstAttribute="leading" secondItem="hs9-Ex-3Ew" secondAttribute="trailing" id="9uk-Ew-JH4"/>
+                            <constraint firstItem="B90-8Z-GN7" firstAttribute="top" secondItem="VDC-TX-qMr" secondAttribute="top" constant="28" id="ONq-sL-rLE"/>
+                            <constraint firstItem="hs9-Ex-3Ew" firstAttribute="leading" secondItem="VDC-TX-qMr" secondAttribute="leading" constant="18" id="Vqt-QX-agd"/>
                             <constraint firstItem="LzK-Ej-DaV" firstAttribute="leading" secondItem="VDC-TX-qMr" secondAttribute="leading" id="gwH-tp-lve"/>
                             <constraint firstItem="LzK-Ej-DaV" firstAttribute="bottom" secondItem="VDC-TX-qMr" secondAttribute="bottom" id="kRU-9e-y2P"/>
+                            <constraint firstItem="B90-8Z-GN7" firstAttribute="leading" secondItem="aHp-Op-AUk" secondAttribute="trailing" constant="8" id="oLU-3B-fud"/>
                             <constraint firstItem="LzK-Ej-DaV" firstAttribute="top" secondItem="D52-7G-1Fk" secondAttribute="top" id="tKy-Nm-oQk"/>
+                            <constraint firstItem="aHp-Op-AUk" firstAttribute="top" secondItem="VDC-TX-qMr" secondAttribute="top" constant="29" id="wIr-3F-g5y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VDC-TX-qMr"/>
                     </view>
@@ -76,4 +122,9 @@
             <point key="canvasLocation" x="-1095" y="134"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-bitcoin-amount" width="73" height="73"/>
+        <image name="icon-cryptodex" width="73" height="73"/>
+        <image name="icon-send-bitcoin" width="73" height="73"/>
+    </resources>
 </document>
