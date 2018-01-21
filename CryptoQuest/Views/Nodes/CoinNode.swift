@@ -9,51 +9,43 @@
 import SceneKit
 
 private let coinRadius: CGFloat = evilBubbleRadius * 0.8
+private let megaCoinRadius: CGFloat = megaEvilBubbleRadius * 0.8
 
 class CoinNode: BaseNode {
     
     // MARK: - Private Instance Attributes
     private var flyTimer: Timer? = nil
-    
+    private var initialType: CryptoCreatureName
+    private(set) var isMegaShit: Bool
+
     
     // MARK: - Initializers
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
         fatalError("unavailable")
     }
     
-    init(_ type: CryptoCreatureName = .bitcoin) {
-        let geometry = SCNCylinder(radius: coinRadius, height: coinRadius * 0.2)
-        geometry.materials = [
-            SCNMaterial(color: type.color()),
-            SCNMaterial.invertedByY(image: type.frontImage()), // front
-            SCNMaterial(image: type.backImage()) // back
-        ]
+    init(_ type: CryptoCreatureName = .bitcoin, isMegaShit: Bool = false) {
+        self.isMegaShit = isMegaShit
+        initialType = type
         super.init()
-        self.geometry = geometry
+        geometry = SCNCylinder(
+            radius: (isMegaShit ? megaCoinRadius : coinRadius),
+            height: (isMegaShit ? megaCoinRadius : coinRadius) * 0.2
+        )
+        update(type: initialType)
         eulerAngles = SCNVector3(0.5 * CGFloat.pi, 0.0, -0.5 * CGFloat.pi)
     }
     
     
     // MARK: - Public Instance Methods
-//    func applePhysics() {
-//        physicsBody = {
-//            let physics = SCNPhysicsBody(type: .dynamic, shape: nil)
-//            physics.mass = 1000.0  // Kg
-//            physics.damping = 0.0  // 0.0 -> 1.0
-//            physics.friction = 1.0 // 0.0 -> 1.0
-//            physics.categoryBitMask = CollisionCategory.coin.rawValue
-//            physics.contactTestBitMask = CollisionCategory.ball.rawValue
-//            physics.collisionBitMask = CollisionCategory.coin.rawValue | CollisionCategory.ball.rawValue
-//            physics.isAffectedByGravity = false
-//            //            physics.velocityFactor = SCNVector3Zero
-//            return physics
-//        }()
-//    }
     func fly(to wallet: SCNNode) {
         let constraint = SCNDistanceConstraint(target: wallet)
         let distance = CGFloat(abs(presentation.worldPosition.distanceFromVector(wallet.presentation.worldPosition)))
         constraint.maximumDistance = distance
         constraints = [constraint]
+        if initialType == .shitCoin {
+            update(type: .bitcoin)
+        }
         flyTimer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true, block: { [weak self] timer in
             constraint.maximumDistance -= 0.025
             guard constraint.maximumDistance <= 0.0 else {
@@ -67,5 +59,13 @@ class CoinNode: BaseNode {
             }
             action(strongSelf)
         })
+    }
+    
+    func update(type: CryptoCreatureName) {
+        geometry?.materials = [
+            SCNMaterial(color: type.color()),
+            SCNMaterial.invertedByY(image: type.frontImage()), // front
+            SCNMaterial(image: type.backImage()) // back
+        ]
     }
 }

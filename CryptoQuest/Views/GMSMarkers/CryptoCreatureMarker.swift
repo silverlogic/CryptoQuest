@@ -23,7 +23,7 @@ enum CryptoCreatureName: String {
         case .bitcoin:
             return #imageLiteral(resourceName: "icon-bitcoin")
         case .bitcoinCash:
-            return #imageLiteral(resourceName: "icon-bitcoincashback")
+            return #imageLiteral(resourceName: "icon-bitcoincash")
         case .ethereum:
             return #imageLiteral(resourceName: "icon-ether")
         case .litecoin:

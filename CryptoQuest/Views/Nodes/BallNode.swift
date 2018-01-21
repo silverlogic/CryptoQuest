@@ -16,15 +16,15 @@ class BallNode: BaseNode {
     }
     
     override init() {
-        let geometry = SCNSphere(radius: 0.5)
-        geometry.materials = [SCNMaterial(color: .red)]
+        let geometry = SCNSphere(radius: 0.3)
+        geometry.materials = [SCNMaterial(image: #imageLiteral(resourceName: "ballTexture"))]
         super.init()
         self.geometry = geometry
         physicsBody = {
             let physics = SCNPhysicsBody(type: .dynamic, shape: nil)
-            physics.mass = 0.5 // Kg
-            physics.damping = 0.0 // 0.0 -> 1.0
-            physics.friction = 0.0 // 0.0 -> 1.0
+            physics.mass = 0.5      // Kg
+            physics.damping = 0.0   // 0.0 -> 1.0
+            physics.friction = 0.0  // 0.0 -> 1.0
             physics.categoryBitMask = CollisionCategory.ball.rawValue
             physics.contactTestBitMask = CollisionCategory.coin.rawValue | CollisionCategory.evilBubble.rawValue
             physics.collisionBitMask = CollisionCategory.ball.rawValue | CollisionCategory.evilBubble.rawValue
