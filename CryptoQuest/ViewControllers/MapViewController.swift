@@ -55,11 +55,11 @@ final class MapViewController: UIViewController {
         }
         switch identifier {
         case "goToAR":
-            guard let arController = segue.destination as? ViewController,
-                  let spawn = sender as? Spawn else {
+            guard let arController = segue.destination as? ViewController else {
                 break
             }
-            arController.spawn = spawn
+            arController.spawn = sender as? Spawn
+            arController.isWarning = (sender as? CryptoCreatureName) == CryptoCreatureName.shitCoin
             arController.coinCaptured = { [weak self] in
                 let storyboard = UIStoryboard(name: "Main", bundle: nil)
                 guard let cryptoDetailViewController = storyboard.instantiateViewController(withIdentifier: "CryptoDexDetailsViewController") as? CryptoDexDetailsViewController else {
@@ -204,6 +204,9 @@ private extension MapViewController {
                 }
                 cachedMarker.map = nil
             }
+        }, for: self)
+        SpawnManager.shared.shitBossAppeared.bind({ [weak self] in
+            self?.performSegue(withIdentifier: "goToAR", sender: CryptoCreatureName.shitCoin)
         }, for: self)
     }
     

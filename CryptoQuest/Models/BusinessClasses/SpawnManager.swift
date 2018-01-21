@@ -22,6 +22,7 @@ final class SpawnManager {
     var newSpawnsAvailable: DynamicBinder<[Spawn]?>
     var spawnCaptured: DynamicBinder<Spawn?>
     var newSpawnReceived: DynamicBinder<Spawn?>
+    var shitBossAppeared: DynamicBinder<Void>
     
     
     // MARK: - Initializers
@@ -29,6 +30,7 @@ final class SpawnManager {
         newSpawnsAvailable = DynamicBinder(nil)
         spawnCaptured = DynamicBinder(nil)
         newSpawnReceived = DynamicBinder(nil)
+        shitBossAppeared = DynamicBinder(())
         setupSocketBindings()
     }
 }
@@ -157,6 +159,9 @@ private extension SpawnManager {
             } catch {
                 print("Error parsing new spawn data: \(error)")
             }
+        }, for: self)
+        Socket.shared.shitCoinAppeared.bind({ [weak self] in
+            self?.shitBossAppeared.value = ()
         }, for: self)
     }
 }
