@@ -23,9 +23,9 @@ struct User {
 
 // MARK: - Public Class Methods
 extension User {
-    static func mockUser1() -> User {
+    static func mockUser2() -> User {
         return User(
-            userId: 1,
+            userId: 2,
             bitcoinAmount: 0.0012892,
             bitcoinCashAmount: 0.00210707,
             veztAmount: 2.9891344961,
@@ -35,9 +35,9 @@ extension User {
         )
     }
     
-    static func mockUser2() -> User {
+    static func mockUser3() -> User {
         return User(
-            userId: 2,
+            userId: 3,
             bitcoinAmount: 0.0,
             bitcoinCashAmount: 0.0,
             veztAmount: 0.0,

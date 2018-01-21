@@ -10,8 +10,8 @@ import Foundation
 
 // MARK: - Available Users Enum
 enum AvailableUsers {
-    case user1
     case user2
+    case user3
 }
 
 final class UserManager {
@@ -21,7 +21,7 @@ final class UserManager {
     
     
     // MARK: - Private Instance Attributes
-    private var currentUser = User.mockUser1()
+    private var currentUser = User.mockUser2()
     
     
     // MARK: - Public Instance Attributes
@@ -59,10 +59,10 @@ final class UserManager {
 extension UserManager {
     func activateUser(_ user: AvailableUsers) {
         switch user {
-        case .user1:
-            currentUser = User.mockUser1()
         case .user2:
             currentUser = User.mockUser2()
+        case .user3:
+            currentUser = User.mockUser3()
         }
     }
 }

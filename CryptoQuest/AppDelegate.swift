@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         _ = SpawnManager.shared
         _ = UserManager.shared
+        UserManager.shared.activateUser(.user2)
         GMSServices.provideAPIKey(GOOGLE_MAPS_API_KEY)
         Socket.shared.connect()
         return true
