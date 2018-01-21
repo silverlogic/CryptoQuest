@@ -35,6 +35,10 @@
 		8826A9F3201403B5000DC63D /* CryptoCreatureMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9F2201403B5000DC63D /* CryptoCreatureMarker.swift */; };
 		88839EA320144CDC004304A1 /* BouncyButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EA220144CDC004304A1 /* BouncyButton.swift */; };
 		88839EA620144EE6004304A1 /* MorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EA520144EE6004304A1 /* MorphingLabel.swift */; };
+		88839EA9201466B2004304A1 /* CryptoDexVerticalFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EA8201466B2004304A1 /* CryptoDexVerticalFlowLayout.swift */; };
+		88839EAC201468AC004304A1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EAB201468AC004304A1 /* User.swift */; };
+		88839EAE20146BB7004304A1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EAD20146BB7004304A1 /* UserManager.swift */; };
+		88839EB020146E18004304A1 /* CryptoDexCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EAF20146E18004304A1 /* CryptoDexCollectionViewCell.swift */; };
 		FA26671C39EA3F9159D7B983 /* Pods_CryptoQuest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F722A759A14007FEA11BEF /* Pods_CryptoQuest.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +76,10 @@
 		88839E9D20144C36004304A1 /* CryptoQuest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CryptoQuest-Bridging-Header.h"; sourceTree = "<group>"; };
 		88839EA220144CDC004304A1 /* BouncyButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BouncyButton.swift; sourceTree = "<group>"; };
 		88839EA520144EE6004304A1 /* MorphingLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorphingLabel.swift; sourceTree = "<group>"; };
+		88839EA8201466B2004304A1 /* CryptoDexVerticalFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDexVerticalFlowLayout.swift; sourceTree = "<group>"; };
+		88839EAB201468AC004304A1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		88839EAD20146BB7004304A1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
+		88839EAF20146E18004304A1 /* CryptoDexCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDexCollectionViewCell.swift; sourceTree = "<group>"; };
 		B4ADFDC56604BBB1391DCBDF /* Pods-CryptoQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoQuest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -158,6 +166,8 @@
 		8826A9CD20139F5A000DC63D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				88839EAA2014688B004304A1 /* UICollectionViewCells */,
+				88839EA72014667B004304A1 /* UICollectionViewFlowLayouts */,
 				88839EA420144ECA004304A1 /* UILabels */,
 				88839EA120144CB8004304A1 /* UIButtons */,
 				8826A9DE2013D013000DC63D /* GMSMarkers */,
@@ -232,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				8826A9F02013F760000DC63D /* SpawnManager.swift */,
+				88839EAD20146BB7004304A1 /* UserManager.swift */,
 			);
 			path = BusinessClasses;
 			sourceTree = "<group>";
@@ -243,6 +254,7 @@
 				8826A9E72013EADB000DC63D /* Faucet.swift */,
 				8826A9E52013E9DA000DC63D /* Coin.swift */,
 				8826A9E32013E881000DC63D /* Location.swift */,
+				88839EAB201468AC004304A1 /* User.swift */,
 			);
 			path = EntityModels;
 			sourceTree = "<group>";
@@ -261,6 +273,22 @@
 				88839EA520144EE6004304A1 /* MorphingLabel.swift */,
 			);
 			path = UILabels;
+			sourceTree = "<group>";
+		};
+		88839EA72014667B004304A1 /* UICollectionViewFlowLayouts */ = {
+			isa = PBXGroup;
+			children = (
+				88839EA8201466B2004304A1 /* CryptoDexVerticalFlowLayout.swift */,
+			);
+			path = UICollectionViewFlowLayouts;
+			sourceTree = "<group>";
+		};
+		88839EAA2014688B004304A1 /* UICollectionViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				88839EAF20146E18004304A1 /* CryptoDexCollectionViewCell.swift */,
+			);
+			path = UICollectionViewCells;
 			sourceTree = "<group>";
 		};
 		D2EBAF953FC116665DB1A420 /* Frameworks */ = {
@@ -419,6 +447,7 @@
 				4D74960D2013CEF500E104D5 /* CoinNode.swift in Sources */,
 				4D74961320140D5E00E104D5 /* HealthBarNode.swift in Sources */,
 				4D7496112014013800E104D5 /* EvilBubbleNode.swift in Sources */,
+				88839EAC201468AC004304A1 /* User.swift in Sources */,
 				4D7496062013A8E300E104D5 /* BaseNode.swift in Sources */,
 				4D74960F2013D10100E104D5 /* CollisionCategory.swift in Sources */,
 				88839EA320144CDC004304A1 /* BouncyButton.swift in Sources */,
@@ -426,10 +455,12 @@
 				88839EA620144EE6004304A1 /* MorphingLabel.swift in Sources */,
 				8826A9BE20139F41000DC63D /* ViewController.swift in Sources */,
 				8826A9F3201403B5000DC63D /* CryptoCreatureMarker.swift in Sources */,
+				88839EA9201466B2004304A1 /* CryptoDexVerticalFlowLayout.swift in Sources */,
 				4D74960B2013AB2200E104D5 /* BallNode.swift in Sources */,
 				8826A9BA20139F41000DC63D /* AppDelegate.swift in Sources */,
 				8826A9D72013ADF6000DC63D /* LocationTracker.swift in Sources */,
 				8826A9E02013D03E000DC63D /* UserLocationMarker.swift in Sources */,
+				88839EAE20146BB7004304A1 /* UserManager.swift in Sources */,
 				8826A9E22013E25A000DC63D /* Socket.swift in Sources */,
 				4D7496042013A45400E104D5 /* Utilities.swift in Sources */,
 				8826A9E62013E9DA000DC63D /* Coin.swift in Sources */,
@@ -437,6 +468,7 @@
 				8826A9D22013A795000DC63D /* Constants.swift in Sources */,
 				8826A9E82013EADB000DC63D /* Faucet.swift in Sources */,
 				8826A9ED2013EBFA000DC63D /* Spawn.swift in Sources */,
+				88839EB020146E18004304A1 /* CryptoDexCollectionViewCell.swift in Sources */,
 				8826A9E42013E881000DC63D /* Location.swift in Sources */,
 				8826A9DA2013AF0D000DC63D /* DynamicBinder.swift in Sources */,
 			);
