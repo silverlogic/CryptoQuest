@@ -20,11 +20,15 @@ final class SpawnManager {
     
     // MARK: - Public Instance Attributes
     var newSpawnsAvailable: DynamicBinder<[Spawn]?>
+    var spawnCaptured: DynamicBinder<Spawn?>
+    var newSpawnReceived: DynamicBinder<Spawn?>
     
     
     // MARK: - Initializers
     private init() {
         newSpawnsAvailable = DynamicBinder(nil)
+        spawnCaptured = DynamicBinder(nil)
+        newSpawnReceived = DynamicBinder(nil)
         setupSocketBindings()
     }
 }
@@ -34,6 +38,27 @@ final class SpawnManager {
 extension SpawnManager {
     func spawn(with index: Int) -> Spawn? {
         return spawns[safe: index]
+    }
+}
+
+
+// MARK: - Public Instance Methods For Attacking
+extension SpawnManager {
+    func attackCryptoCreature(spawn: Spawn) {
+        let socketEventData: [String: Any] = [
+            "spawn_id": spawn.spawnId,
+            "user_id": 1
+        ]
+        let socketEventInfo: [String: Any] = [
+            "type": SocketEvent.shoot.rawValue,
+            "data": socketEventData
+        ]
+        do {
+            let socketData = try JSONEncoder().encode(socketEventInfo)
+            Socket.shared.write(with: socketData)
+        } catch {
+            print("Error serialization spawn attack socket data")
+        }
     }
 }
 
@@ -54,6 +79,38 @@ private extension SpawnManager {
                 self?.newSpawnsAvailable.value = newSpawns
             } catch {
                 print("Error parsing spawn list data: \(error)")
+            }
+        }
+        Socket.shared.didCaptureSpawn.bind { [weak self] (data) in
+            guard let capturedSpawnData = data else {
+                print("Captured spawn data was not received")
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+                let capturedSpawn = try decoder.decode(Spawn.self, from: capturedSpawnData)
+                guard let index = self?.spawns.index(where: { $0.spawnId == capturedSpawn.spawnId }) else {
+                    print("Could not located captured spawn in datasource")
+                    return
+                }
+                self?.spawns[index] = capturedSpawn
+                self?.spawnCaptured.value = capturedSpawn
+            } catch {
+                print("Error parsing captured spawn data: \(error)")
+            }
+        }
+        Socket.shared.newSpawnReceived.bind { [weak self] (data) in
+            guard let newSpawnReceivedData = data else {
+                print("New spawn data was not received")
+                return
+            }
+            let decoder = JSONDecoder()
+            do {
+               let newSpawn = try decoder.decode(Spawn.self, from: newSpawnReceivedData)
+                self?.spawns.append(newSpawn)
+                self?.newSpawnReceived.value = newSpawn
+            } catch {
+                print("Error parsing new spawn data: \(error)")
             }
         }
     }
