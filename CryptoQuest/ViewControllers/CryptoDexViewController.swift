@@ -99,7 +99,7 @@ extension CryptoDexViewController: UICollectionViewDataSource {
                 cryptoName = CryptoCreatureName.bitcoinCash.rawValue
                 cryptoAmount = UserManager.shared.bitcoinCashAmount
             case .vezt:
-                cryptoImage = #imageLiteral(resourceName: "icon-vezt-cryptodex")
+                cryptoImage = #imageLiteral(resourceName: "icon-vezt-gray-cryptodex")
                 cryptoName = CryptoCreatureName.vezt.rawValue
                 cryptoAmount = UserManager.shared.veztAmount
             case .ethereum:

@@ -41,6 +41,8 @@
 		88839EAE20146BB7004304A1 /* UserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EAD20146BB7004304A1 /* UserManager.swift */; };
 		88839EB020146E18004304A1 /* CryptoDexCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EAF20146E18004304A1 /* CryptoDexCollectionViewCell.swift */; };
 		88839EB220147A56004304A1 /* CryptoDexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EB120147A56004304A1 /* CryptoDexViewController.swift */; };
+		88839EB52014909D004304A1 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EB42014909D004304A1 /* CornerView.swift */; };
+		88839EB7201493D2004304A1 /* CryptoDexDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EB6201493D2004304A1 /* CryptoDexDetailsViewController.swift */; };
 		FA26671C39EA3F9159D7B983 /* Pods_CryptoQuest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F722A759A14007FEA11BEF /* Pods_CryptoQuest.framework */; };
 /* End PBXBuildFile section */
 
@@ -84,6 +86,8 @@
 		88839EAD20146BB7004304A1 /* UserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserManager.swift; sourceTree = "<group>"; };
 		88839EAF20146E18004304A1 /* CryptoDexCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDexCollectionViewCell.swift; sourceTree = "<group>"; };
 		88839EB120147A56004304A1 /* CryptoDexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDexViewController.swift; sourceTree = "<group>"; };
+		88839EB42014909D004304A1 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
+		88839EB6201493D2004304A1 /* CryptoDexDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDexDetailsViewController.swift; sourceTree = "<group>"; };
 		B4ADFDC56604BBB1391DCBDF /* Pods-CryptoQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoQuest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -170,6 +174,7 @@
 		8826A9CD20139F5A000DC63D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				88839EB320149074004304A1 /* UIViews */,
 				88839EAA2014688B004304A1 /* UICollectionViewCells */,
 				88839EA72014667B004304A1 /* UICollectionViewFlowLayouts */,
 				88839EA420144ECA004304A1 /* UILabels */,
@@ -187,6 +192,7 @@
 				8826A9BD20139F41000DC63D /* ViewController.swift */,
 				8826A9D32013A9DC000DC63D /* MapViewController.swift */,
 				88839EB120147A56004304A1 /* CryptoDexViewController.swift */,
+				88839EB6201493D2004304A1 /* CryptoDexDetailsViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -295,6 +301,14 @@
 				88839EAF20146E18004304A1 /* CryptoDexCollectionViewCell.swift */,
 			);
 			path = UICollectionViewCells;
+			sourceTree = "<group>";
+		};
+		88839EB320149074004304A1 /* UIViews */ = {
+			isa = PBXGroup;
+			children = (
+				88839EB42014909D004304A1 /* CornerView.swift */,
+			);
+			path = UIViews;
 			sourceTree = "<group>";
 		};
 		D2EBAF953FC116665DB1A420 /* Frameworks */ = {
@@ -460,9 +474,11 @@
 				8826A9F12013F760000DC63D /* SpawnManager.swift in Sources */,
 				88839EA620144EE6004304A1 /* MorphingLabel.swift in Sources */,
 				8826A9BE20139F41000DC63D /* ViewController.swift in Sources */,
+				88839EB7201493D2004304A1 /* CryptoDexDetailsViewController.swift in Sources */,
 				8826A9F3201403B5000DC63D /* CryptoCreatureMarker.swift in Sources */,
 				88839EA9201466B2004304A1 /* CryptoDexVerticalFlowLayout.swift in Sources */,
 				4D74960B2013AB2200E104D5 /* BallNode.swift in Sources */,
+				88839EB52014909D004304A1 /* CornerView.swift in Sources */,
 				8826A9BA20139F41000DC63D /* AppDelegate.swift in Sources */,
 				8826A9D72013ADF6000DC63D /* LocationTracker.swift in Sources */,
 				8826A9E02013D03E000DC63D /* UserLocationMarker.swift in Sources */,
