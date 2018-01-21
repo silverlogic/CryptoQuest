@@ -27,6 +27,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     private var isSceneSetupFinished: Bool = false
     private weak var walletImageView: UIImageView!
     private weak var warningView: WarningView!
+    private var coinsAround: Int = 0
     
     
     // MARK: - Lifecycle
@@ -168,6 +169,7 @@ private extension ViewController {
     }
     
     func addFlyingCoin(with type: CryptoCreatureName = .bitcoin, xOffset: Float = 0.0, yOffset: Float = 0.0, zOffset: Float = -6.0, isMegaShit: Bool = false) {
+        coinsAround += 1
 //        guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
 //            return
 //        }
@@ -186,10 +188,12 @@ private extension ViewController {
         bubble.startFlyingRandomly()
         bubble.healthBar.look(at: sceneView.pointOfView!, offset: nil)
         bubble.action = { [weak self, weak bubble] _ in
+            self?.coinsAround -= 1
             // Coin in the wallet!
             bubble?.removeFromParentNode()
             self?.walletImageView.shake()
             self?.hideWalletView()
+            self?.warningView.layer.removeAllAnimations()
         }
     }
     
@@ -229,6 +233,7 @@ private extension ViewController {
     }
     
     func shitCoinsAttack() {
+        coinsAround += 5
         addFlyingCoin(with: .shitCoin, xOffset: -2.0, yOffset: 2.0, zOffset: -6.0)
         addFlyingCoin(with: .shitCoin, xOffset: -2.0, yOffset: -2.0, zOffset: -6.0)
         addFlyingCoin(with: .shitCoin, xOffset: 2.0, yOffset: 2.0, zOffset: -6.0)
