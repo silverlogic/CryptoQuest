@@ -104,6 +104,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BRYSerialAnimationQueue/BRYSerialAnimationQueue.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SSBouncyButton/SSBouncyButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UIColor-Hex/UIColor_Hex.framework"
@@ -112,6 +113,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${BUILT_PRODUCTS_DIR}/BRYSerialAnimationQueue/BRYSerialAnimationQueue.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/LTMorphingLabel/LTMorphingLabel.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/QRCodeReader.swift/QRCodeReader.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/SSBouncyButton/SSBouncyButton.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/UIColor-Hex/UIColor_Hex.framework"
