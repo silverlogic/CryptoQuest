@@ -295,3 +295,24 @@ extension Array {
         return index < count && index >= 0 ? self[index] : nil
     }
 }
+
+
+// MARK: - UIViewController
+extension UIViewController {
+    func showActivityIndicator() {
+        let activityIndicatorView = UIActivityIndicatorView(activityIndicatorStyle: .gray)
+        activityIndicatorView.color = .white
+        activityIndicatorView.tag = 99
+        activityIndicatorView.center = view.center
+        activityIndicatorView.alpha = 0
+        activityIndicatorView.startAnimating()
+        view.addSubview(activityIndicatorView)
+        activityIndicatorView.animateShow()
+    }
+    
+    func dismissActivityIndicator() {
+        guard let activityIndicatorView = view.subviews.first(where: { $0.tag == 99 }) else { return }
+        activityIndicatorView.animateHide()
+        activityIndicatorView.removeFromSuperview()
+    }
+}

@@ -7,143 +7,485 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		10A0EE629EEFDDA439DCA30E575588AA /* Pods-CryptoQuest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD0ADB5052A2F0ADECF2B5AF1C3F8E0 /* Pods-CryptoQuest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		341A14CB0766C887FF5897046BC19D73 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6550545353F2A073D24A521C5387C14 /* Starscream-dummy.m */; };
-		365D910173BB12F1CCBDF07771CB52F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		5D753E261C6408B0631DFA83FC8BE150 /* Pods-CryptoQuest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C3B0D772108BD98F6DB1E86268C0E5 /* Pods-CryptoQuest-dummy.m */; };
-		77C2A1604B294581CCE363E3A573DEE3 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2EB591F452905BACF1FE2A2EBB9B91 /* SSLSecurity.swift */; };
-		859A9C56C19E9B32CB66B87FB91E68AA /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE870D2FB4057D7CF39AF9432D7A9DA /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		941EFE07A18D7A762617989FB0DDF394 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6AF6C47C2426ACDE1514BD0B4F8B7 /* Compression.swift */; };
-		DF07DF5B590B914B7B24EDD683BA58CF /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5699D27CE4604D4E6CB493489053C8D5 /* WebSocket.swift */; };
-		E63852FA1AA284F2682CCCE8F9D2EE9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		068F9400228E8C572E7904C2DC228B7F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC722795ECD6E74F0C34EEF4090F7F29 /* UIKit.framework */; };
+		08C0327DC8C27F01418ED9F38A777A4E /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE210AA48D1FD6AB74785393072DBA91 /* WebSocket.swift */; };
+		15FFB9A0EA34A068BEDEE0033DA818DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59D532339CA0CD419DD646155523EE2 /* Foundation.framework */; };
+		1A5990D23E06508C434B8E0AF53B6EF0 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A22E6C19CD5DEC9C78ED004DC19E6A9B /* Starscream-dummy.m */; };
+		220A91F8CE8669B742B00CD3C81C3910 /* LTMorphingLabel+Anvil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA208D24ADA50563A5D5C198EB7C0E9 /* LTMorphingLabel+Anvil.swift */; };
+		2534806772D59757EC8F1CC16528B9D1 /* LTStringDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE194616D4B3FD747DCD53B4B17B258 /* LTStringDiffResult.swift */; };
+		25C3F265D7F50A75BAFB1F34198AFA64 /* Pods-CryptoQuest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD0ADB5052A2F0ADECF2B5AF1C3F8E0 /* Pods-CryptoQuest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		27327805F7C2030359F982727A8D8C0A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2421D2DC954699EC37231A848187ACD /* QuartzCore.framework */; };
+		28E88754BA864255823EC6A946A26EFD /* Pods-CryptoQuest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C3B0D772108BD98F6DB1E86268C0E5 /* Pods-CryptoQuest-dummy.m */; };
+		2A136BA1F3842D39715E6408A7E65BEE /* BRYSerialAnimationQueue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BB26B62E0E1D2E7BE16438D64569941 /* BRYSerialAnimationQueue.framework */; };
+		3663AD5A53A399294F616BBB090BC98C /* LTMorphingLabel.h in Headers */ = {isa = PBXBuildFile; fileRef = FFBCB918885BED1053CAB70482B88EC2 /* LTMorphingLabel.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3915206FF4D2AC23E461D4E7F9DFEB04 /* SSBouncyButton-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 221365E29812A983369D95BB8EF24354 /* SSBouncyButton-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D3BC671BC2D5D5A64F5767B55F7D28C /* SSBouncyButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 14E288046387032ABE349C244AA66C78 /* SSBouncyButton.m */; };
+		3F8B0A80A2276127C916C8EF2CB92C07 /* LTMorphingLabel+Evaporate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C89C1D2126959C8B21E91519A215553 /* LTMorphingLabel+Evaporate.swift */; };
+		435090E3FE50A2A659F6F29E79B57B16 /* LTMorphingEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC465F0645B4783222315BB92661A97 /* LTMorphingEffect.swift */; };
+		4551B6357C64E8B811FB9075232D7CA0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59D532339CA0CD419DD646155523EE2 /* Foundation.framework */; };
+		4D457C42840531BE202D342132BDE5AB /* UIColor+Hex.h in Headers */ = {isa = PBXBuildFile; fileRef = 6ADE745A3892E59163C6BFD1A494DEDE /* UIColor+Hex.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		503F70FCC6E8D6394B5243A4FA2BB520 /* LTMorphingLabel-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CA4CBEE9E4664EBCFC69C6FA8F01810B /* LTMorphingLabel-dummy.m */; };
+		54EBC9BA708FBE6E03D6878B162CC121 /* UIImage+BetterAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 639CA9899F49659A6C1730DF64D27A5E /* UIImage+BetterAdditions.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		556D33B99B64976B2F45B25C99B5923E /* LTMorphingLabel+Burn.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE78BF3112AF4C747D5F29C0CF0E24AD /* LTMorphingLabel+Burn.swift */; };
+		57671B3D935B395C10CC34505E718219 /* UIColor-Hex-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 65BACD20EF838B0ACF0274459C585AB8 /* UIColor-Hex-dummy.m */; };
+		57E79535A20AFCE40755EC5377892E39 /* UIImage_BetterAdditions.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EF72512CAF489C6515E17EAC85ADCB9 /* UIImage_BetterAdditions.framework */; };
+		57EFA215581F5898393A34E0FFE47707 /* UIImage+BetterAdditions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B249367F082B065C3B882AFE99D5F914 /* UIImage+BetterAdditions-dummy.m */; };
+		582750E7830B8AB9CE781B5E29894B5D /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2421D2DC954699EC37231A848187ACD /* QuartzCore.framework */; };
+		5A0F18538C3064600098A17B11F383CF /* Sparkle.png in Resources */ = {isa = PBXBuildFile; fileRef = 48376539E4DD83E5C5DFCD4B2F6E71CA /* Sparkle.png */; };
+		615C49C562AA0DB2D7E00E2858A44386 /* SSBouncyButton.h in Headers */ = {isa = PBXBuildFile; fileRef = CC1C1AF92367D23789FEC875CE1BBE6D /* SSBouncyButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6C2F96F1D97CEE4C463FF67DE81791A2 /* LTMorphingLabel+Sparkle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 733DDD2CA9ED4523F44AA5409D82BD58 /* LTMorphingLabel+Sparkle.swift */; };
+		6C4F33723E922B3668D02B9DB0DDA879 /* LTEmitterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FA1723C7832CC3D1B80906B6BADBFA8 /* LTEmitterView.swift */; };
+		705E2BBCB1523265AD59C7EE8837C818 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = B68455562B854DD2AB4546C91E99BD14 /* Compression.swift */; };
+		713768DA2CB74E729CF215D49E6B6005 /* LTCharacterLimbo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7CC36658A2B1F5B6BA87870F172AB92 /* LTCharacterLimbo.swift */; };
+		7366FCE474FD9C23B4C81A54DD560A0F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC722795ECD6E74F0C34EEF4090F7F29 /* UIKit.framework */; };
+		771F32BA5A5D25DECFE6C1E8F8630F41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59D532339CA0CD419DD646155523EE2 /* Foundation.framework */; };
+		79FDCD519D1793A35F426AF61DCA07DD /* UIColor_Hex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74FF64A45BF68311248DFA0F8E2EA33F /* UIColor_Hex.framework */; };
+		7B2F6DED93FECE00717FCF5AAD0A74FF /* Fragment.png in Resources */ = {isa = PBXBuildFile; fileRef = 09EC8474ED849E5684F1C5741D785035 /* Fragment.png */; };
+		7D15D8DD9BC19EAF886F9E3BF14279DD /* LTCharacterDiffResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 339CC4F0AF8F873CE0764A0AB86291BF /* LTCharacterDiffResult.swift */; };
+		81DF54F7E9A97274D1D35A7BDE512F9E /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC722795ECD6E74F0C34EEF4090F7F29 /* UIKit.framework */; };
+		861281D2AED3C4F7A05C98BD2E496575 /* LTEasing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BA59A53FC305EF0E484172998B43BF7 /* LTEasing.swift */; };
+		9C1F2A5C483E99BD4D1C7E2ABF21B5FC /* LTMorphingLabel+Fall.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1670C61FFE111CAC402A0100BA2124A7 /* LTMorphingLabel+Fall.swift */; };
+		A2EFE55E2C0A1C10C7A5367B47C7D562 /* LTMorphingLabel+Pixelate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05899BF7F3F9EE48002FBA2EC750214 /* LTMorphingLabel+Pixelate.swift */; };
+		A35FFF8775E5736CB18803C37BC57BCB /* BRYSerialAnimationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 0290517D41E31A233FF7CF10FD8669C6 /* BRYSerialAnimationQueue.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A66119EA2280142A3860ACB1D16CD3B1 /* UIImage+BetterAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 067F25486F1E39B2FBB8B4392EFD423F /* UIImage+BetterAdditions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B03B5CC4D259EEC129F8DCF35675ECDD /* LTMorphingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A511BB705E11F281B635A88570C7CB91 /* LTMorphingLabel.swift */; };
+		B74ABCCB2254EDC1638369A95A5D8E8B /* BRYSerialAnimationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 84E9F0A9426306AAD082EC8154D7664E /* BRYSerialAnimationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BB2873D1E6440D5510A3E40A1F0D38A3 /* LTMorphingLabel-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EEA6D4B51E4486278947CF245FF4E4F3 /* LTMorphingLabel-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0BBCA768762712D359028D31142618B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59D532339CA0CD419DD646155523EE2 /* Foundation.framework */; };
+		C1FFE2AF4C6580B45148E762EA625CBF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59D532339CA0CD419DD646155523EE2 /* Foundation.framework */; };
+		C70D3E8D1A38667000CFCF0A6AFD7270 /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EAB7EE69A313BCEB618BC6C537C6DB08 /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CC3F534D324DADD3A7F5E3BF2F0DCC0A /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0745D50099D475B6B1B6EF5711CE7A74 /* SSLSecurity.swift */; };
+		CE6D21CE686A96DD13E06FA6F02A7079 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59D532339CA0CD419DD646155523EE2 /* Foundation.framework */; };
+		D7922CB30E0953C6606D95BC050DB664 /* SSBouncyButton-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4CD844E636D1A7F995C5405E607A2CEC /* SSBouncyButton-dummy.m */; };
+		D92E3137067D035EB4B103DD8938EBD0 /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 001A5E56C2071A5C50380311F60D2795 /* UIColor+Hex.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		DB192F03DD7F0B02702A556D083F6A83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC722795ECD6E74F0C34EEF4090F7F29 /* UIKit.framework */; };
+		E250AA9522C3A393033ECF5CB29E1449 /* Fire.png in Resources */ = {isa = PBXBuildFile; fileRef = 6F2F4653C4C8664673A19FD6E0DD16F9 /* Fire.png */; };
+		E32C37404BB55BB9D390C64F72D49C9A /* UIImage+BetterAdditions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 673F3BC13C31EFAA88FDE6F92551F391 /* UIImage+BetterAdditions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E39B8D7A4AF9FE6145DDA7701E3FD2FA /* BRYSerialAnimationQueue-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B6440608CCB3140942806C672DF6E9E /* BRYSerialAnimationQueue-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E96D6E5CCA1D9320BF331411A6B4B7B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B59D532339CA0CD419DD646155523EE2 /* Foundation.framework */; };
+		F88BD96E6B23ADD4C3E88401ABA3A9F6 /* UIColor-Hex-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DDF98410D2D26EF98049B179B6D2A9A1 /* UIColor-Hex-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F8D433CA471973BC21DA610BC14BCEEB /* BRYSerialAnimationQueue-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BED3D0C8F614225B52E0386A57AAC31E /* BRYSerialAnimationQueue-dummy.m */; };
+		FBAEB0A61D7D3D4DD723D11671A814BB /* Smoke.png in Resources */ = {isa = PBXBuildFile; fileRef = D3F8DACEDA2E1F0D586148E22F4E3D07 /* Smoke.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		47B8560ED83C2F72DB9565805254124B /* PBXContainerItemProxy */ = {
+		03E5CDFD16F0434E5260AB5D0E26E1B5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 8165F54462EF12B91E824BE8EBCA273A;
+			remoteGlobalIDString = 005028F4A259C5603C6AFA698F9225D6;
+			remoteInfo = BRYSerialAnimationQueue;
+		};
+		2872F78D0388FCF4C38B07BE7A7B23CF /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9D9CFA67DD67292CE4AD81C4661905;
+			remoteInfo = "UIImage+BetterAdditions";
+		};
+		5A43515C0FF78D2CAD706D9638FF049F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4C69BF3EF4CE81852226B9442B0C2DF4;
+			remoteInfo = LTMorphingLabel;
+		};
+		7814C0277E774476B363109E134B148D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 741D2A75E444C6AC1EA51543D3870999;
+			remoteInfo = SSBouncyButton;
+		};
+		828F624F8B4D10FE7C3B29BA100280B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DE9D9CFA67DD67292CE4AD81C4661905;
+			remoteInfo = "UIImage+BetterAdditions";
+		};
+		8EEBF5D83E3730C6FF932B741555F498 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CF2B7E9B6EFD4A2686A86A9A558B681;
+			remoteInfo = "UIColor-Hex";
+		};
+		915938C410299786308C1097E19CE4EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 005028F4A259C5603C6AFA698F9225D6;
+			remoteInfo = BRYSerialAnimationQueue;
+		};
+		9B9168AEFAB4D4F442A0E46387FCCB88 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 09A702FA76AE668086E06EE3E41BBB32;
 			remoteInfo = Starscream;
+		};
+		A99946B1E2610E23E26613D9F6C64606 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6CF2B7E9B6EFD4A2686A86A9A558B681;
+			remoteInfo = "UIColor-Hex";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		001A5E56C2071A5C50380311F60D2795 /* UIColor+Hex.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIColor+Hex.m"; path = "Classes/UIColor+Hex.m"; sourceTree = "<group>"; };
+		0290517D41E31A233FF7CF10FD8669C6 /* BRYSerialAnimationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BRYSerialAnimationQueue.m; path = Classes/BRYSerialAnimationQueue.m; sourceTree = "<group>"; };
+		067F25486F1E39B2FBB8B4392EFD423F /* UIImage+BetterAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+BetterAdditions.h"; sourceTree = "<group>"; };
+		0745D50099D475B6B1B6EF5711CE7A74 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Sources/SSLSecurity.swift; sourceTree = "<group>"; };
+		09EC8474ED849E5684F1C5741D785035 /* Fragment.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Fragment.png; path = LTMorphingLabel/Particles/Fragment.png; sourceTree = "<group>"; };
+		0B6440608CCB3140942806C672DF6E9E /* BRYSerialAnimationQueue-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BRYSerialAnimationQueue-umbrella.h"; sourceTree = "<group>"; };
+		0FA208D24ADA50563A5D5C198EB7C0E9 /* LTMorphingLabel+Anvil.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Anvil.swift"; path = "LTMorphingLabel/LTMorphingLabel+Anvil.swift"; sourceTree = "<group>"; };
+		10CF3CDE1B40A4D98863F1352A745DBE /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		126AA36E31EBCB086818DD21E5CF8AA3 /* Pods-CryptoQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptoQuest.release.xcconfig"; sourceTree = "<group>"; };
-		2305DB2B4943059302B9BA38E1DAC68C /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
-		2BC4C2981929FF48F08926410404305E /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		14E288046387032ABE349C244AA66C78 /* SSBouncyButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SSBouncyButton.m; path = SSBouncyButton/SSBouncyButton.m; sourceTree = "<group>"; };
+		1670C61FFE111CAC402A0100BA2124A7 /* LTMorphingLabel+Fall.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Fall.swift"; path = "LTMorphingLabel/LTMorphingLabel+Fall.swift"; sourceTree = "<group>"; };
+		221365E29812A983369D95BB8EF24354 /* SSBouncyButton-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSBouncyButton-umbrella.h"; sourceTree = "<group>"; };
+		25B61E721C00D7D7237B02D003535798 /* LTMorphingLabel-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTMorphingLabel-prefix.pch"; sourceTree = "<group>"; };
+		27753D23DAD243BFD562103D72EAAA83 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2DD0ADB5052A2F0ADECF2B5AF1C3F8E0 /* Pods-CryptoQuest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CryptoQuest-umbrella.h"; sourceTree = "<group>"; };
-		2F2EB591F452905BACF1FE2A2EBB9B91 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Sources/SSLSecurity.swift; sourceTree = "<group>"; };
+		2EC01D47C332E6308D667D08A8A1DCEC /* SSBouncyButton.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SSBouncyButton.framework; path = SSBouncyButton.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		339CC4F0AF8F873CE0764A0AB86291BF /* LTCharacterDiffResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTCharacterDiffResult.swift; path = LTMorphingLabel/LTCharacterDiffResult.swift; sourceTree = "<group>"; };
 		356295DAC7B1E675E43C422FF5F739E7 /* Pods-CryptoQuest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptoQuest.debug.xcconfig"; sourceTree = "<group>"; };
-		3D49468385B468FA73C4D3D645A4113A /* Starscream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.xcconfig; sourceTree = "<group>"; };
+		366EC5A3BD90B1C6FCDA528F998D5BBC /* UIImage+BetterAdditions.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIImage+BetterAdditions.xcconfig"; sourceTree = "<group>"; };
+		370550E32D5061BE0A394E29D4CDA8AF /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Starscream.modulemap; sourceTree = "<group>"; };
+		3E0FCFB78A6ADFF61E22FD95B451C97F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3FA1723C7832CC3D1B80906B6BADBFA8 /* LTEmitterView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEmitterView.swift; path = LTMorphingLabel/LTEmitterView.swift; sourceTree = "<group>"; };
+		43369A7DE9D904289CE67E15068DEA47 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		4349E7B1CEAACF2D3534FE9378D84FC7 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		44A60E1D75E4B1148692EFCF0B7D11B0 /* Pods-CryptoQuest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptoQuest-resources.sh"; sourceTree = "<group>"; };
-		513ABAD1544FD9433A71EDA8E29FF3F0 /* Pods_CryptoQuest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CryptoQuest.framework; path = "Pods-CryptoQuest.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		5699D27CE4604D4E6CB493489053C8D5 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/WebSocket.swift; sourceTree = "<group>"; };
+		48376539E4DD83E5C5DFCD4B2F6E71CA /* Sparkle.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Sparkle.png; path = LTMorphingLabel/Particles/Sparkle.png; sourceTree = "<group>"; };
+		4CD844E636D1A7F995C5405E607A2CEC /* SSBouncyButton-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SSBouncyButton-dummy.m"; sourceTree = "<group>"; };
+		4DC465F0645B4783222315BB92661A97 /* LTMorphingEffect.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingEffect.swift; path = LTMorphingLabel/LTMorphingEffect.swift; sourceTree = "<group>"; };
+		525396ACDE9B803BCF6608DBA307F1F6 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		587A129BBE0EE7101E101F38CCD16821 /* UIColor-Hex-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor-Hex-prefix.pch"; sourceTree = "<group>"; };
 		5B34DA58D69CB78E0B2B914BC0A96C4B /* Pods-CryptoQuest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CryptoQuest-acknowledgements.markdown"; sourceTree = "<group>"; };
-		656C460E5868417F35B7B414602E40C3 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		5BB26B62E0E1D2E7BE16438D64569941 /* BRYSerialAnimationQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BRYSerialAnimationQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C89C1D2126959C8B21E91519A215553 /* LTMorphingLabel+Evaporate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Evaporate.swift"; path = "LTMorphingLabel/LTMorphingLabel+Evaporate.swift"; sourceTree = "<group>"; };
+		5EB93CEA4A156C089BE56FA8F3EF4CCB /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		639CA9899F49659A6C1730DF64D27A5E /* UIImage+BetterAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BetterAdditions.m"; sourceTree = "<group>"; };
+		64D5C214818D2B1259796CFCDB920092 /* UIImage_BetterAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIImage_BetterAdditions.framework; path = "UIImage+BetterAdditions.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		65BACD20EF838B0ACF0274459C585AB8 /* UIColor-Hex-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIColor-Hex-dummy.m"; sourceTree = "<group>"; };
+		673F3BC13C31EFAA88FDE6F92551F391 /* UIImage+BetterAdditions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+BetterAdditions-umbrella.h"; sourceTree = "<group>"; };
+		67D08375A806E4DA29190538CDE5DD42 /* UIColor_Hex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = UIColor_Hex.framework; path = "UIColor-Hex.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6ADE745A3892E59163C6BFD1A494DEDE /* UIColor+Hex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIColor+Hex.h"; path = "Classes/UIColor+Hex.h"; sourceTree = "<group>"; };
+		6F2F4653C4C8664673A19FD6E0DD16F9 /* Fire.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Fire.png; path = LTMorphingLabel/Particles/Fire.png; sourceTree = "<group>"; };
+		733DDD2CA9ED4523F44AA5409D82BD58 /* LTMorphingLabel+Sparkle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Sparkle.swift"; path = "LTMorphingLabel/LTMorphingLabel+Sparkle.swift"; sourceTree = "<group>"; };
+		74FF64A45BF68311248DFA0F8E2EA33F /* UIColor_Hex.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIColor_Hex.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7912E59F0305783A4CDD77F0509CB5D2 /* Pods_CryptoQuest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CryptoQuest.framework; path = "Pods-CryptoQuest.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B01E437E4E1B23A825012DBB1501AF1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EF72512CAF489C6515E17EAC85ADCB9 /* UIImage_BetterAdditions.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = UIImage_BetterAdditions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F6B61E2D0450D2F3611EAF878EE6EAE /* Pods-CryptoQuest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptoQuest-frameworks.sh"; sourceTree = "<group>"; };
+		80EA31C2E0555D9524ED63CBEE4F5DE5 /* UIImage+BetterAdditions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIImage+BetterAdditions-prefix.pch"; sourceTree = "<group>"; };
+		817D296811E37E11789B1A885938E4AF /* LTMorphingLabel.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = LTMorphingLabel.modulemap; sourceTree = "<group>"; };
+		84E9F0A9426306AAD082EC8154D7664E /* BRYSerialAnimationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BRYSerialAnimationQueue.h; path = Classes/BRYSerialAnimationQueue.h; sourceTree = "<group>"; };
+		9092CFB9128B66B49A269B028D301AEB /* LTMorphingLabel.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LTMorphingLabel.framework; path = LTMorphingLabel.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9C6D8F6CD96EF955A656D7D94EABD1E6 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9CE870D2FB4057D7CF39AF9432D7A9DA /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
+		94E00975B8FF01801DC30E24BDADE784 /* LTMorphingLabel.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LTMorphingLabel.xcconfig; sourceTree = "<group>"; };
+		98135776D66042FC1C7DDE44A943553F /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B8DC466EA19AB3C028B6C969FA6B31A /* BRYSerialAnimationQueue.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = BRYSerialAnimationQueue.modulemap; sourceTree = "<group>"; };
+		9BA59A53FC305EF0E484172998B43BF7 /* LTEasing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTEasing.swift; path = LTMorphingLabel/LTEasing.swift; sourceTree = "<group>"; };
+		A22E6C19CD5DEC9C78ED004DC19E6A9B /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
+		A33785629110BFAF78478C5F41139283 /* UIImage+BetterAdditions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "UIImage+BetterAdditions.modulemap"; sourceTree = "<group>"; };
+		A511BB705E11F281B635A88570C7CB91 /* LTMorphingLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTMorphingLabel.swift; path = LTMorphingLabel/LTMorphingLabel.swift; sourceTree = "<group>"; };
+		A5C2669B80DC590028354A83264D403F /* UIColor-Hex.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "UIColor-Hex.xcconfig"; sourceTree = "<group>"; };
 		ABC23F61BF4E1B0932A371A0135385E3 /* Pods-CryptoQuest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CryptoQuest.modulemap"; sourceTree = "<group>"; };
-		AD6DF984D84E1E4E9874A05CFF1FBE88 /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
-		B6550545353F2A073D24A521C5387C14 /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
-		B73F9965E67F2532AE30FAFAE9922F04 /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Starscream.modulemap; sourceTree = "<group>"; };
-		C75E9E3807937679FFD4885E8EA0D1A1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
-		CBC5C716D1A38AE28B2706460FE7DB74 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E8C6AF6C47C2426ACDE1514BD0B4F8B7 /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Compression.swift; sourceTree = "<group>"; };
+		B05899BF7F3F9EE48002FBA2EC750214 /* LTMorphingLabel+Pixelate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Pixelate.swift"; path = "LTMorphingLabel/LTMorphingLabel+Pixelate.swift"; sourceTree = "<group>"; };
+		B102B03FAB62AC11D7BAF5CA01A58B67 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		B249367F082B065C3B882AFE99D5F914 /* UIImage+BetterAdditions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "UIImage+BetterAdditions-dummy.m"; sourceTree = "<group>"; };
+		B29BEF8AD18AFDBF402246C2392C2265 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B59D532339CA0CD419DD646155523EE2 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		B68455562B854DD2AB4546C91E99BD14 /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Compression.swift; sourceTree = "<group>"; };
+		B912FE550A6CF0C79CEF85A995C63AD9 /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
+		BE8045269250C327AABE73269F6FF6A5 /* SSBouncyButton.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = SSBouncyButton.modulemap; sourceTree = "<group>"; };
+		BED3D0C8F614225B52E0386A57AAC31E /* BRYSerialAnimationQueue-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BRYSerialAnimationQueue-dummy.m"; sourceTree = "<group>"; };
+		C2421D2DC954699EC37231A848187ACD /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		CA4CBEE9E4664EBCFC69C6FA8F01810B /* LTMorphingLabel-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LTMorphingLabel-dummy.m"; sourceTree = "<group>"; };
+		CC1C1AF92367D23789FEC875CE1BBE6D /* SSBouncyButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = SSBouncyButton.h; path = SSBouncyButton/SSBouncyButton.h; sourceTree = "<group>"; };
+		CCE194616D4B3FD747DCD53B4B17B258 /* LTStringDiffResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTStringDiffResult.swift; path = LTMorphingLabel/LTStringDiffResult.swift; sourceTree = "<group>"; };
+		CE78BF3112AF4C747D5F29C0CF0E24AD /* LTMorphingLabel+Burn.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "LTMorphingLabel+Burn.swift"; path = "LTMorphingLabel/LTMorphingLabel+Burn.swift"; sourceTree = "<group>"; };
+		D3F8DACEDA2E1F0D586148E22F4E3D07 /* Smoke.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = Smoke.png; path = LTMorphingLabel/Particles/Smoke.png; sourceTree = "<group>"; };
+		D7CC36658A2B1F5B6BA87870F172AB92 /* LTCharacterLimbo.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LTCharacterLimbo.swift; path = LTMorphingLabel/LTCharacterLimbo.swift; sourceTree = "<group>"; };
+		DC722795ECD6E74F0C34EEF4090F7F29 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		DDCB78F109720BE574F94A655D85A3FD /* UIColor-Hex.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "UIColor-Hex.modulemap"; sourceTree = "<group>"; };
+		DDF98410D2D26EF98049B179B6D2A9A1 /* UIColor-Hex-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "UIColor-Hex-umbrella.h"; sourceTree = "<group>"; };
+		E0E507DB4744960466185F0F5A0369B8 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3A20B552C6A44F131CDB9DF3714806D /* BRYSerialAnimationQueue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = BRYSerialAnimationQueue.framework; path = BRYSerialAnimationQueue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAB7EE69A313BCEB618BC6C537C6DB08 /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
+		ECD73415C4D1CB3765835ACBC06C3E9D /* SSBouncyButton.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SSBouncyButton.xcconfig; sourceTree = "<group>"; };
+		ED9890CA5548790EB094ED78B0490FEC /* SSBouncyButton-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SSBouncyButton-prefix.pch"; sourceTree = "<group>"; };
+		EE210AA48D1FD6AB74785393072DBA91 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/WebSocket.swift; sourceTree = "<group>"; };
+		EEA6D4B51E4486278947CF245FF4E4F3 /* LTMorphingLabel-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LTMorphingLabel-umbrella.h"; sourceTree = "<group>"; };
+		F1F061B637224B4D59E900546A77EF23 /* BRYSerialAnimationQueue.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BRYSerialAnimationQueue.xcconfig; sourceTree = "<group>"; };
 		F284D18E9C922299C442C62358BEC5AF /* Pods-CryptoQuest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptoQuest-acknowledgements.plist"; sourceTree = "<group>"; };
 		F4C3B0D772108BD98F6DB1E86268C0E5 /* Pods-CryptoQuest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptoQuest-dummy.m"; sourceTree = "<group>"; };
+		F68E04EB811243BDF93B410CFACA1CE2 /* BRYSerialAnimationQueue-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BRYSerialAnimationQueue-prefix.pch"; sourceTree = "<group>"; };
+		FA5A871879BC51D1E526F5A04612915D /* Starscream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.xcconfig; sourceTree = "<group>"; };
+		FFBCB918885BED1053CAB70482B88EC2 /* LTMorphingLabel.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LTMorphingLabel.h; path = LTMorphingLabel/LTMorphingLabel.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		E7FD920004D4B3423B4CA3611C7ECF9D /* Frameworks */ = {
+		1F62AFC08895AB254D46B4ECC6931D36 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				365D910173BB12F1CCBDF07771CB52F9 /* Foundation.framework in Frameworks */,
+				15FFB9A0EA34A068BEDEE0033DA818DA /* Foundation.framework in Frameworks */,
+				582750E7830B8AB9CE781B5E29894B5D /* QuartzCore.framework in Frameworks */,
+				7366FCE474FD9C23B4C81A54DD560A0F /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FAA630F45B64F291F1792CB11971C87E /* Frameworks */ = {
+		256CDA3F851372E98E0D7A9B8BB4DF03 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E63852FA1AA284F2682CCCE8F9D2EE9E /* Foundation.framework in Frameworks */,
+				C0BBCA768762712D359028D31142618B /* Foundation.framework in Frameworks */,
+				068F9400228E8C572E7904C2DC228B7F /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E3B9FA363DEDB9660016E2A6A7BA112 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE6D21CE686A96DD13E06FA6F02A7079 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		481CE2254BCDD6CEAC8F50E403D43721 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4551B6357C64E8B811FB9075232D7CA0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		72E9F9E65877C80A8CEDBC752273C1A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A136BA1F3842D39715E6408A7E65BEE /* BRYSerialAnimationQueue.framework in Frameworks */,
+				E96D6E5CCA1D9320BF331411A6B4B7B9 /* Foundation.framework in Frameworks */,
+				27327805F7C2030359F982727A8D8C0A /* QuartzCore.framework in Frameworks */,
+				79FDCD519D1793A35F426AF61DCA07DD /* UIColor_Hex.framework in Frameworks */,
+				57E79535A20AFCE40755EC5377892E39 /* UIImage_BetterAdditions.framework in Frameworks */,
+				DB192F03DD7F0B02702A556D083F6A83 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A0F166EF706818789F07BF9AF89894A4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				771F32BA5A5D25DECFE6C1E8F8630F41 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E060666A5C82689E3E369463CE709ED7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1FFE2AF4C6580B45148E762EA625CBF /* Foundation.framework in Frameworks */,
+				81DF54F7E9A97274D1D35A7BDE512F9E /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		11FA1666A7A02D571434B59666B03AA8 /* Pods */ = {
+		0A6618F6D322D4701BF500FC33595C8E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				FEBB450B59A7E9888F52D582D6C5C772 /* GoogleMaps */,
-				C293EE2772CCCDC03D04C228DF51313F /* Starscream */,
+				5BB26B62E0E1D2E7BE16438D64569941 /* BRYSerialAnimationQueue.framework */,
+				74FF64A45BF68311248DFA0F8E2EA33F /* UIColor_Hex.framework */,
+				7EF72512CAF489C6515E17EAC85ADCB9 /* UIImage_BetterAdditions.framework */,
+				FA43E35C2C3EB507634FE7069073CD16 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		143313A45CC98C945014E84F6CCCD5B6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B102B03FAB62AC11D7BAF5CA01A58B67 /* GoogleMaps.framework */,
+				4349E7B1CEAACF2D3534FE9378D84FC7 /* GoogleMapsCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1593C85D9F4AE8E0314DB58547887536 /* Starscream */ = {
+			isa = PBXGroup;
+			children = (
+				B68455562B854DD2AB4546C91E99BD14 /* Compression.swift */,
+				0745D50099D475B6B1B6EF5711CE7A74 /* SSLSecurity.swift */,
+				EE210AA48D1FD6AB74785393072DBA91 /* WebSocket.swift */,
+				F8BF0E45AA24BDC545D531C8E80E0F35 /* Support Files */,
+			);
+			name = Starscream;
+			path = Starscream;
+			sourceTree = "<group>";
+		};
+		22CFE1952A29F7D7E731AA18340C7193 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B29BEF8AD18AFDBF402246C2392C2265 /* Info.plist */,
+				BE8045269250C327AABE73269F6FF6A5 /* SSBouncyButton.modulemap */,
+				ECD73415C4D1CB3765835ACBC06C3E9D /* SSBouncyButton.xcconfig */,
+				4CD844E636D1A7F995C5405E607A2CEC /* SSBouncyButton-dummy.m */,
+				ED9890CA5548790EB094ED78B0490FEC /* SSBouncyButton-prefix.pch */,
+				221365E29812A983369D95BB8EF24354 /* SSBouncyButton-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SSBouncyButton";
+			sourceTree = "<group>";
+		};
+		29607C9216559B825FB42A00F76F21D9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				27753D23DAD243BFD562103D72EAAA83 /* Info.plist */,
+				DDCB78F109720BE574F94A655D85A3FD /* UIColor-Hex.modulemap */,
+				A5C2669B80DC590028354A83264D403F /* UIColor-Hex.xcconfig */,
+				65BACD20EF838B0ACF0274459C585AB8 /* UIColor-Hex-dummy.m */,
+				587A129BBE0EE7101E101F38CCD16821 /* UIColor-Hex-prefix.pch */,
+				DDF98410D2D26EF98049B179B6D2A9A1 /* UIColor-Hex-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/UIColor-Hex";
+			sourceTree = "<group>";
+		};
+		3ABE9FD4D04107E08B21EB975ECBCA14 /* LTMorphingLabel */ = {
+			isa = PBXGroup;
+			children = (
+				339CC4F0AF8F873CE0764A0AB86291BF /* LTCharacterDiffResult.swift */,
+				D7CC36658A2B1F5B6BA87870F172AB92 /* LTCharacterLimbo.swift */,
+				9BA59A53FC305EF0E484172998B43BF7 /* LTEasing.swift */,
+				3FA1723C7832CC3D1B80906B6BADBFA8 /* LTEmitterView.swift */,
+				4DC465F0645B4783222315BB92661A97 /* LTMorphingEffect.swift */,
+				FFBCB918885BED1053CAB70482B88EC2 /* LTMorphingLabel.h */,
+				A511BB705E11F281B635A88570C7CB91 /* LTMorphingLabel.swift */,
+				0FA208D24ADA50563A5D5C198EB7C0E9 /* LTMorphingLabel+Anvil.swift */,
+				CE78BF3112AF4C747D5F29C0CF0E24AD /* LTMorphingLabel+Burn.swift */,
+				5C89C1D2126959C8B21E91519A215553 /* LTMorphingLabel+Evaporate.swift */,
+				1670C61FFE111CAC402A0100BA2124A7 /* LTMorphingLabel+Fall.swift */,
+				B05899BF7F3F9EE48002FBA2EC750214 /* LTMorphingLabel+Pixelate.swift */,
+				733DDD2CA9ED4523F44AA5409D82BD58 /* LTMorphingLabel+Sparkle.swift */,
+				CCE194616D4B3FD747DCD53B4B17B258 /* LTStringDiffResult.swift */,
+				4BFA9AF071245A7222F6D45427D03DB2 /* Resources */,
+				4D6B842945D8119951CE210218AB304F /* Support Files */,
+			);
+			name = LTMorphingLabel;
+			path = LTMorphingLabel;
+			sourceTree = "<group>";
+		};
+		4BFA9AF071245A7222F6D45427D03DB2 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6F2F4653C4C8664673A19FD6E0DD16F9 /* Fire.png */,
+				09EC8474ED849E5684F1C5741D785035 /* Fragment.png */,
+				D3F8DACEDA2E1F0D586148E22F4E3D07 /* Smoke.png */,
+				48376539E4DD83E5C5DFCD4B2F6E71CA /* Sparkle.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		4D6B842945D8119951CE210218AB304F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				98135776D66042FC1C7DDE44A943553F /* Info.plist */,
+				817D296811E37E11789B1A885938E4AF /* LTMorphingLabel.modulemap */,
+				94E00975B8FF01801DC30E24BDADE784 /* LTMorphingLabel.xcconfig */,
+				CA4CBEE9E4664EBCFC69C6FA8F01810B /* LTMorphingLabel-dummy.m */,
+				25B61E721C00D7D7237B02D003535798 /* LTMorphingLabel-prefix.pch */,
+				EEA6D4B51E4486278947CF245FF4E4F3 /* LTMorphingLabel-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LTMorphingLabel";
+			sourceTree = "<group>";
+		};
+		542A7B0FDFEE7ED669914E2E6457F2B8 /* UIImage+BetterAdditions */ = {
+			isa = PBXGroup;
+			children = (
+				067F25486F1E39B2FBB8B4392EFD423F /* UIImage+BetterAdditions.h */,
+				639CA9899F49659A6C1730DF64D27A5E /* UIImage+BetterAdditions.m */,
+				E15CEA8EF5BE92B89966C786D879C8FB /* Support Files */,
+			);
+			name = "UIImage+BetterAdditions";
+			path = "UIImage+BetterAdditions";
+			sourceTree = "<group>";
+		};
+		6BB07356D687C06FBF452AC7BDF847EC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86D6BE83C344C62263AC8C5B6EABB391 /* BRYSerialAnimationQueue */,
+				79524BFBC4ED93F5702F88CF92C55CD5 /* GoogleMaps */,
+				3ABE9FD4D04107E08B21EB975ECBCA14 /* LTMorphingLabel */,
+				ABDD5D1D53F6D1FB6B43B111BDCA92E1 /* SSBouncyButton */,
+				1593C85D9F4AE8E0314DB58547887536 /* Starscream */,
+				AE40485E39FF9E904957B79A840D187C /* UIColor-Hex */,
+				542A7B0FDFEE7ED669914E2E6457F2B8 /* UIImage+BetterAdditions */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		243C84E4BF0A3FEEB752C97B69E6F228 /* Products */ = {
+		79524BFBC4ED93F5702F88CF92C55CD5 /* GoogleMaps */ = {
 			isa = PBXGroup;
 			children = (
-				513ABAD1544FD9433A71EDA8E29FF3F0 /* Pods_CryptoQuest.framework */,
-				9C6D8F6CD96EF955A656D7D94EABD1E6 /* Starscream.framework */,
+				F2D366BE11CEFED14F40D5E76B9BD78B /* Base */,
+				9190D1CCA1BD59E9087DC15FD99CC6A8 /* Maps */,
 			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		3EF53EBF8696C0C84651F99488983F99 /* Maps */ = {
-			isa = PBXGroup;
-			children = (
-				DFAEC1AE46BDF59BF93C232117A99A1E /* Frameworks */,
-				75442670DFF1C73F22848415B45F0B87 /* Resources */,
-			);
-			name = Maps;
-			sourceTree = "<group>";
-		};
-		705E84DB6BE840B15D4AF76FCE52D552 /* Base */ = {
-			isa = PBXGroup;
-			children = (
-				BF65B84397F20C0E4ABE78DF15A4DA9F /* Frameworks */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		75442670DFF1C73F22848415B45F0B87 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				656C460E5868417F35B7B414602E40C3 /* GoogleMaps.bundle */,
-			);
-			name = Resources;
+			name = GoogleMaps;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
-				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				11FA1666A7A02D571434B59666B03AA8 /* Pods */,
-				243C84E4BF0A3FEEB752C97B69E6F228 /* Products */,
+				0A6618F6D322D4701BF500FC33595C8E /* Frameworks */,
+				6BB07356D687C06FBF452AC7BDF847EC /* Pods */,
+				90628E75BA69A77B6002245D32BB4838 /* Products */,
 				A0C2F5268C0DF6739F162BFC0BAE22DC /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		996F73E6D9F68C199449FC03F0462F1A /* Support Files */ = {
+		86D6BE83C344C62263AC8C5B6EABB391 /* BRYSerialAnimationQueue */ = {
 			isa = PBXGroup;
 			children = (
-				CBC5C716D1A38AE28B2706460FE7DB74 /* Info.plist */,
-				B73F9965E67F2532AE30FAFAE9922F04 /* Starscream.modulemap */,
-				3D49468385B468FA73C4D3D645A4113A /* Starscream.xcconfig */,
-				B6550545353F2A073D24A521C5387C14 /* Starscream-dummy.m */,
-				AD6DF984D84E1E4E9874A05CFF1FBE88 /* Starscream-prefix.pch */,
-				9CE870D2FB4057D7CF39AF9432D7A9DA /* Starscream-umbrella.h */,
+				84E9F0A9426306AAD082EC8154D7664E /* BRYSerialAnimationQueue.h */,
+				0290517D41E31A233FF7CF10FD8669C6 /* BRYSerialAnimationQueue.m */,
+				A3D756EC739E41A459172D5ED8DD1C51 /* Support Files */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/Starscream";
+			name = BRYSerialAnimationQueue;
+			path = BRYSerialAnimationQueue;
+			sourceTree = "<group>";
+		};
+		90628E75BA69A77B6002245D32BB4838 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E3A20B552C6A44F131CDB9DF3714806D /* BRYSerialAnimationQueue.framework */,
+				9092CFB9128B66B49A269B028D301AEB /* LTMorphingLabel.framework */,
+				7912E59F0305783A4CDD77F0509CB5D2 /* Pods_CryptoQuest.framework */,
+				2EC01D47C332E6308D667D08A8A1DCEC /* SSBouncyButton.framework */,
+				E0E507DB4744960466185F0F5A0369B8 /* Starscream.framework */,
+				67D08375A806E4DA29190538CDE5DD42 /* UIColor_Hex.framework */,
+				64D5C214818D2B1259796CFCDB920092 /* UIImage_BetterAdditions.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9190D1CCA1BD59E9087DC15FD99CC6A8 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				143313A45CC98C945014E84F6CCCD5B6 /* Frameworks */,
+				C9CC63EDD8215E3950DCDD329E3A7D13 /* Resources */,
+			);
+			name = Maps;
 			sourceTree = "<group>";
 		};
 		A0C2F5268C0DF6739F162BFC0BAE22DC /* Targets Support Files */ = {
@@ -152,6 +494,42 @@
 				BB8F1A5973993EC69680B60B22CC00ED /* Pods-CryptoQuest */,
 			);
 			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		A3D756EC739E41A459172D5ED8DD1C51 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9B8DC466EA19AB3C028B6C969FA6B31A /* BRYSerialAnimationQueue.modulemap */,
+				F1F061B637224B4D59E900546A77EF23 /* BRYSerialAnimationQueue.xcconfig */,
+				BED3D0C8F614225B52E0386A57AAC31E /* BRYSerialAnimationQueue-dummy.m */,
+				F68E04EB811243BDF93B410CFACA1CE2 /* BRYSerialAnimationQueue-prefix.pch */,
+				0B6440608CCB3140942806C672DF6E9E /* BRYSerialAnimationQueue-umbrella.h */,
+				10CF3CDE1B40A4D98863F1352A745DBE /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/BRYSerialAnimationQueue";
+			sourceTree = "<group>";
+		};
+		ABDD5D1D53F6D1FB6B43B111BDCA92E1 /* SSBouncyButton */ = {
+			isa = PBXGroup;
+			children = (
+				CC1C1AF92367D23789FEC875CE1BBE6D /* SSBouncyButton.h */,
+				14E288046387032ABE349C244AA66C78 /* SSBouncyButton.m */,
+				22CFE1952A29F7D7E731AA18340C7193 /* Support Files */,
+			);
+			name = SSBouncyButton;
+			path = SSBouncyButton;
+			sourceTree = "<group>";
+		};
+		AE40485E39FF9E904957B79A840D187C /* UIColor-Hex */ = {
+			isa = PBXGroup;
+			children = (
+				6ADE745A3892E59163C6BFD1A494DEDE /* UIColor+Hex.h */,
+				001A5E56C2071A5C50380311F60D2795 /* UIColor+Hex.m */,
+				29607C9216559B825FB42A00F76F21D9 /* Support Files */,
+			);
+			name = "UIColor-Hex";
+			path = "UIColor-Hex";
 			sourceTree = "<group>";
 		};
 		BB8F1A5973993EC69680B60B22CC00ED /* Pods-CryptoQuest */ = {
@@ -172,108 +550,159 @@
 			path = "Target Support Files/Pods-CryptoQuest";
 			sourceTree = "<group>";
 		};
-		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+		C9CC63EDD8215E3950DCDD329E3A7D13 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
+				43369A7DE9D904289CE67E15068DEA47 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CB57408F2813FA2D2D02AE50B40DF233 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				525396ACDE9B803BCF6608DBA307F1F6 /* GoogleMapsBase.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		BF65B84397F20C0E4ABE78DF15A4DA9F /* Frameworks */ = {
+		E15CEA8EF5BE92B89966C786D879C8FB /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				2305DB2B4943059302B9BA38E1DAC68C /* GoogleMapsBase.framework */,
+				5EB93CEA4A156C089BE56FA8F3EF4CCB /* Info.plist */,
+				A33785629110BFAF78478C5F41139283 /* UIImage+BetterAdditions.modulemap */,
+				366EC5A3BD90B1C6FCDA528F998D5BBC /* UIImage+BetterAdditions.xcconfig */,
+				B249367F082B065C3B882AFE99D5F914 /* UIImage+BetterAdditions-dummy.m */,
+				80EA31C2E0555D9524ED63CBEE4F5DE5 /* UIImage+BetterAdditions-prefix.pch */,
+				673F3BC13C31EFAA88FDE6F92551F391 /* UIImage+BetterAdditions-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/UIImage+BetterAdditions";
 			sourceTree = "<group>";
 		};
-		C293EE2772CCCDC03D04C228DF51313F /* Starscream */ = {
+		F2D366BE11CEFED14F40D5E76B9BD78B /* Base */ = {
 			isa = PBXGroup;
 			children = (
-				E8C6AF6C47C2426ACDE1514BD0B4F8B7 /* Compression.swift */,
-				2F2EB591F452905BACF1FE2A2EBB9B91 /* SSLSecurity.swift */,
-				5699D27CE4604D4E6CB493489053C8D5 /* WebSocket.swift */,
-				996F73E6D9F68C199449FC03F0462F1A /* Support Files */,
+				CB57408F2813FA2D2D02AE50B40DF233 /* Frameworks */,
 			);
-			name = Starscream;
-			path = Starscream;
+			name = Base;
 			sourceTree = "<group>";
 		};
-		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
+		F8BF0E45AA24BDC545D531C8E80E0F35 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */,
+				3E0FCFB78A6ADFF61E22FD95B451C97F /* Info.plist */,
+				370550E32D5061BE0A394E29D4CDA8AF /* Starscream.modulemap */,
+				FA5A871879BC51D1E526F5A04612915D /* Starscream.xcconfig */,
+				A22E6C19CD5DEC9C78ED004DC19E6A9B /* Starscream-dummy.m */,
+				B912FE550A6CF0C79CEF85A995C63AD9 /* Starscream-prefix.pch */,
+				EAB7EE69A313BCEB618BC6C537C6DB08 /* Starscream-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Starscream";
+			sourceTree = "<group>";
+		};
+		FA43E35C2C3EB507634FE7069073CD16 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				B59D532339CA0CD419DD646155523EE2 /* Foundation.framework */,
+				C2421D2DC954699EC37231A848187ACD /* QuartzCore.framework */,
+				DC722795ECD6E74F0C34EEF4090F7F29 /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		DFAEC1AE46BDF59BF93C232117A99A1E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C75E9E3807937679FFD4885E8EA0D1A1 /* GoogleMaps.framework */,
-				2BC4C2981929FF48F08926410404305E /* GoogleMapsCore.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		FEBB450B59A7E9888F52D582D6C5C772 /* GoogleMaps */ = {
-			isa = PBXGroup;
-			children = (
-				705E84DB6BE840B15D4AF76FCE52D552 /* Base */,
-				3EF53EBF8696C0C84651F99488983F99 /* Maps */,
-			);
-			name = GoogleMaps;
-			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		062AB7A246A8BADA6ADED86F6116EC6E /* Headers */ = {
+		3B8680E0E77D64C06CE6EFC729A1B6D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				859A9C56C19E9B32CB66B87FB91E68AA /* Starscream-umbrella.h in Headers */,
+				C70D3E8D1A38667000CFCF0A6AFD7270 /* Starscream-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		687940F8E46AA673E134DB1ADF95209D /* Headers */ = {
+		3E819C6B6C0823E559750E85E6FEA7D0 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				10A0EE629EEFDDA439DCA30E575588AA /* Pods-CryptoQuest-umbrella.h in Headers */,
+				E39B8D7A4AF9FE6145DDA7701E3FD2FA /* BRYSerialAnimationQueue-umbrella.h in Headers */,
+				B74ABCCB2254EDC1638369A95A5D8E8B /* BRYSerialAnimationQueue.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		48E870457FA5D4C98C7224718D957891 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3915206FF4D2AC23E461D4E7F9DFEB04 /* SSBouncyButton-umbrella.h in Headers */,
+				615C49C562AA0DB2D7E00E2858A44386 /* SSBouncyButton.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		66B62DFAA2FF294C0BA5E247C2CFADB5 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E32C37404BB55BB9D390C64F72D49C9A /* UIImage+BetterAdditions-umbrella.h in Headers */,
+				A66119EA2280142A3860ACB1D16CD3B1 /* UIImage+BetterAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		77F4151711BB76082050F4AC4C3FC741 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				25C3F265D7F50A75BAFB1F34198AFA64 /* Pods-CryptoQuest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D3B700BD1A6EECD26BF38E09A2F8619F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D457C42840531BE202D342132BDE5AB /* UIColor+Hex.h in Headers */,
+				F88BD96E6B23ADD4C3E88401ABA3A9F6 /* UIColor-Hex-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E19D0AD0562BD9B880571349E087F2A3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BB2873D1E6440D5510A3E40A1F0D38A3 /* LTMorphingLabel-umbrella.h in Headers */,
+				3663AD5A53A399294F616BBB090BC98C /* LTMorphingLabel.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		2A9C69F135F6EFB240F7CA433B62388F /* Pods-CryptoQuest */ = {
+		005028F4A259C5603C6AFA698F9225D6 /* BRYSerialAnimationQueue */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2EDF723479F355948BE309EDE98CFFF2 /* Build configuration list for PBXNativeTarget "Pods-CryptoQuest" */;
+			buildConfigurationList = 87076A783EEA8733C5C7BF5B73842725 /* Build configuration list for PBXNativeTarget "BRYSerialAnimationQueue" */;
 			buildPhases = (
-				E7DC28B39F53DB7233628DBBA7D2958D /* Sources */,
-				FAA630F45B64F291F1792CB11971C87E /* Frameworks */,
-				687940F8E46AA673E134DB1ADF95209D /* Headers */,
+				BCF77B65D3399EA1ADB0A82F41192481 /* Sources */,
+				E060666A5C82689E3E369463CE709ED7 /* Frameworks */,
+				3E819C6B6C0823E559750E85E6FEA7D0 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				016551B108EDC5BAE2B849058FB8E164 /* PBXTargetDependency */,
 			);
-			name = "Pods-CryptoQuest";
-			productName = "Pods-CryptoQuest";
-			productReference = 513ABAD1544FD9433A71EDA8E29FF3F0 /* Pods_CryptoQuest.framework */;
+			name = BRYSerialAnimationQueue;
+			productName = BRYSerialAnimationQueue;
+			productReference = E3A20B552C6A44F131CDB9DF3714806D /* BRYSerialAnimationQueue.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		8165F54462EF12B91E824BE8EBCA273A /* Starscream */ = {
+		09A702FA76AE668086E06EE3E41BBB32 /* Starscream */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0E73136D79581D0B548879EB676C1459 /* Build configuration list for PBXNativeTarget "Starscream" */;
+			buildConfigurationList = AD74D276652495CA2D8D6A777E7F7E31 /* Build configuration list for PBXNativeTarget "Starscream" */;
 			buildPhases = (
-				AE945A01A394FE91C959E7CA3C74E18A /* Sources */,
-				E7FD920004D4B3423B4CA3611C7ECF9D /* Frameworks */,
-				062AB7A246A8BADA6ADED86F6116EC6E /* Headers */,
+				CB9EF08B4B465271583D0BDA050C02B9 /* Sources */,
+				481CE2254BCDD6CEAC8F50E403D43721 /* Frameworks */,
+				3B8680E0E77D64C06CE6EFC729A1B6D5 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -281,7 +710,102 @@
 			);
 			name = Starscream;
 			productName = Starscream;
-			productReference = 9C6D8F6CD96EF955A656D7D94EABD1E6 /* Starscream.framework */;
+			productReference = E0E507DB4744960466185F0F5A0369B8 /* Starscream.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4C69BF3EF4CE81852226B9442B0C2DF4 /* LTMorphingLabel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1291CF685CE0226B8EB9F5347779246 /* Build configuration list for PBXNativeTarget "LTMorphingLabel" */;
+			buildPhases = (
+				4075A2D82A70F8CBB84F0FF3D77F44AA /* Sources */,
+				1F62AFC08895AB254D46B4ECC6931D36 /* Frameworks */,
+				E19D0AD0562BD9B880571349E087F2A3 /* Headers */,
+				AEDE394367F5030A06E9FD631E9BC3E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LTMorphingLabel;
+			productName = LTMorphingLabel;
+			productReference = 9092CFB9128B66B49A269B028D301AEB /* LTMorphingLabel.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		4E562ECC0B8619D3D421E76EB3EB6E86 /* Pods-CryptoQuest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B1097048E3AAD8E0BD01E0EF6ED8644E /* Build configuration list for PBXNativeTarget "Pods-CryptoQuest" */;
+			buildPhases = (
+				BA052674E1FAE8066324B804BE71868B /* Sources */,
+				A0F166EF706818789F07BF9AF89894A4 /* Frameworks */,
+				77F4151711BB76082050F4AC4C3FC741 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				31018DB41B6B9077D4A45488C257EB08 /* PBXTargetDependency */,
+				C85B281FA85029CEDB595EA1F20CBF61 /* PBXTargetDependency */,
+				FA5D3948F0923ABBA7F7E35A8F207BED /* PBXTargetDependency */,
+				CB7AE9CB4D279CB7D2A4EDAD21F2DEE5 /* PBXTargetDependency */,
+				B95E1CDEF2A48A4DA9E933060DDFC375 /* PBXTargetDependency */,
+				6399907EEAE5AB323D3A35927CD49011 /* PBXTargetDependency */,
+			);
+			name = "Pods-CryptoQuest";
+			productName = "Pods-CryptoQuest";
+			productReference = 7912E59F0305783A4CDD77F0509CB5D2 /* Pods_CryptoQuest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		6CF2B7E9B6EFD4A2686A86A9A558B681 /* UIColor-Hex */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 79ABF533BBFECCA1ADE12DAA42A6302A /* Build configuration list for PBXNativeTarget "UIColor-Hex" */;
+			buildPhases = (
+				066D425230E6C66B18EAFEF3EEF374C4 /* Sources */,
+				2E3B9FA363DEDB9660016E2A6A7BA112 /* Frameworks */,
+				D3B700BD1A6EECD26BF38E09A2F8619F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIColor-Hex";
+			productName = "UIColor-Hex";
+			productReference = 67D08375A806E4DA29190538CDE5DD42 /* UIColor_Hex.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		741D2A75E444C6AC1EA51543D3870999 /* SSBouncyButton */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2C6CA108C798B8BED7897A32EC2E98A4 /* Build configuration list for PBXNativeTarget "SSBouncyButton" */;
+			buildPhases = (
+				2485156785E5357255E85221D93EFE39 /* Sources */,
+				72E9F9E65877C80A8CEDBC752273C1A0 /* Frameworks */,
+				48E870457FA5D4C98C7224718D957891 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B7F4A1A5BF6CABD2500F1BEA2D499006 /* PBXTargetDependency */,
+				460A7B8074A843A8D6899BB41B0A5CC2 /* PBXTargetDependency */,
+				4963CECD97D149DCDF84489F164F5475 /* PBXTargetDependency */,
+			);
+			name = SSBouncyButton;
+			productName = SSBouncyButton;
+			productReference = 2EC01D47C332E6308D667D08A8A1DCEC /* SSBouncyButton.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		DE9D9CFA67DD67292CE4AD81C4661905 /* UIImage+BetterAdditions */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 870C9611A5390C74F2EDF8B11374CC43 /* Build configuration list for PBXNativeTarget "UIImage+BetterAdditions" */;
+			buildPhases = (
+				1B3B54828D3B278A181DE76688186DC1 /* Sources */,
+				256CDA3F851372E98E0D7A9B8BB4DF03 /* Frameworks */,
+				66B62DFAA2FF294C0BA5E247C2CFADB5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "UIImage+BetterAdditions";
+			productName = "UIImage+BetterAdditions";
+			productReference = 64D5C214818D2B1259796CFCDB920092 /* UIImage_BetterAdditions.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -301,49 +825,235 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 243C84E4BF0A3FEEB752C97B69E6F228 /* Products */;
+			productRefGroup = 90628E75BA69A77B6002245D32BB4838 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2A9C69F135F6EFB240F7CA433B62388F /* Pods-CryptoQuest */,
-				8165F54462EF12B91E824BE8EBCA273A /* Starscream */,
+				005028F4A259C5603C6AFA698F9225D6 /* BRYSerialAnimationQueue */,
+				4C69BF3EF4CE81852226B9442B0C2DF4 /* LTMorphingLabel */,
+				4E562ECC0B8619D3D421E76EB3EB6E86 /* Pods-CryptoQuest */,
+				741D2A75E444C6AC1EA51543D3870999 /* SSBouncyButton */,
+				09A702FA76AE668086E06EE3E41BBB32 /* Starscream */,
+				6CF2B7E9B6EFD4A2686A86A9A558B681 /* UIColor-Hex */,
+				DE9D9CFA67DD67292CE4AD81C4661905 /* UIImage+BetterAdditions */,
 			);
 		};
 /* End PBXProject section */
 
-/* Begin PBXSourcesBuildPhase section */
-		AE945A01A394FE91C959E7CA3C74E18A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
+/* Begin PBXResourcesBuildPhase section */
+		AEDE394367F5030A06E9FD631E9BC3E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				941EFE07A18D7A762617989FB0DDF394 /* Compression.swift in Sources */,
-				77C2A1604B294581CCE363E3A573DEE3 /* SSLSecurity.swift in Sources */,
-				341A14CB0766C887FF5897046BC19D73 /* Starscream-dummy.m in Sources */,
-				DF07DF5B590B914B7B24EDD683BA58CF /* WebSocket.swift in Sources */,
+				E250AA9522C3A393033ECF5CB29E1449 /* Fire.png in Resources */,
+				7B2F6DED93FECE00717FCF5AAD0A74FF /* Fragment.png in Resources */,
+				FBAEB0A61D7D3D4DD723D11671A814BB /* Smoke.png in Resources */,
+				5A0F18538C3064600098A17B11F383CF /* Sparkle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		E7DC28B39F53DB7233628DBBA7D2958D /* Sources */ = {
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		066D425230E6C66B18EAFEF3EEF374C4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5D753E261C6408B0631DFA83FC8BE150 /* Pods-CryptoQuest-dummy.m in Sources */,
+				D92E3137067D035EB4B103DD8938EBD0 /* UIColor+Hex.m in Sources */,
+				57671B3D935B395C10CC34505E718219 /* UIColor-Hex-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1B3B54828D3B278A181DE76688186DC1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				57EFA215581F5898393A34E0FFE47707 /* UIImage+BetterAdditions-dummy.m in Sources */,
+				54EBC9BA708FBE6E03D6878B162CC121 /* UIImage+BetterAdditions.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2485156785E5357255E85221D93EFE39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D7922CB30E0953C6606D95BC050DB664 /* SSBouncyButton-dummy.m in Sources */,
+				3D3BC671BC2D5D5A64F5767B55F7D28C /* SSBouncyButton.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4075A2D82A70F8CBB84F0FF3D77F44AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7D15D8DD9BC19EAF886F9E3BF14279DD /* LTCharacterDiffResult.swift in Sources */,
+				713768DA2CB74E729CF215D49E6B6005 /* LTCharacterLimbo.swift in Sources */,
+				861281D2AED3C4F7A05C98BD2E496575 /* LTEasing.swift in Sources */,
+				6C4F33723E922B3668D02B9DB0DDA879 /* LTEmitterView.swift in Sources */,
+				435090E3FE50A2A659F6F29E79B57B16 /* LTMorphingEffect.swift in Sources */,
+				220A91F8CE8669B742B00CD3C81C3910 /* LTMorphingLabel+Anvil.swift in Sources */,
+				556D33B99B64976B2F45B25C99B5923E /* LTMorphingLabel+Burn.swift in Sources */,
+				3F8B0A80A2276127C916C8EF2CB92C07 /* LTMorphingLabel+Evaporate.swift in Sources */,
+				9C1F2A5C483E99BD4D1C7E2ABF21B5FC /* LTMorphingLabel+Fall.swift in Sources */,
+				A2EFE55E2C0A1C10C7A5367B47C7D562 /* LTMorphingLabel+Pixelate.swift in Sources */,
+				6C2F96F1D97CEE4C463FF67DE81791A2 /* LTMorphingLabel+Sparkle.swift in Sources */,
+				503F70FCC6E8D6394B5243A4FA2BB520 /* LTMorphingLabel-dummy.m in Sources */,
+				B03B5CC4D259EEC129F8DCF35675ECDD /* LTMorphingLabel.swift in Sources */,
+				2534806772D59757EC8F1CC16528B9D1 /* LTStringDiffResult.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA052674E1FAE8066324B804BE71868B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				28E88754BA864255823EC6A946A26EFD /* Pods-CryptoQuest-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BCF77B65D3399EA1ADB0A82F41192481 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8D433CA471973BC21DA610BC14BCEEB /* BRYSerialAnimationQueue-dummy.m in Sources */,
+				A35FFF8775E5736CB18803C37BC57BCB /* BRYSerialAnimationQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB9EF08B4B465271583D0BDA050C02B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				705E2BBCB1523265AD59C7EE8837C818 /* Compression.swift in Sources */,
+				CC3F534D324DADD3A7F5E3BF2F0DCC0A /* SSLSecurity.swift in Sources */,
+				1A5990D23E06508C434B8E0AF53B6EF0 /* Starscream-dummy.m in Sources */,
+				08C0327DC8C27F01418ED9F38A777A4E /* WebSocket.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		016551B108EDC5BAE2B849058FB8E164 /* PBXTargetDependency */ = {
+		31018DB41B6B9077D4A45488C257EB08 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BRYSerialAnimationQueue;
+			target = 005028F4A259C5603C6AFA698F9225D6 /* BRYSerialAnimationQueue */;
+			targetProxy = 915938C410299786308C1097E19CE4EB /* PBXContainerItemProxy */;
+		};
+		460A7B8074A843A8D6899BB41B0A5CC2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIColor-Hex";
+			target = 6CF2B7E9B6EFD4A2686A86A9A558B681 /* UIColor-Hex */;
+			targetProxy = A99946B1E2610E23E26613D9F6C64606 /* PBXContainerItemProxy */;
+		};
+		4963CECD97D149DCDF84489F164F5475 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIImage+BetterAdditions";
+			target = DE9D9CFA67DD67292CE4AD81C4661905 /* UIImage+BetterAdditions */;
+			targetProxy = 828F624F8B4D10FE7C3B29BA100280B0 /* PBXContainerItemProxy */;
+		};
+		6399907EEAE5AB323D3A35927CD49011 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIImage+BetterAdditions";
+			target = DE9D9CFA67DD67292CE4AD81C4661905 /* UIImage+BetterAdditions */;
+			targetProxy = 2872F78D0388FCF4C38B07BE7A7B23CF /* PBXContainerItemProxy */;
+		};
+		B7F4A1A5BF6CABD2500F1BEA2D499006 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = BRYSerialAnimationQueue;
+			target = 005028F4A259C5603C6AFA698F9225D6 /* BRYSerialAnimationQueue */;
+			targetProxy = 03E5CDFD16F0434E5260AB5D0E26E1B5 /* PBXContainerItemProxy */;
+		};
+		B95E1CDEF2A48A4DA9E933060DDFC375 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "UIColor-Hex";
+			target = 6CF2B7E9B6EFD4A2686A86A9A558B681 /* UIColor-Hex */;
+			targetProxy = 8EEBF5D83E3730C6FF932B741555F498 /* PBXContainerItemProxy */;
+		};
+		C85B281FA85029CEDB595EA1F20CBF61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LTMorphingLabel;
+			target = 4C69BF3EF4CE81852226B9442B0C2DF4 /* LTMorphingLabel */;
+			targetProxy = 5A43515C0FF78D2CAD706D9638FF049F /* PBXContainerItemProxy */;
+		};
+		CB7AE9CB4D279CB7D2A4EDAD21F2DEE5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = Starscream;
-			target = 8165F54462EF12B91E824BE8EBCA273A /* Starscream */;
-			targetProxy = 47B8560ED83C2F72DB9565805254124B /* PBXContainerItemProxy */;
+			target = 09A702FA76AE668086E06EE3E41BBB32 /* Starscream */;
+			targetProxy = 9B9168AEFAB4D4F442A0E46387FCCB88 /* PBXContainerItemProxy */;
+		};
+		FA5D3948F0923ABBA7F7E35A8F207BED /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSBouncyButton;
+			target = 741D2A75E444C6AC1EA51543D3870999 /* SSBouncyButton */;
+			targetProxy = 7814C0277E774476B363109E134B148D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		21CAAB6E0DD7A01147723EA2FAE7BE4D /* Release */ = {
+		0106A6ECDD5352650E12EC43454614EF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 94E00975B8FF01801DC30E24BDADE784 /* LTMorphingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LTMorphingLabel/LTMorphingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LTMorphingLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LTMorphingLabel/LTMorphingLabel.modulemap";
+				PRODUCT_NAME = LTMorphingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		0538A3E3D12E52F88F7837E6CBBEFA9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 366EC5A3BD90B1C6FCDA528F998D5BBC /* UIImage+BetterAdditions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIImage+BetterAdditions/UIImage+BetterAdditions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIImage+BetterAdditions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIImage+BetterAdditions/UIImage+BetterAdditions.modulemap";
+				PRODUCT_NAME = UIImage_BetterAdditions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		1344AD2CABE5BFD85D718C6993A0E571 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 126AA36E31EBCB086818DD21E5CF8AA3 /* Pods-CryptoQuest.release.xcconfig */;
 			buildSettings = {
@@ -370,6 +1080,37 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		36376C287AA89AABE163590DB049F201 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5C2669B80DC590028354A83264D403F /* UIColor-Hex.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor-Hex/UIColor-Hex-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor-Hex/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIColor-Hex/UIColor-Hex.modulemap";
+				PRODUCT_NAME = UIColor_Hex;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -438,9 +1179,39 @@
 			};
 			name = Debug;
 		};
-		584EB0CDDDCBBDE69C8B4586942CCE51 /* Release */ = {
+		39F1E7880E610894F847023692AEEDF5 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D49468385B468FA73C4D3D645A4113A /* Starscream.xcconfig */;
+			baseConfigurationReference = A5C2669B80DC590028354A83264D403F /* UIColor-Hex.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIColor-Hex/UIColor-Hex-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIColor-Hex/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIColor-Hex/UIColor-Hex.modulemap";
+				PRODUCT_NAME = UIColor_Hex;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4BFEDD1DAE4DF22EDA5C73AD1190B66F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA5A871879BC51D1E526F5A04612915D /* Starscream.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -461,8 +1232,129 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		511AAA99D729905EEC2795085D541427 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECD73415C4D1CB3765835ACBC06C3E9D /* SSBouncyButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SSBouncyButton/SSBouncyButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSBouncyButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SSBouncyButton/SSBouncyButton.modulemap";
+				PRODUCT_NAME = SSBouncyButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		5F59DA191CEEB0136CC8B35F64A1B3B5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1F061B637224B4D59E900546A77EF23 /* BRYSerialAnimationQueue.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BRYSerialAnimationQueue/BRYSerialAnimationQueue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BRYSerialAnimationQueue/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BRYSerialAnimationQueue/BRYSerialAnimationQueue.modulemap";
+				PRODUCT_NAME = BRYSerialAnimationQueue;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		65D31A311055391BAAFF6689AF90D285 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = ECD73415C4D1CB3765835ACBC06C3E9D /* SSBouncyButton.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SSBouncyButton/SSBouncyButton-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SSBouncyButton/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SSBouncyButton/SSBouncyButton.modulemap";
+				PRODUCT_NAME = SSBouncyButton;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		87144E1BE18C6A8C348F17101E9EA7AF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 366EC5A3BD90B1C6FCDA528F998D5BBC /* UIImage+BetterAdditions.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/UIImage+BetterAdditions/UIImage+BetterAdditions-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/UIImage+BetterAdditions/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/UIImage+BetterAdditions/UIImage+BetterAdditions.modulemap";
+				PRODUCT_NAME = UIImage_BetterAdditions;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -525,9 +1417,40 @@
 			};
 			name = Release;
 		};
-		ACDC9B4CC48D626F3ABA02F887043269 /* Debug */ = {
+		952C6859F0A3E81CCB80C1C6C7C15F68 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3D49468385B468FA73C4D3D645A4113A /* Starscream.xcconfig */;
+			baseConfigurationReference = 94E00975B8FF01801DC30E24BDADE784 /* LTMorphingLabel.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/LTMorphingLabel/LTMorphingLabel-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/LTMorphingLabel/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/LTMorphingLabel/LTMorphingLabel.modulemap";
+				PRODUCT_NAME = LTMorphingLabel;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AA022F2DD54126F1F9AF6D123641F0A7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FA5A871879BC51D1E526F5A04612915D /* Starscream.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -548,15 +1471,47 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		DD86BCB123DE76B9DAD01EF85AB33A1C /* Debug */ = {
+		EBF89D979C4DF61FBD8DB902F4D0DF99 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F1F061B637224B4D59E900546A77EF23 /* BRYSerialAnimationQueue.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/BRYSerialAnimationQueue/BRYSerialAnimationQueue-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BRYSerialAnimationQueue/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BRYSerialAnimationQueue/BRYSerialAnimationQueue.modulemap";
+				PRODUCT_NAME = BRYSerialAnimationQueue;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 3.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EF27AC63A24201A2A5956C02A179D2B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 356295DAC7B1E675E43C422FF5F739E7 /* Pods-CryptoQuest.debug.xcconfig */;
 			buildSettings = {
@@ -594,11 +1549,11 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0E73136D79581D0B548879EB676C1459 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+		2C6CA108C798B8BED7897A32EC2E98A4 /* Build configuration list for PBXNativeTarget "SSBouncyButton" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ACDC9B4CC48D626F3ABA02F887043269 /* Debug */,
-				584EB0CDDDCBBDE69C8B4586942CCE51 /* Release */,
+				511AAA99D729905EEC2795085D541427 /* Debug */,
+				65D31A311055391BAAFF6689AF90D285 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -612,11 +1567,56 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2EDF723479F355948BE309EDE98CFFF2 /* Build configuration list for PBXNativeTarget "Pods-CryptoQuest" */ = {
+		79ABF533BBFECCA1ADE12DAA42A6302A /* Build configuration list for PBXNativeTarget "UIColor-Hex" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD86BCB123DE76B9DAD01EF85AB33A1C /* Debug */,
-				21CAAB6E0DD7A01147723EA2FAE7BE4D /* Release */,
+				39F1E7880E610894F847023692AEEDF5 /* Debug */,
+				36376C287AA89AABE163590DB049F201 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		87076A783EEA8733C5C7BF5B73842725 /* Build configuration list for PBXNativeTarget "BRYSerialAnimationQueue" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5F59DA191CEEB0136CC8B35F64A1B3B5 /* Debug */,
+				EBF89D979C4DF61FBD8DB902F4D0DF99 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		870C9611A5390C74F2EDF8B11374CC43 /* Build configuration list for PBXNativeTarget "UIImage+BetterAdditions" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0538A3E3D12E52F88F7837E6CBBEFA9A /* Debug */,
+				87144E1BE18C6A8C348F17101E9EA7AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AD74D276652495CA2D8D6A777E7F7E31 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4BFEDD1DAE4DF22EDA5C73AD1190B66F /* Debug */,
+				AA022F2DD54126F1F9AF6D123641F0A7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B1097048E3AAD8E0BD01E0EF6ED8644E /* Build configuration list for PBXNativeTarget "Pods-CryptoQuest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF27AC63A24201A2A5956C02A179D2B8 /* Debug */,
+				1344AD2CABE5BFD85D718C6993A0E571 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1291CF685CE0226B8EB9F5347779246 /* Build configuration list for PBXNativeTarget "LTMorphingLabel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				952C6859F0A3E81CCB80C1C6C7C15F68 /* Debug */,
+				0106A6ECDD5352650E12EC43454614EF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

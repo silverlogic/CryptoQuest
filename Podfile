@@ -7,12 +7,14 @@ target 'CryptoQuest' do
 
   # Pods for CryptoQuest
   pod 'GoogleMaps'
+  pod 'LTMorphingLabel', '~> 0.5.3'
+  pod 'SSBouncyButton', '~> 1.0'
   pod 'Starscream'
   
   post_install do |installer|
       installer.pods_project.targets.each do |target|
           target.build_configurations.each do |config|
-              if target.name == 'Starscream'
+              if target.name == 'Starscream' || target.name == 'LTMorphingLabel'
                   config.build_settings['SWIFT_VERSION'] = '4.0'
               else
                   config.build_settings['SWIFT_VERSION'] = '3.2'

@@ -13,6 +13,10 @@ final class MapViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet private weak var mapView: GMSMapView!
+    @IBOutlet private weak var amountOfBitcoinLabel: MorphingLabel!
+    @IBOutlet private weak var bitcoinImageView: UIImageView!
+    @IBOutlet private weak var sendBitcoinButton: BouncyButton!
+    @IBOutlet private weak var cryptoDexButton: BouncyButton!
     
     
     // MARK: - Private Instance Variables Maps
@@ -34,6 +38,7 @@ final class MapViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        showActivityIndicator()
         requestLocationPermission()
     }
 }
@@ -53,6 +58,10 @@ extension MapViewController: GMSMapViewDelegate {
 private extension MapViewController {
     func setup() {
         mapView.alpha = 0
+        amountOfBitcoinLabel.alpha = 0
+        bitcoinImageView.alpha = 0
+        sendBitcoinButton.alpha = 0
+        cryptoDexButton.alpha = 0
         mapView.delegate = self
         userLocationMarker.map = mapView
         do {
@@ -78,7 +87,23 @@ private extension MapViewController {
             let cameraPosition = GMSCameraPosition.camera(withTarget: coordinate, zoom: self?.zoomLevel ?? 0)
             if self?.mapView.alpha == 0 {
                 self?.mapView.camera = cameraPosition
+                self?.dismissActivityIndicator()
                 self?.mapView.animateShow()
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
+                    self?.bitcoinImageView.animateShow()
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        self?.amountOfBitcoinLabel.animateShow()
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                            self?.sendBitcoinButton.animateShow()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                self?.cryptoDexButton.animateShow()
+                                DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
+                                    self?.amountOfBitcoinLabel.text = "0.0"
+                                }
+                            }
+                        }
+                    }
+                }
             } else {
                 self?.mapView.animate(to: cameraPosition)
             }
@@ -109,7 +134,7 @@ private extension MapViewController {
             let markers = newSpawns.flatMap { (spawn) -> CryptoCreatureMarker? in
                 return spawn.cryptoCreatureMarker
             }
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 6) {
                 markers.forEach {
                     $0.map = self?.mapView
                 }
