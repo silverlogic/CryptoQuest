@@ -50,7 +50,7 @@
                                     <constraint firstAttribute="height" constant="50" id="W5R-EW-d5e"/>
                                 </constraints>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRl-nD-nxQ">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QRl-nD-nxQ" customClass="BouncyButton" customModule="CryptoQuest" customModuleProvider="target">
                                 <rect key="frame" x="309" y="609" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="0SR-4y-v9m"/>
@@ -58,7 +58,7 @@
                                 </constraints>
                                 <state key="normal" image="icon-cryptodex"/>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B90-8Z-GN7">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B90-8Z-GN7" customClass="BouncyButton" customModule="CryptoQuest" customModuleProvider="target">
                                 <rect key="frame" x="309" y="48" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="HGh-74-Z3w"/>
@@ -66,7 +66,7 @@
                                 </constraints>
                                 <state key="normal" image="icon-send-bitcoin"/>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00071152" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHp-Op-AUk">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculating..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aHp-Op-AUk" customClass="MorphingLabel" customModule="CryptoQuest" customModuleProvider="target">
                                 <rect key="frame" x="68" y="49" width="233" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="DJu-x9-Tf1"/>
@@ -96,7 +96,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="6x2-3M-m9x"/>
                     <connections>
+                        <outlet property="amountOfBitcoinLabel" destination="aHp-Op-AUk" id="SSe-fJ-HgR"/>
+                        <outlet property="bitcoinImageView" destination="hs9-Ex-3Ew" id="x9b-Ob-B7B"/>
+                        <outlet property="cryptoDexButton" destination="QRl-nD-nxQ" id="94u-2J-kVh"/>
                         <outlet property="mapView" destination="LzK-Ej-DaV" id="6ym-eI-zbX"/>
+                        <outlet property="sendBitcoinButton" destination="B90-8Z-GN7" id="rm4-q5-Ruc"/>
                         <segue destination="BV1-FR-VrT" kind="show" id="37l-Sb-9Ew"/>
                     </connections>
                 </viewController>
