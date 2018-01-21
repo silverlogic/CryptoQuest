@@ -70,7 +70,7 @@ extension UserManager {
 
 // MARK: - Public Instance Methods For Updating Balance
 extension UserManager {
-    func updateBalance() {
+    func updateBalanceFromQGenerator() {
         let socketEventInfo: [String: Any] = [
             "type": SocketEvent.balanceUpdate.rawValue,
             "data": [:]
@@ -85,6 +85,10 @@ extension UserManager {
         } catch {
             print("Error serialization balance update socket data")
         }
+    }
+    
+    func updateBalanceFromQScanner() {
+        currentUser.bitcoinAmount = 0.00004297
     }
 }
 

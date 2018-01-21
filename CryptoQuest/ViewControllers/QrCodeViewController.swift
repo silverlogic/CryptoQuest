@@ -29,7 +29,7 @@ final class QrCodeViewController: UIViewController {
 // MARK: - IBActions
 extension QrCodeViewController {
     @IBAction func dismissButtonTapped(sender: UIButton) {
-        UserManager.shared.updateBalance()
+        UserManager.shared.updateBalanceFromQGenerator()
         navigationController?.popViewController(animated: true)
     }
 }
