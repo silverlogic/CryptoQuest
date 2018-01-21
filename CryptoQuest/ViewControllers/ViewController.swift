@@ -18,12 +18,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     private var contentScaleFactor: CGFloat = 1.3
     private var exposureOffset: CGFloat = -1
     private var minimumExposure: CGFloat = -1
+    private var isSceneSetupFinished: Bool = false
+    private weak var walletImageView: UIImageView!
 
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScene()
-//        sceneView.showsStatistics = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,7 +35,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
-        addFlyingCoins()
+//        addFlyingCoin()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -48,6 +49,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
 // MARK: - ARSessionDelegate
 extension ViewController: ARSessionDelegate {
+    func renderer(_ renderer: SCNSceneRenderer, didRenderScene scene: SCNScene, atTime time: TimeInterval) {
+        guard !isSceneSetupFinished,
+              sceneView.session.currentFrame?.cameraVector() != nil else {
+            return
+        }
+        isSceneSetupFinished = true
+        addFlyingCoin()
+    }
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
 //        guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
 //            return
@@ -60,28 +69,8 @@ extension ViewController: ARSessionDelegate {
 // MARK: - SCNPhysicsContactDelegate
 extension ViewController: SCNPhysicsContactDelegate {
     func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
-        var evilBubble: EvilBubbleNode! = nil
-        if contact.nodeA is EvilBubbleNode {
-            evilBubble = contact.nodeA as? EvilBubbleNode
-        } else if contact.nodeB is EvilBubbleNode {
-            evilBubble = contact.nodeB as? EvilBubbleNode
-        }
-        guard evilBubble != nil else {
-            return
-        }
-        evilBubble.healthBar.hitted()
-//        var coinNode: CoinNode! = nil
-//        let coinNodeA: CoinNode? = contact.nodeA.parentOfType()
-//        let coinNodeB: CoinNode? = contact.nodeB.parentOfType()
-//        if coinNodeA != nil {
-//            coinNode = coinNodeA
-//        } else if coinNodeB != nil {
-//            coinNode = coinNodeB
-//        }
-//        guard coinNode != nil else {
-//            return
-//        }
-//        coinNode.physicsBody?.clearAllForces()
+        evilBubbleHitted(contact.nodeA as? EvilBubbleNode)
+        evilBubbleHitted(contact.nodeB as? EvilBubbleNode)
     }
 }
 
@@ -131,6 +120,17 @@ private extension ViewController {
             pointOfView.addChildNode(cameraLightNode)
             self.cameraLightNode = lightNode
         }
+        // Setup wallet image view
+        let imageView = UIImageView(image: #imageLiteral(resourceName: "Wallet"))
+        imageView.contentMode = .scaleAspectFit
+        imageView.frame = CGRect(
+            x: view.bounds.width * 0.05,
+            y: view.frame.height,
+            width: view.bounds.width * 0.9,
+            height: view.bounds.width * 0.6
+        )
+        view.addSubview(imageView)
+        walletImageView = imageView
     }
     
     func throwTheBall() {
@@ -148,11 +148,59 @@ private extension ViewController {
         ball.physicsBody?.applyForce(forceVector, asImpulse: true)
     }
     
-    func addFlyingCoins() {
-        let bubble = EvilBubbleNode()
-        bubble.position = SCNVector3(0.0, 0.0, -8.0)
+    func addFlyingCoin(with type: CryptoCreatureName = .bitcoin) {
+        guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
+            return
+        }
+        let bubble = EvilBubbleNode(type)
+        bubble.position = SCNVector3(
+            cameraVector.direction.x * (4.0 + Float(arc4random_uniform(800)) / 100),
+            cameraVector.direction.y,
+            cameraVector.direction.z * (4.0 + Float(arc4random_uniform(800)) / 100)
+        )
         sceneView.scene.rootNode.addChildNode(bubble)
         bubble.startFlyingRandomly()
         bubble.healthBar.look(at: sceneView.pointOfView!, offset: nil)
+        bubble.action = { [weak self, weak bubble] _ in
+            // Coin in the wallet!
+            bubble?.removeFromParentNode()
+            self?.walletImageView.shake()
+            self?.hideWalletView()
+        }
+    }
+    
+    func showWalletView() {
+        DispatchQueue.main.async { [weak self] in
+            UIView.animate(withDuration: 1.0, animations: {
+                guard var walletFrame = self?.walletImageView.frame else {
+                    return
+                }
+                walletFrame.origin.y -= walletFrame.size.height
+                self?.walletImageView.frame = walletFrame
+            })
+        }
+    }
+    
+    func hideWalletView() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.6) { [weak self] in
+            UIView.animate(withDuration: 1.0, animations: {
+                guard var walletFrame = self?.walletImageView.frame else {
+                    return
+                }
+                walletFrame.origin.y += walletFrame.size.height
+                self?.walletImageView.frame = walletFrame
+            })
+        }
+    }
+
+    func evilBubbleHitted(_ evilBubble: EvilBubbleNode?) {
+        guard let evilBubble = evilBubble else {
+            return
+        }
+        evilBubble.hitted(sceneView.pointOfView!)
+        guard evilBubble.healthBar.livesLeft == 0 else {
+            return
+        }
+        showWalletView()
     }
 }
