@@ -100,7 +100,7 @@ extension SpawnManager {
 // MARK: - Private Instance Methods For Socket Bindings
 private extension SpawnManager {
     func setupSocketBindings() {
-        Socket.shared.didReceiveSpawnList.bind { [weak self] (data) in
+        Socket.shared.didReceiveSpawnList.bind({ [weak self] (data) in
             guard let spawnData = data else {
                 print("Spawn data was not received")
                 return
@@ -114,8 +114,8 @@ private extension SpawnManager {
             } catch {
                 print("Error parsing spawn list data: \(error)")
             }
-        }
-        Socket.shared.didCaptureSpawn.bind { [weak self] (data) in
+        }, for: self)
+        Socket.shared.didCaptureSpawn.bind({ [weak self] (data) in
             guard let capturedSpawnData = data else {
                 print("Captured spawn data was not received")
                 return
@@ -132,20 +132,20 @@ private extension SpawnManager {
             } catch {
                 print("Error parsing captured spawn data: \(error)")
             }
-        }
-        Socket.shared.newSpawnReceived.bind { [weak self] (data) in
+        }, for: self)
+        Socket.shared.newSpawnReceived.bind({ [weak self] (data) in
             guard let newSpawnReceivedData = data else {
                 print("New spawn data was not received")
                 return
             }
             let decoder = JSONDecoder()
             do {
-               let newSpawn = try decoder.decode(Spawn.self, from: newSpawnReceivedData)
+                let newSpawn = try decoder.decode(Spawn.self, from: newSpawnReceivedData)
                 self?.spawns.append(newSpawn)
                 self?.newSpawnReceived.value = newSpawn
             } catch {
                 print("Error parsing new spawn data: \(error)")
             }
-        }
+        }, for: self)
     }
 }

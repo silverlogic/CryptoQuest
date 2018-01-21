@@ -78,7 +78,7 @@ private extension MapViewController {
     }
     
     func setupLocationTrackerBindings() {
-        locationTracker.currentLocation.bind { [weak self] (location) in
+        locationTracker.currentLocation.bind({ [weak self] (location) in
             guard let location = location else {
                 print("Location received not available")
                 return
@@ -110,11 +110,11 @@ private extension MapViewController {
             self?.mapView.animate(toViewingAngle: 65)
             self?.mapView.animate(toBearing: -18)
             self?.userLocationMarker.position = coordinate
-        }
-        locationTracker.locationError.bind { _ in
+        }, for: self)
+        locationTracker.locationError.bind({ _ in
             print("Error occured with location tracking")
-        }
-        locationTracker.permissionStatus.bind { [weak self] (status) in
+        }, for: self)
+        locationTracker.permissionStatus.bind({ [weak self] (status) in
             guard let status = status else {
                 print("Status not available")
                 return
@@ -125,11 +125,11 @@ private extension MapViewController {
             default:
                 print("Location tracking not available")
             }
-        }
+        }, for: self)
     }
     
     func setupSpawnManagerBindings() {
-        SpawnManager.shared.newSpawnsAvailable.bind { [weak self] (spawns) in
+        SpawnManager.shared.newSpawnsAvailable.bind({ [weak self] (spawns) in
             guard let newSpawns = spawns else { return }
             let markers = newSpawns.flatMap { (spawn) -> CryptoCreatureMarker? in
                 return spawn.cryptoCreatureMarker
@@ -139,21 +139,21 @@ private extension MapViewController {
                     $0.map = self?.mapView
                 }
             }
-        }
-        SpawnManager.shared.newSpawnReceived.bind { [weak self] (spawn) in
+        }, for: self)
+        SpawnManager.shared.newSpawnReceived.bind({ [weak self] (spawn) in
             guard let receivedSpawn = spawn,
                   let marker = receivedSpawn.cryptoCreatureMarker else { return }
             DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
                 marker.map = self?.mapView
             }
-        }
-        SpawnManager.shared.spawnCaptured.bind { (spawn) in
+        }, for: self)
+        SpawnManager.shared.spawnCaptured.bind({ (spawn) in
             guard let capturedSpawn = spawn,
                   let marker = capturedSpawn.cryptoCreatureMarker else { return }
             DispatchQueue.main.async {
                 marker.map = nil
             }
-        }
+        }, for: self)
     }
     
     func requestLocationPermission() {
