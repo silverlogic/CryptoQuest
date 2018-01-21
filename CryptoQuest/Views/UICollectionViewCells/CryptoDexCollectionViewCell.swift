@@ -19,9 +19,13 @@ final class CryptoDexCollectionViewCell: UICollectionViewCell {
 
 // MARK: - Public Instance Attributes
 extension CryptoDexCollectionViewCell {
-    func configure(cryptoImage: UIImage, cryptoName: String, cryptoAmount: Float) {
+    func configure(cryptoImage: UIImage,
+                   cryptoName: String,
+                   cryptoAmount: Float,
+                   shouldHideAmount: Bool = false) {
         cryptoCreatureImageView.image = cryptoImage
         cryptoCreatureNameLabel.text = cryptoName
         cryptoAmountLabel.text = "\(cryptoAmount)"
+        cryptoAmountLabel.isHidden = shouldHideAmount
     }
 }

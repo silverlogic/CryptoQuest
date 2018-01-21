@@ -59,6 +59,9 @@
                                     <constraint firstAttribute="width" constant="50" id="w2b-8G-XGG"/>
                                 </constraints>
                                 <state key="normal" image="icon-cryptodex"/>
+                                <connections>
+                                    <action selector="cryptoDexButtonTappedWithSender:" destination="8am-CK-VGm" eventType="touchUpInside" id="4do-g1-KPU"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B90-8Z-GN7" customClass="BouncyButton" customModule="CryptoQuest" customModuleProvider="target">
                                 <rect key="frame" x="309" y="72" width="50" height="50"/>
@@ -104,17 +107,17 @@
                         <outlet property="mapView" destination="LzK-Ej-DaV" id="6ym-eI-zbX"/>
                         <outlet property="sendBitcoinButton" destination="B90-8Z-GN7" id="rm4-q5-Ruc"/>
                         <segue destination="BV1-FR-VrT" kind="show" identifier="goToAR" id="37l-Sb-9Ew"/>
-                        <segue destination="fIX-4q-oPV" kind="show" id="frq-aQ-VEF"/>
+                        <segue destination="fIX-4q-oPV" kind="show" identifier="goToCryptoDex" id="frq-aQ-VEF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BhB-V9-3Yy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-292" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--Crypto Dex View Controller-->
         <scene sceneID="U9j-PD-DqW">
             <objects>
-                <viewController id="fIX-4q-oPV" sceneMemberID="viewController">
+                <viewController id="fIX-4q-oPV" customClass="CryptoDexViewController" customModule="CryptoQuest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="1Ky-6z-N6d">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -149,6 +152,9 @@
                                     <constraint firstAttribute="width" constant="50" id="f6z-1r-RfK"/>
                                 </constraints>
                                 <state key="normal" image="icon-backarrow-cryptodex"/>
+                                <connections>
+                                    <action selector="dismissButtonTappedWithSender:" destination="fIX-4q-oPV" eventType="touchUpInside" id="Nu1-lS-uv5"/>
+                                </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rkm-cK-jZZ">
                                 <rect key="frame" x="0.0" y="266" width="375" height="418"/>
@@ -168,27 +174,27 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-bitcoin-cryptodex" translatesAutoresizingMaskIntoConstraints="NO" id="lRA-pD-sfx">
-                                                    <rect key="frame" x="27.666666666666671" y="0.0" width="110.00000000000001" height="128"/>
+                                                    <rect key="frame" x="47.666666666666657" y="0.0" width="70" height="70"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="128" id="2vf-7S-d6K"/>
-                                                        <constraint firstAttribute="width" constant="110" id="zP8-rP-MtS"/>
+                                                        <constraint firstAttribute="height" constant="70" id="2vf-7S-d6K"/>
+                                                        <constraint firstAttribute="width" constant="70" id="zP8-rP-MtS"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bitcoin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkG-aQ-q2R">
-                                                    <rect key="frame" x="20" y="143" width="125" height="27"/>
+                                                    <rect key="frame" x="20" y="70" width="125" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="27" id="Bc0-YH-mHq"/>
+                                                        <constraint firstAttribute="height" constant="20" id="Bc0-YH-mHq"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0003223" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x4S-Jq-qcu">
-                                                    <rect key="frame" x="20" y="178" width="125" height="27"/>
+                                                    <rect key="frame" x="20" y="90" width="125" height="20"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="27" id="fs7-aD-Y2e"/>
+                                                        <constraint firstAttribute="height" constant="20" id="fs7-aD-Y2e"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="20"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="14"/>
                                                     <color key="textColor" red="0.94117647058823528" green="0.32156862745098036" blue="0.13725490196078433" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -200,8 +206,8 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="GkG-aQ-q2R" secondAttribute="trailing" constant="12" id="7wd-Gl-JLU"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="x4S-Jq-qcu" secondAttribute="trailing" constant="12" id="Biq-7W-794"/>
                                             <constraint firstItem="GkG-aQ-q2R" firstAttribute="leading" secondItem="XXS-fR-3Vj" secondAttribute="leadingMargin" constant="12" id="Ub5-pV-tSJ"/>
-                                            <constraint firstItem="GkG-aQ-q2R" firstAttribute="top" secondItem="lRA-pD-sfx" secondAttribute="bottom" constant="15" id="dmp-iO-UL6"/>
-                                            <constraint firstItem="x4S-Jq-qcu" firstAttribute="top" secondItem="GkG-aQ-q2R" secondAttribute="bottom" constant="8" id="ljl-ob-VFA"/>
+                                            <constraint firstItem="GkG-aQ-q2R" firstAttribute="top" secondItem="lRA-pD-sfx" secondAttribute="bottom" id="dmp-iO-UL6"/>
+                                            <constraint firstItem="x4S-Jq-qcu" firstAttribute="top" secondItem="GkG-aQ-q2R" secondAttribute="bottom" id="ljl-ob-VFA"/>
                                             <constraint firstItem="lRA-pD-sfx" firstAttribute="centerX" secondItem="XXS-fR-3Vj" secondAttribute="centerX" id="n5p-4v-0d3"/>
                                             <constraint firstItem="lRA-pD-sfx" firstAttribute="top" secondItem="XXS-fR-3Vj" secondAttribute="top" id="q1K-1b-zeG"/>
                                         </constraints>
@@ -217,7 +223,7 @@
                                 <rect key="frame" x="0.0" y="684" width="375" height="128"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8jd-ec-xOt">
-                                        <rect key="frame" x="51.666666666666657" y="6" width="271.66666666666674" height="80"/>
+                                        <rect key="frame" x="36.333333333333343" y="6" width="302.66666666666663" height="80"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-bitcoin-amount" translatesAutoresizingMaskIntoConstraints="NO" id="MsJ-iT-Lwk">
                                                 <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
@@ -226,8 +232,8 @@
                                                     <constraint firstAttribute="height" constant="80" id="5ed-VB-PlK"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.0012892" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-pv-0Z3" customClass="MorphingLabel" customModule="CryptoQuest" customModuleProvider="target">
-                                                <rect key="frame" x="79.999999999999986" y="0.0" width="191.66666666666663" height="80"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calculating..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKj-pv-0Z3" customClass="MorphingLabel" customModule="CryptoQuest" customModuleProvider="target">
+                                                <rect key="frame" x="79.999999999999986" y="0.0" width="222.66666666666663" height="80"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="35"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -266,6 +272,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="55u-nO-WBi"/>
                     </view>
+                    <connections>
+                        <outlet property="bitcoinAmountLabel" destination="RKj-pv-0Z3" id="rFQ-Ln-Oxe"/>
+                        <outlet property="collectionView" destination="rkm-cK-jZZ" id="9xL-3Q-orh"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="koD-vW-xQG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -292,7 +302,7 @@
     <resources>
         <image name="icon-backarrow-cryptodex" width="115" height="115"/>
         <image name="icon-bitcoin-amount" width="73" height="73"/>
-        <image name="icon-bitcoin-cryptodex" width="240" height="314"/>
+        <image name="icon-bitcoin-cryptodex" width="264" height="331"/>
         <image name="icon-cryptodex" width="73" height="73"/>
         <image name="icon-cryptodex-headerart" width="403" height="282"/>
         <image name="icon-cryptodex-title" width="594" height="144"/>
