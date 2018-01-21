@@ -8,7 +8,7 @@
 
 import SceneKit
 
-class BallNode: SCNNode {
+class BallNode: BaseNode {
     
     // MARK: - Initializers
     @available(*, unavailable) required init?(coder aDecoder: NSCoder) {
@@ -25,6 +25,9 @@ class BallNode: SCNNode {
             physics.mass = 0.5 // Kg
             physics.damping = 0.0 // 0.0 -> 1.0
             physics.friction = 0.0 // 0.0 -> 1.0
+            physics.categoryBitMask = CollisionCategory.ball.rawValue
+            physics.contactTestBitMask = CollisionCategory.coin.rawValue | CollisionCategory.evilBubble.rawValue
+            physics.collisionBitMask = CollisionCategory.ball.rawValue | CollisionCategory.evilBubble.rawValue
             return physics
         }()
     }

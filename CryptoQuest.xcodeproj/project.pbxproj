@@ -10,6 +10,10 @@
 		4D7496042013A45400E104D5 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7496032013A45400E104D5 /* Utilities.swift */; };
 		4D7496062013A8E300E104D5 /* BaseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7496052013A8E300E104D5 /* BaseNode.swift */; };
 		4D74960B2013AB2200E104D5 /* BallNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74960A2013AB2200E104D5 /* BallNode.swift */; };
+		4D74960D2013CEF500E104D5 /* CoinNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74960C2013CEF500E104D5 /* CoinNode.swift */; };
+		4D74960F2013D10100E104D5 /* CollisionCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74960E2013D10100E104D5 /* CollisionCategory.swift */; };
+		4D7496112014013800E104D5 /* EvilBubbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7496102014013800E104D5 /* EvilBubbleNode.swift */; };
+		4D74961320140D5E00E104D5 /* HealthBarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74961220140D5E00E104D5 /* HealthBarNode.swift */; };
 		8826A9BA20139F41000DC63D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9B920139F41000DC63D /* AppDelegate.swift */; };
 		8826A9BC20139F41000DC63D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8826A9BB20139F41000DC63D /* art.scnassets */; };
 		8826A9BE20139F41000DC63D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9BD20139F41000DC63D /* ViewController.swift */; };
@@ -38,6 +42,10 @@
 		4D7496032013A45400E104D5 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4D7496052013A8E300E104D5 /* BaseNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNode.swift; sourceTree = "<group>"; };
 		4D74960A2013AB2200E104D5 /* BallNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BallNode.swift; sourceTree = "<group>"; };
+		4D74960C2013CEF500E104D5 /* CoinNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinNode.swift; sourceTree = "<group>"; };
+		4D74960E2013D10100E104D5 /* CollisionCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionCategory.swift; sourceTree = "<group>"; };
+		4D7496102014013800E104D5 /* EvilBubbleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvilBubbleNode.swift; sourceTree = "<group>"; };
+		4D74961220140D5E00E104D5 /* HealthBarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBarNode.swift; sourceTree = "<group>"; };
 		8826A9B620139F41000DC63D /* CryptoQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8826A9B920139F41000DC63D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8826A9BB20139F41000DC63D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -88,6 +96,9 @@
 			children = (
 				4D74960A2013AB2200E104D5 /* BallNode.swift */,
 				4D7496052013A8E300E104D5 /* BaseNode.swift */,
+				4D74960C2013CEF500E104D5 /* CoinNode.swift */,
+				4D7496102014013800E104D5 /* EvilBubbleNode.swift */,
+				4D74961220140D5E00E104D5 /* HealthBarNode.swift */,
 			);
 			path = Nodes;
 			sourceTree = "<group>";
@@ -159,6 +170,7 @@
 		8826A9CF20139F68000DC63D /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				4D74960E2013D10100E104D5 /* CollisionCategory.swift */,
 				8826A9EF2013F71D000DC63D /* EntityModels */,
 				8826A9EE2013F716000DC63D /* BusinessClasses */,
 			);
@@ -369,7 +381,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4D74960D2013CEF500E104D5 /* CoinNode.swift in Sources */,
+				4D74961320140D5E00E104D5 /* HealthBarNode.swift in Sources */,
+				4D7496112014013800E104D5 /* EvilBubbleNode.swift in Sources */,
 				4D7496062013A8E300E104D5 /* BaseNode.swift in Sources */,
+				4D74960F2013D10100E104D5 /* CollisionCategory.swift in Sources */,
 				8826A9F12013F760000DC63D /* SpawnManager.swift in Sources */,
 				8826A9BE20139F41000DC63D /* ViewController.swift in Sources */,
 				8826A9F3201403B5000DC63D /* CryptoCreatureMarker.swift in Sources */,

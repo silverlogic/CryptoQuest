@@ -13,17 +13,17 @@ import ARKit
 class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
-    
+    private weak var lightNode: SCNNode!
+    private weak var cameraLightNode: SCNNode!
+    private var contentScaleFactor: CGFloat = 1.3
+    private var exposureOffset: CGFloat = -1
+    private var minimumExposure: CGFloat = -1
+
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        // Set the view's delegate
-        sceneView.delegate = self
-        
-        // Show statistics such as fps and timing information
-        sceneView.showsStatistics = true
-        sceneView.session.delegate = self
+        setupScene()
+//        sceneView.showsStatistics = true
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -34,6 +34,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         // Run the view's session
         sceneView.session.run(configuration)
+        addFlyingCoins()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,6 +46,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 }
 
 
+// MARK: - ARSessionDelegate
 extension ViewController: ARSessionDelegate {
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
 //        guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
@@ -55,35 +57,102 @@ extension ViewController: ARSessionDelegate {
 }
 
 
+// MARK: - SCNPhysicsContactDelegate
+extension ViewController: SCNPhysicsContactDelegate {
+    func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+        var evilBubble: EvilBubbleNode! = nil
+        if contact.nodeA is EvilBubbleNode {
+            evilBubble = contact.nodeA as? EvilBubbleNode
+        } else if contact.nodeB is EvilBubbleNode {
+            evilBubble = contact.nodeB as? EvilBubbleNode
+        }
+        guard evilBubble != nil else {
+            return
+        }
+        evilBubble.healthBar.hitted()
+//        var coinNode: CoinNode! = nil
+//        let coinNodeA: CoinNode? = contact.nodeA.parentOfType()
+//        let coinNodeB: CoinNode? = contact.nodeB.parentOfType()
+//        if coinNodeA != nil {
+//            coinNode = coinNodeA
+//        } else if coinNodeB != nil {
+//            coinNode = coinNodeB
+//        }
+//        guard coinNode != nil else {
+//            return
+//        }
+//        coinNode.physicsBody?.clearAllForces()
+    }
+}
+
+
 // MARK: - UIResponder
 extension ViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         throwTheBall()
-//        guard let touchLocation = touches.first?.location(in: sceneView) else { return }
-//        let results = sceneView.hitTest(touchLocation, options: [.boundingBoxOnly: true])
-//        guard let result = results.first else { return }
     }
 }
 
 
 // MARK: - Private Instance Methods
 private extension ViewController {
+    
+    /// Sets up the Scene.
+    func setupScene() {
+        sceneView.delegate = self
+        sceneView.session.delegate = self
+        sceneView.antialiasingMode = .multisampling4X
+        sceneView.automaticallyUpdatesLighting = false
+        sceneView.contentScaleFactor = contentScaleFactor
+        if let camera = sceneView.pointOfView?.camera {
+            camera.wantsHDR = true
+            camera.exposureOffset = exposureOffset
+            camera.minimumExposure = minimumExposure
+        }
+        let scene = SCNScene()
+        sceneView.scene = scene
+        sceneView.autoenablesDefaultLighting = false
+        sceneView.scene.physicsWorld.contactDelegate = self
+        let lightNode = SCNNode()
+        let light = SCNLight()
+        light.type = SCNLight.LightType.ambient
+        light.color = UIColor(white: 0.72, alpha: 1.0)
+        lightNode.light = light
+        sceneView.scene.rootNode.addChildNode(lightNode)
+        self.lightNode = lightNode
+        if let pointOfView = sceneView.pointOfView {
+            let cameraLightNode = SCNNode()
+            let cameraLight = SCNLight()
+            cameraLight.type = SCNLight.LightType.omni
+            cameraLight.color = UIColor(white: 0.95, alpha: 1.0)
+            cameraLightNode.light = cameraLight
+            cameraLightNode.position = SCNVector3Make(0, 1.2, 1.2)
+            pointOfView.addChildNode(cameraLightNode)
+            self.cameraLightNode = lightNode
+        }
+    }
+    
     func throwTheBall() {
         guard let cameraVector = sceneView.session.currentFrame?.cameraVector() else {
             return
         }
-//        let direction = SCNVector3(10.0, 10.0, -10.0)
         let ball = BallNode()
         ball.position = cameraVector.position
-        sceneView.scene.rootNode.addChildNode(ball)
-        let gravity = sceneView.scene.physicsWorld.gravity
         let forceVector = ball.position.forceVector(
             to: cameraVector.direction * 10,
-            by: 1,
-            with: gravity
+            by: 1.0,
+            with: sceneView.scene.physicsWorld.gravity
         )
+        sceneView.scene.rootNode.addChildNode(ball)
         ball.physicsBody?.applyForce(forceVector, asImpulse: true)
-        print(forceVector)
+    }
+    
+    func addFlyingCoins() {
+        let bubble = EvilBubbleNode()
+        bubble.position = SCNVector3(0.0, 0.0, -8.0)
+        sceneView.scene.rootNode.addChildNode(bubble)
+        bubble.startFlyingRandomly()
+        bubble.healthBar.look(at: sceneView.pointOfView!, offset: nil)
     }
 }

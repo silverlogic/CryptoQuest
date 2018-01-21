@@ -176,6 +176,15 @@ extension SCNNode {
             node = node?.parent
         } while node != nil
     }
+    
+    func applyRandomForce(with magnitude: UInt32) {
+        let randomX = Float(arc4random_uniform(magnitude)) - Float(magnitude) / 2
+        let randomY = Float(arc4random_uniform(magnitude)) - Float(magnitude) / 2
+        let randomZ = Float(arc4random_uniform(magnitude)) - Float(magnitude) / 2
+        let forceVector = SCNVector3(randomX, randomY, randomZ)
+        physicsBody?.clearAllForces()
+        physicsBody?.applyForce(forceVector, asImpulse: true)
+    }
 }
 
 
@@ -202,14 +211,16 @@ extension UIColor {
 extension SCNMaterial {
     
     // MARK: - Initializers
-    convenience init(color: UIColor) {
+    convenience init(color: UIColor, specularColor: UIColor? = .white) {
         self.init()
         diffuse.contents = color
+        specular.contents = specularColor
     }
     
-    convenience init(image: UIImage) {
+    convenience init(image: UIImage, specularColor: UIColor? = .white) {
         self.init()
         diffuse.contents = image
+        specular.contents = specularColor
     }
 }
 
