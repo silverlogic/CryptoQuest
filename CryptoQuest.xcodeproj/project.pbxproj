@@ -44,6 +44,7 @@
 		88839EB220147A56004304A1 /* CryptoDexViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EB120147A56004304A1 /* CryptoDexViewController.swift */; };
 		88839EB52014909D004304A1 /* CornerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EB42014909D004304A1 /* CornerView.swift */; };
 		88839EB7201493D2004304A1 /* CryptoDexDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EB6201493D2004304A1 /* CryptoDexDetailsViewController.swift */; };
+		88839EB92014A974004304A1 /* BitStopMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88839EB82014A974004304A1 /* BitStopMarker.swift */; };
 		FA26671C39EA3F9159D7B983 /* Pods_CryptoQuest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44F722A759A14007FEA11BEF /* Pods_CryptoQuest.framework */; };
 /* End PBXBuildFile section */
 
@@ -90,6 +91,7 @@
 		88839EB120147A56004304A1 /* CryptoDexViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDexViewController.swift; sourceTree = "<group>"; };
 		88839EB42014909D004304A1 /* CornerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CornerView.swift; sourceTree = "<group>"; };
 		88839EB6201493D2004304A1 /* CryptoDexDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDexDetailsViewController.swift; sourceTree = "<group>"; };
+		88839EB82014A974004304A1 /* BitStopMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BitStopMarker.swift; sourceTree = "<group>"; };
 		B4ADFDC56604BBB1391DCBDF /* Pods-CryptoQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoQuest.release.xcconfig"; path = "Pods/Target Support Files/Pods-CryptoQuest/Pods-CryptoQuest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -249,6 +251,7 @@
 			children = (
 				8826A9DF2013D03E000DC63D /* UserLocationMarker.swift */,
 				8826A9F2201403B5000DC63D /* CryptoCreatureMarker.swift */,
+				88839EB82014A974004304A1 /* BitStopMarker.swift */,
 			);
 			path = GMSMarkers;
 			sourceTree = "<group>";
@@ -489,6 +492,7 @@
 				88839EAE20146BB7004304A1 /* UserManager.swift in Sources */,
 				8826A9E22013E25A000DC63D /* Socket.swift in Sources */,
 				4D7496042013A45400E104D5 /* Utilities.swift in Sources */,
+				88839EB92014A974004304A1 /* BitStopMarker.swift in Sources */,
 				8826A9E62013E9DA000DC63D /* Coin.swift in Sources */,
 				8826A9D42013A9DC000DC63D /* MapViewController.swift in Sources */,
 				88839EB220147A56004304A1 /* CryptoDexViewController.swift in Sources */,

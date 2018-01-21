@@ -132,6 +132,10 @@ private extension MapViewController {
                 self?.mapView.camera = cameraPosition
                 self?.dismissActivityIndicator()
                 self?.mapView.animateShow()
+                let bitStopMarkers = BitStopMarker.defaultLocations()
+                bitStopMarkers.forEach {
+                    $0.map = self?.mapView
+                }
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.4) {
                     self?.bitcoinImageView.animateShow()
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
