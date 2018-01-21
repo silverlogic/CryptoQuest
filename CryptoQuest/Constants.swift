@@ -10,6 +10,7 @@ import Foundation
 
 // MARK: - Networking Constants
 let BASE_SOCKET = "ws://2878e977.ngrok.io/"
+let QRCODE_URL = "https://2878e977.ngrok.io/api/receive"
 
 
 // MARK: - Google API Keys

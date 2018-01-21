@@ -26,7 +26,7 @@ extension User {
     static func mockUser1() -> User {
         return User(
             userId: 1,
-            bitcoinAmount: 0.0003223,
+            bitcoinAmount: 0.0012892,
             bitcoinCashAmount: 0.00210707,
             veztAmount: 0.0,
             ethereumAmount: 0.00358395,

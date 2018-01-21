@@ -41,10 +41,14 @@ final class MapViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        requestLocationPermission()
         if mapView.alpha == 0 {
             showActivityIndicator()
+            return
         }
-        requestLocationPermission()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) { [weak self] in
+            self?.amountOfBitcoinLabel.text = "\(UserManager.shared.bitcoinAmount)"
+        }
     }
     
     
@@ -145,7 +149,7 @@ private extension MapViewController {
                             DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
                                 self?.cryptoDexButton.animateShow()
                                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
-                                    self?.amountOfBitcoinLabel.text = "0.0"
+                                    self?.amountOfBitcoinLabel.text = "\(UserManager.shared.bitcoinAmount)"
                                 }
                             }
                         }
@@ -200,6 +204,7 @@ private extension MapViewController {
                   let marker = capturedSpawn.cryptoCreatureMarker else { return }
             DispatchQueue.main.async {
                 guard let cachedMarker = self?.mapMarkers.first(where: {$0.position == marker.position}) else {
+                    print("Marker not cached")
                     return
                 }
                 cachedMarker.map = nil

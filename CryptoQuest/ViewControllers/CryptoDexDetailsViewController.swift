@@ -25,6 +25,11 @@ final class CryptoDexDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        updateVeztAmountLabel()
+    }
 }
 
 
@@ -32,6 +37,12 @@ final class CryptoDexDetailsViewController: UIViewController {
 private extension CryptoDexDetailsViewController {
     @IBAction func backToCryptoDetailsTapped(_ sender: UIButton) {
         navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func buyMoreButtonTapped(_ sender: BouncyButton) {
+        _ = Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false) { [weak self] _ in
+            self?.performSegue(withIdentifier: "goToQrCode", sender: nil)
+        }
     }
 }
 
@@ -48,7 +59,7 @@ private extension CryptoDexDetailsViewController {
     
     func updateVeztAmountLabel() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
-            self?.veztAmountLabel.text = "2.98913450"
+            self?.veztAmountLabel.text = "\(UserManager.shared.veztAmount)"
         }
     }
 }
