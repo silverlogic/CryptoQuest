@@ -27,6 +27,7 @@ enum SocketEvent: String {
     case spawnCaptured = "spawn_captured"
     case newSpawn = "spawn_new"
     case sessionStart = "session_start"
+    case shitCoin = "shitcoin"
 }
 
 
@@ -45,6 +46,7 @@ final class Socket {
     var didReceiveSpawnList: DynamicBinder<Data?>
     var didCaptureSpawn: DynamicBinder<Data?>
     var newSpawnReceived: DynamicBinder<Data?>
+    var shitCoinAppeared: DynamicBinder<Void>
     var socketError: DynamicBinder<Error?>
     
     
@@ -57,6 +59,7 @@ final class Socket {
         didCaptureSpawn = DynamicBinder(nil)
         socketError = DynamicBinder(nil)
         newSpawnReceived = DynamicBinder(nil)
+        shitCoinAppeared = DynamicBinder(())
         setupBindings()
     }
 }
@@ -124,13 +127,13 @@ private extension Socket {
                     socketError.value = SocketError.eventTypeNotDetermined
                     return
             }
-            guard let socketData = dataDic["data"] as? [String: Any] else {
-                print("Error retrieving socket data")
-                socketError.value = SocketError.eventDataNotPresent
-                return
-            }
             switch socketEvent {
             case .spawnList:
+                guard let socketData = dataDic["data"] as? [String: Any] else {
+                    print("Error retrieving socket data")
+                    socketError.value = SocketError.eventDataNotPresent
+                    return
+                }
                 guard let spawnList = socketData["spawns"] as? [AnyObject] else {
                     print("Spawn event data not present")
                     socketError.value = SocketError.spawnEventDataNotPresent
@@ -139,13 +142,25 @@ private extension Socket {
                 let spawnData = try JSONSerialization.data(withJSONObject: spawnList, options: [])
                 didReceiveSpawnList.value = spawnData
             case .spawnCaptured:
+                guard let socketData = dataDic["data"] as? [String: Any] else {
+                    print("Error retrieving socket data")
+                    socketError.value = SocketError.eventDataNotPresent
+                    return
+                }
                 let capturedSpawn = socketData["spawn"] as AnyObject
                 let capturedSpawnData = try JSONSerialization.data(withJSONObject: capturedSpawn, options: [])
                 didCaptureSpawn.value = capturedSpawnData
             case .newSpawn:
+                guard let socketData = dataDic["data"] as? [String: Any] else {
+                    print("Error retrieving socket data")
+                    socketError.value = SocketError.eventDataNotPresent
+                    return
+                }
                 let newSpawn = socketData["spawn"] as AnyObject
                 let newSpawnData = try JSONSerialization.data(withJSONObject: newSpawn, options: [])
                 newSpawnReceived.value = newSpawnData
+            case .shitCoin:
+                shitCoinAppeared.value = ()
             default:
                 print("Event not being handled!")
             }

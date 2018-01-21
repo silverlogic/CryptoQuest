@@ -44,6 +44,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         super.viewWillAppear(animated)
         let configuration = ARWorldTrackingConfiguration()
         sceneView.session.run(configuration)
+        if !isWarning {
+            SpawnManager.shared.startSession(for: UserManager.shared.userId)
+        }
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -239,7 +242,9 @@ private extension ViewController {
             return
         }
         evilBubble.hitted(sceneView.pointOfView!)
-        SpawnManager.shared.attackCryptoCreature(spawn: spawn)
+        if let spawn = spawn {
+            SpawnManager.shared.attackCryptoCreature(spawn: spawn)
+        }
         if evilBubble.healthBar.livesLeft == 0 {
             showWalletView()
         }
