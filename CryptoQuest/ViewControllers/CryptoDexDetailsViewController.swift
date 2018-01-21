@@ -24,6 +24,7 @@ final class CryptoDexDetailsViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setup()
     }
     
     override func viewDidAppear(_ animated: Bool) {
