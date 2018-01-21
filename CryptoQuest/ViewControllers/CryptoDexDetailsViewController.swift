@@ -14,6 +14,7 @@ final class CryptoDexDetailsViewController: UIViewController {
     @IBOutlet private weak var comingSoonButton: BouncyButton!
     @IBOutlet private weak var buyMoreButton: BouncyButton!
     @IBOutlet private weak var cryptoCreatureImageView: UIImageView!
+    @IBOutlet private weak var veztAmountLabel: MorphingLabel!
     
     
     // MARK: - Public Instance Attributes
@@ -36,12 +37,18 @@ private extension CryptoDexDetailsViewController {
 
 
 // MARK: - Private Instance Methods
-extension CryptoDexDetailsViewController {
+private extension CryptoDexDetailsViewController {
     func setup() {
         if shouldShowCongrats {
             cryptoCreatureImageView.image = #imageLiteral(resourceName: "icon-vezt-cryptodex-details-confetti_dex")
         } else {
             cryptoCreatureImageView.image = #imageLiteral(resourceName: "icon-vezt-cryptodex-details")
+        }
+    }
+    
+    func updateVeztAmountLabel() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
+            self?.veztAmountLabel.text = "2.98913450"
         }
     }
 }
