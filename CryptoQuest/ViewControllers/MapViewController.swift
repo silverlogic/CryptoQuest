@@ -39,10 +39,21 @@ final class MapViewController: UIViewController {
 }
 
 
+// MARK: - GMSMapViewDelegate
+extension MapViewController: GMSMapViewDelegate {
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        guard let creatureMarker = marker as? CryptoCreatureMarker else { return true }
+        print("Crypto creature tapped")
+        return true
+    }
+}
+
+
 // MARK: - Private Instance Methods
 private extension MapViewController {
     func setup() {
         mapView.alpha = 0
+        mapView.delegate = self
         userLocationMarker.map = mapView
         do {
             if let styleUrl = Bundle.main.url(forResource: "mapstyle", withExtension: "json") {
@@ -53,6 +64,11 @@ private extension MapViewController {
         } catch {
             print("Loading style error: \(error)")
         }
+        setupLocationTrackerBindings()
+        setupSpawnManagerBindings()
+    }
+    
+    func setupLocationTrackerBindings() {
         locationTracker.currentLocation.bind { [weak self] (location) in
             guard let location = location else {
                 print("Location received not available")
@@ -82,6 +98,20 @@ private extension MapViewController {
                 self?.locationTracker.startTracking()
             default:
                 print("Location tracking not available")
+            }
+        }
+    }
+    
+    func setupSpawnManagerBindings() {
+        SpawnManager.shared.newSpawnsAvailable.bind { [weak self] (spawns) in
+            guard let newSpawns = spawns else { return }
+            let markers = newSpawns.flatMap { (spawn) -> CryptoCreatureMarker? in
+                return spawn.cryptoCreatureMarker
+            }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+                markers.forEach {
+                    $0.map = self?.mapView
+                }
             }
         }
     }

@@ -9,8 +9,7 @@
 import Foundation
 
 // MARK: - Networking Constants
-private let baseHost = ""
-let BASE_URL = "\(baseHost)/api/v1"
+let BASE_SOCKET = "ws://2878e977.ngrok.io/"
 
 
 // MARK: - Google API Keys

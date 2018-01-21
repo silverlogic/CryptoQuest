@@ -4,13 +4,16 @@ PODS:
   - GoogleMaps/Base (2.5.0)
   - GoogleMaps/Maps (2.5.0):
     - GoogleMaps/Base
+  - Starscream (3.0.3)
 
 DEPENDENCIES:
   - GoogleMaps
+  - Starscream
 
 SPEC CHECKSUMS:
   GoogleMaps: c087b8e5dfe87ca6ebf59adb9b4894a4146bec4f
+  Starscream: dfb1b3f39506717ee52b67fb48de0c8269504cbc
 
-PODFILE CHECKSUM: 647f409b5ff0a0357654fc8660ac5cad89abf14f
+PODFILE CHECKSUM: 60071978d528831f8ef315bcdb10ec71ec235b86
 
 COCOAPODS: 1.3.1

@@ -7,100 +7,118 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4FB4B11410318EFDEAD018D1FD903BD3 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		628BE09AE4C9E8EB5AF706D270449C9F /* Pods-CryptoQuest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD0ADB5052A2F0ADECF2B5AF1C3F8E0 /* Pods-CryptoQuest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FF3DCCE7A20F72168259B59224C7FE79 /* Pods-CryptoQuest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C3B0D772108BD98F6DB1E86268C0E5 /* Pods-CryptoQuest-dummy.m */; };
+		10A0EE629EEFDDA439DCA30E575588AA /* Pods-CryptoQuest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DD0ADB5052A2F0ADECF2B5AF1C3F8E0 /* Pods-CryptoQuest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		341A14CB0766C887FF5897046BC19D73 /* Starscream-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B6550545353F2A073D24A521C5387C14 /* Starscream-dummy.m */; };
+		365D910173BB12F1CCBDF07771CB52F9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		5D753E261C6408B0631DFA83FC8BE150 /* Pods-CryptoQuest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F4C3B0D772108BD98F6DB1E86268C0E5 /* Pods-CryptoQuest-dummy.m */; };
+		77C2A1604B294581CCE363E3A573DEE3 /* SSLSecurity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F2EB591F452905BACF1FE2A2EBB9B91 /* SSLSecurity.swift */; };
+		859A9C56C19E9B32CB66B87FB91E68AA /* Starscream-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9CE870D2FB4057D7CF39AF9432D7A9DA /* Starscream-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		941EFE07A18D7A762617989FB0DDF394 /* Compression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8C6AF6C47C2426ACDE1514BD0B4F8B7 /* Compression.swift */; };
+		DF07DF5B590B914B7B24EDD683BA58CF /* WebSocket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5699D27CE4604D4E6CB493489053C8D5 /* WebSocket.swift */; };
+		E63852FA1AA284F2682CCCE8F9D2EE9E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		47B8560ED83C2F72DB9565805254124B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8165F54462EF12B91E824BE8EBCA273A;
+			remoteInfo = Starscream;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		126AA36E31EBCB086818DD21E5CF8AA3 /* Pods-CryptoQuest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptoQuest.release.xcconfig"; sourceTree = "<group>"; };
-		184D4E9F4F1CF4A24C4415DE1812D0B2 /* Pods_CryptoQuest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CryptoQuest.framework; path = "Pods-CryptoQuest.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2305DB2B4943059302B9BA38E1DAC68C /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		2BC4C2981929FF48F08926410404305E /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
 		2DD0ADB5052A2F0ADECF2B5AF1C3F8E0 /* Pods-CryptoQuest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CryptoQuest-umbrella.h"; sourceTree = "<group>"; };
+		2F2EB591F452905BACF1FE2A2EBB9B91 /* SSLSecurity.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SSLSecurity.swift; path = Sources/SSLSecurity.swift; sourceTree = "<group>"; };
 		356295DAC7B1E675E43C422FF5F739E7 /* Pods-CryptoQuest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CryptoQuest.debug.xcconfig"; sourceTree = "<group>"; };
-		36DB83CB4279B90D59054691B89501D1 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsCore.framework; path = Maps/Frameworks/GoogleMapsCore.framework; sourceTree = "<group>"; };
+		3D49468385B468FA73C4D3D645A4113A /* Starscream.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Starscream.xcconfig; sourceTree = "<group>"; };
 		44A60E1D75E4B1148692EFCF0B7D11B0 /* Pods-CryptoQuest-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptoQuest-resources.sh"; sourceTree = "<group>"; };
+		513ABAD1544FD9433A71EDA8E29FF3F0 /* Pods_CryptoQuest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_CryptoQuest.framework; path = "Pods-CryptoQuest.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5699D27CE4604D4E6CB493489053C8D5 /* WebSocket.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = WebSocket.swift; path = Sources/WebSocket.swift; sourceTree = "<group>"; };
 		5B34DA58D69CB78E0B2B914BC0A96C4B /* Pods-CryptoQuest-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CryptoQuest-acknowledgements.markdown"; sourceTree = "<group>"; };
+		656C460E5868417F35B7B414602E40C3 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		7B01E437E4E1B23A825012DBB1501AF1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7F6B61E2D0450D2F3611EAF878EE6EAE /* Pods-CryptoQuest-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CryptoQuest-frameworks.sh"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9C6D8F6CD96EF955A656D7D94EABD1E6 /* Starscream.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Starscream.framework; path = Starscream.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9CE870D2FB4057D7CF39AF9432D7A9DA /* Starscream-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-umbrella.h"; sourceTree = "<group>"; };
 		ABC23F61BF4E1B0932A371A0135385E3 /* Pods-CryptoQuest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-CryptoQuest.modulemap"; sourceTree = "<group>"; };
-		BE887D0024608594C3B440F4DF167E08 /* GoogleMaps.bundle */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
-		E004374149D836C1256FFFCB38FECB72 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMapsBase.framework; path = Base/Frameworks/GoogleMapsBase.framework; sourceTree = "<group>"; };
+		AD6DF984D84E1E4E9874A05CFF1FBE88 /* Starscream-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Starscream-prefix.pch"; sourceTree = "<group>"; };
+		B6550545353F2A073D24A521C5387C14 /* Starscream-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Starscream-dummy.m"; sourceTree = "<group>"; };
+		B73F9965E67F2532AE30FAFAE9922F04 /* Starscream.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = Starscream.modulemap; sourceTree = "<group>"; };
+		C75E9E3807937679FFD4885E8EA0D1A1 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
+		CBC5C716D1A38AE28B2706460FE7DB74 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E8C6AF6C47C2426ACDE1514BD0B4F8B7 /* Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compression.swift; path = Sources/Compression.swift; sourceTree = "<group>"; };
 		F284D18E9C922299C442C62358BEC5AF /* Pods-CryptoQuest-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CryptoQuest-acknowledgements.plist"; sourceTree = "<group>"; };
 		F4C3B0D772108BD98F6DB1E86268C0E5 /* Pods-CryptoQuest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CryptoQuest-dummy.m"; sourceTree = "<group>"; };
-		F95DB7ACF73CF03040C57A3D42223A51 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GoogleMaps.framework; path = Maps/Frameworks/GoogleMaps.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		9EAC24F91A3D9F9BE6B9B035BD90EC73 /* Frameworks */ = {
+		E7FD920004D4B3423B4CA3611C7ECF9D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4FB4B11410318EFDEAD018D1FD903BD3 /* Foundation.framework in Frameworks */,
+				365D910173BB12F1CCBDF07771CB52F9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAA630F45B64F291F1792CB11971C87E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E63852FA1AA284F2682CCCE8F9D2EE9E /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		1418B056D31B27EE2CEBA552B5ADFE56 /* Base */ = {
+		11FA1666A7A02D571434B59666B03AA8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				501562BF592517FC6A65661FF1B35C78 /* Frameworks */,
-			);
-			name = Base;
-			sourceTree = "<group>";
-		};
-		243FAC914C81DCF02EFAD12598762AD5 /* GoogleMaps */ = {
-			isa = PBXGroup;
-			children = (
-				1418B056D31B27EE2CEBA552B5ADFE56 /* Base */,
-				6BC99F081C91F80679CFA5DDC6213D57 /* Maps */,
-			);
-			name = GoogleMaps;
-			path = GoogleMaps;
-			sourceTree = "<group>";
-		};
-		3598CBA77D53C0AA5CCFD958CD2E8857 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				BE887D0024608594C3B440F4DF167E08 /* GoogleMaps.bundle */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		4A8B7D48113946D95EBBC0B61E84AF51 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				184D4E9F4F1CF4A24C4415DE1812D0B2 /* Pods_CryptoQuest.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		501562BF592517FC6A65661FF1B35C78 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				E004374149D836C1256FFFCB38FECB72 /* GoogleMapsBase.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		6B9DDBFD34805D0CECB3FE7AA6B7B594 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				243FAC914C81DCF02EFAD12598762AD5 /* GoogleMaps */,
+				FEBB450B59A7E9888F52D582D6C5C772 /* GoogleMaps */,
+				C293EE2772CCCDC03D04C228DF51313F /* Starscream */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		6BC99F081C91F80679CFA5DDC6213D57 /* Maps */ = {
+		243C84E4BF0A3FEEB752C97B69E6F228 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E10253D9A6AF596CDA1C3BBE1F2FBFD6 /* Frameworks */,
-				3598CBA77D53C0AA5CCFD958CD2E8857 /* Resources */,
+				513ABAD1544FD9433A71EDA8E29FF3F0 /* Pods_CryptoQuest.framework */,
+				9C6D8F6CD96EF955A656D7D94EABD1E6 /* Starscream.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3EF53EBF8696C0C84651F99488983F99 /* Maps */ = {
+			isa = PBXGroup;
+			children = (
+				DFAEC1AE46BDF59BF93C232117A99A1E /* Frameworks */,
+				75442670DFF1C73F22848415B45F0B87 /* Resources */,
 			);
 			name = Maps;
+			sourceTree = "<group>";
+		};
+		705E84DB6BE840B15D4AF76FCE52D552 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				BF65B84397F20C0E4ABE78DF15A4DA9F /* Frameworks */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		75442670DFF1C73F22848415B45F0B87 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				656C460E5868417F35B7B414602E40C3 /* GoogleMaps.bundle */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -108,10 +126,24 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				6B9DDBFD34805D0CECB3FE7AA6B7B594 /* Pods */,
-				4A8B7D48113946D95EBBC0B61E84AF51 /* Products */,
+				11FA1666A7A02D571434B59666B03AA8 /* Pods */,
+				243C84E4BF0A3FEEB752C97B69E6F228 /* Products */,
 				A0C2F5268C0DF6739F162BFC0BAE22DC /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		996F73E6D9F68C199449FC03F0462F1A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBC5C716D1A38AE28B2706460FE7DB74 /* Info.plist */,
+				B73F9965E67F2532AE30FAFAE9922F04 /* Starscream.modulemap */,
+				3D49468385B468FA73C4D3D645A4113A /* Starscream.xcconfig */,
+				B6550545353F2A073D24A521C5387C14 /* Starscream-dummy.m */,
+				AD6DF984D84E1E4E9874A05CFF1FBE88 /* Starscream-prefix.pch */,
+				9CE870D2FB4057D7CF39AF9432D7A9DA /* Starscream-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Starscream";
 			sourceTree = "<group>";
 		};
 		A0C2F5268C0DF6739F162BFC0BAE22DC /* Targets Support Files */ = {
@@ -148,6 +180,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BF65B84397F20C0E4ABE78DF15A4DA9F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2305DB2B4943059302B9BA38E1DAC68C /* GoogleMapsBase.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C293EE2772CCCDC03D04C228DF51313F /* Starscream */ = {
+			isa = PBXGroup;
+			children = (
+				E8C6AF6C47C2426ACDE1514BD0B4F8B7 /* Compression.swift */,
+				2F2EB591F452905BACF1FE2A2EBB9B91 /* SSLSecurity.swift */,
+				5699D27CE4604D4E6CB493489053C8D5 /* WebSocket.swift */,
+				996F73E6D9F68C199449FC03F0462F1A /* Support Files */,
+			);
+			name = Starscream;
+			path = Starscream;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -156,44 +208,80 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		E10253D9A6AF596CDA1C3BBE1F2FBFD6 /* Frameworks */ = {
+		DFAEC1AE46BDF59BF93C232117A99A1E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F95DB7ACF73CF03040C57A3D42223A51 /* GoogleMaps.framework */,
-				36DB83CB4279B90D59054691B89501D1 /* GoogleMapsCore.framework */,
+				C75E9E3807937679FFD4885E8EA0D1A1 /* GoogleMaps.framework */,
+				2BC4C2981929FF48F08926410404305E /* GoogleMapsCore.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FEBB450B59A7E9888F52D582D6C5C772 /* GoogleMaps */ = {
+			isa = PBXGroup;
+			children = (
+				705E84DB6BE840B15D4AF76FCE52D552 /* Base */,
+				3EF53EBF8696C0C84651F99488983F99 /* Maps */,
+			);
+			name = GoogleMaps;
+			path = GoogleMaps;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		4C40211B350AA99D9D69BF35C4584D53 /* Headers */ = {
+		062AB7A246A8BADA6ADED86F6116EC6E /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				628BE09AE4C9E8EB5AF706D270449C9F /* Pods-CryptoQuest-umbrella.h in Headers */,
+				859A9C56C19E9B32CB66B87FB91E68AA /* Starscream-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		687940F8E46AA673E134DB1ADF95209D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				10A0EE629EEFDDA439DCA30E575588AA /* Pods-CryptoQuest-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7A4D90FAD6EDE0ACCA25450CCD20D59F /* Pods-CryptoQuest */ = {
+		2A9C69F135F6EFB240F7CA433B62388F /* Pods-CryptoQuest */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4BB940909375D04CC561DEA3620238B5 /* Build configuration list for PBXNativeTarget "Pods-CryptoQuest" */;
+			buildConfigurationList = 2EDF723479F355948BE309EDE98CFFF2 /* Build configuration list for PBXNativeTarget "Pods-CryptoQuest" */;
 			buildPhases = (
-				85B05C4664EB76FFAECCEEDF0DEF8BD7 /* Sources */,
-				9EAC24F91A3D9F9BE6B9B035BD90EC73 /* Frameworks */,
-				4C40211B350AA99D9D69BF35C4584D53 /* Headers */,
+				E7DC28B39F53DB7233628DBBA7D2958D /* Sources */,
+				FAA630F45B64F291F1792CB11971C87E /* Frameworks */,
+				687940F8E46AA673E134DB1ADF95209D /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				016551B108EDC5BAE2B849058FB8E164 /* PBXTargetDependency */,
+			);
+			name = "Pods-CryptoQuest";
+			productName = "Pods-CryptoQuest";
+			productReference = 513ABAD1544FD9433A71EDA8E29FF3F0 /* Pods_CryptoQuest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8165F54462EF12B91E824BE8EBCA273A /* Starscream */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0E73136D79581D0B548879EB676C1459 /* Build configuration list for PBXNativeTarget "Starscream" */;
+			buildPhases = (
+				AE945A01A394FE91C959E7CA3C74E18A /* Sources */,
+				E7FD920004D4B3423B4CA3611C7ECF9D /* Frameworks */,
+				062AB7A246A8BADA6ADED86F6116EC6E /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Pods-CryptoQuest";
-			productName = "Pods-CryptoQuest";
-			productReference = 184D4E9F4F1CF4A24C4415DE1812D0B2 /* Pods_CryptoQuest.framework */;
+			name = Starscream;
+			productName = Starscream;
+			productReference = 9C6D8F6CD96EF955A656D7D94EABD1E6 /* Starscream.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -213,30 +301,51 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 4A8B7D48113946D95EBBC0B61E84AF51 /* Products */;
+			productRefGroup = 243C84E4BF0A3FEEB752C97B69E6F228 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7A4D90FAD6EDE0ACCA25450CCD20D59F /* Pods-CryptoQuest */,
+				2A9C69F135F6EFB240F7CA433B62388F /* Pods-CryptoQuest */,
+				8165F54462EF12B91E824BE8EBCA273A /* Starscream */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		85B05C4664EB76FFAECCEEDF0DEF8BD7 /* Sources */ = {
+		AE945A01A394FE91C959E7CA3C74E18A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF3DCCE7A20F72168259B59224C7FE79 /* Pods-CryptoQuest-dummy.m in Sources */,
+				941EFE07A18D7A762617989FB0DDF394 /* Compression.swift in Sources */,
+				77C2A1604B294581CCE363E3A573DEE3 /* SSLSecurity.swift in Sources */,
+				341A14CB0766C887FF5897046BC19D73 /* Starscream-dummy.m in Sources */,
+				DF07DF5B590B914B7B24EDD683BA58CF /* WebSocket.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E7DC28B39F53DB7233628DBBA7D2958D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D753E261C6408B0631DFA83FC8BE150 /* Pods-CryptoQuest-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		016551B108EDC5BAE2B849058FB8E164 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Starscream;
+			target = 8165F54462EF12B91E824BE8EBCA273A /* Starscream */;
+			targetProxy = 47B8560ED83C2F72DB9565805254124B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin XCBuildConfiguration section */
-		1DDAB0E445350CF52E1A93B7D76532F1 /* Debug */ = {
+		21CAAB6E0DD7A01147723EA2FAE7BE4D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 356295DAC7B1E675E43C422FF5F739E7 /* Pods-CryptoQuest.debug.xcconfig */;
+			baseConfigurationReference = 126AA36E31EBCB086818DD21E5CF8AA3 /* Pods-CryptoQuest.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -260,12 +369,14 @@
 				PRODUCT_NAME = Pods_CryptoQuest;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		39C5BC78A31CDE101068C530CAC7FA0F /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -327,6 +438,38 @@
 			};
 			name = Debug;
 		};
+		584EB0CDDDCBBDE69C8B4586942CCE51 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3D49468385B468FA73C4D3D645A4113A /* Starscream.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		89C8BB24E37B25BAEEB8FBA01EE05DAF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -382,9 +525,40 @@
 			};
 			name = Release;
 		};
-		CAA9C26D4CAEB7BA510EA71A7253E23F /* Release */ = {
+		ACDC9B4CC48D626F3ABA02F887043269 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 126AA36E31EBCB086818DD21E5CF8AA3 /* Pods-CryptoQuest.release.xcconfig */;
+			baseConfigurationReference = 3D49468385B468FA73C4D3D645A4113A /* Starscream.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/Starscream/Starscream-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Starscream/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Starscream/Starscream.modulemap";
+				PRODUCT_NAME = Starscream;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DD86BCB123DE76B9DAD01EF85AB33A1C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 356295DAC7B1E675E43C422FF5F739E7 /* Pods-CryptoQuest.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -408,17 +582,27 @@
 				PRODUCT_NAME = Pods_CryptoQuest;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0E73136D79581D0B548879EB676C1459 /* Build configuration list for PBXNativeTarget "Starscream" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				ACDC9B4CC48D626F3ABA02F887043269 /* Debug */,
+				584EB0CDDDCBBDE69C8B4586942CCE51 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -428,11 +612,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4BB940909375D04CC561DEA3620238B5 /* Build configuration list for PBXNativeTarget "Pods-CryptoQuest" */ = {
+		2EDF723479F355948BE309EDE98CFFF2 /* Build configuration list for PBXNativeTarget "Pods-CryptoQuest" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1DDAB0E445350CF52E1A93B7D76532F1 /* Debug */,
-				CAA9C26D4CAEB7BA510EA71A7253E23F /* Release */,
+				DD86BCB123DE76B9DAD01EF85AB33A1C /* Debug */,
+				21CAAB6E0DD7A01147723EA2FAE7BE4D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
