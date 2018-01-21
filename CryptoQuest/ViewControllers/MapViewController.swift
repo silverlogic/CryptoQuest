@@ -83,6 +83,7 @@ private extension MapViewController {
                 self?.mapView.animate(to: cameraPosition)
             }
             self?.mapView.animate(toViewingAngle: 65)
+            self?.mapView.animate(toBearing: -18)
             self?.userLocationMarker.position = coordinate
         }
         locationTracker.locationError.bind { _ in
@@ -112,6 +113,20 @@ private extension MapViewController {
                 markers.forEach {
                     $0.map = self?.mapView
                 }
+            }
+        }
+        SpawnManager.shared.newSpawnReceived.bind { [weak self] (spawn) in
+            guard let receivedSpawn = spawn,
+                  let marker = receivedSpawn.cryptoCreatureMarker else { return }
+            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                marker.map = self?.mapView
+            }
+        }
+        SpawnManager.shared.spawnCaptured.bind { (spawn) in
+            guard let capturedSpawn = spawn,
+                  let marker = capturedSpawn.cryptoCreatureMarker else { return }
+            DispatchQueue.main.async {
+                marker.map = nil
             }
         }
     }
