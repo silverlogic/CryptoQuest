@@ -15,6 +15,7 @@
 		4D7496112014013800E104D5 /* EvilBubbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7496102014013800E104D5 /* EvilBubbleNode.swift */; };
 		4D74961320140D5E00E104D5 /* HealthBarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D74961220140D5E00E104D5 /* HealthBarNode.swift */; };
 		4DC3C45920148A580009D623 /* WarningView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DC3C45820148A580009D623 /* WarningView.swift */; };
+		4DC3C45B2014A0D30009D623 /* alarmsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4DC3C45A2014A0D30009D623 /* alarmsound.mp3 */; };
 		8826A9BA20139F41000DC63D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9B920139F41000DC63D /* AppDelegate.swift */; };
 		8826A9BC20139F41000DC63D /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8826A9BB20139F41000DC63D /* art.scnassets */; };
 		8826A9BE20139F41000DC63D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8826A9BD20139F41000DC63D /* ViewController.swift */; };
@@ -57,6 +58,7 @@
 		4D7496102014013800E104D5 /* EvilBubbleNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EvilBubbleNode.swift; sourceTree = "<group>"; };
 		4D74961220140D5E00E104D5 /* HealthBarNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBarNode.swift; sourceTree = "<group>"; };
 		4DC3C45820148A580009D623 /* WarningView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WarningView.swift; sourceTree = "<group>"; };
+		4DC3C45A2014A0D30009D623 /* alarmsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = alarmsound.mp3; sourceTree = "<group>"; };
 		8826A9B620139F41000DC63D /* CryptoQuest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoQuest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8826A9B920139F41000DC63D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8826A9BB20139F41000DC63D /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 		8826A9D82013AE66000DC63D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				4DC3C45A2014A0D30009D623 /* alarmsound.mp3 */,
 				8826A9D92013AF0D000DC63D /* DynamicBinder.swift */,
 			);
 			path = Helpers;
@@ -386,6 +389,7 @@
 				8826A9C620139F41000DC63D /* LaunchScreen.storyboard in Resources */,
 				8826A9C320139F41000DC63D /* Assets.xcassets in Resources */,
 				8826A9DD2013C97E000DC63D /* mapstyle.json in Resources */,
+				4DC3C45B2014A0D30009D623 /* alarmsound.mp3 in Resources */,
 				8826A9C120139F41000DC63D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
