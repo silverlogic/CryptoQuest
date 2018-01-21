@@ -28,6 +28,8 @@ enum SocketEvent: String {
     case newSpawn = "spawn_new"
     case sessionStart = "session_start"
     case shitCoin = "shitcoin"
+    case balanceUpdate = "balance_update"
+    case balanceUpdated = "balance_updated"
 }
 
 
@@ -47,6 +49,7 @@ final class Socket {
     var didCaptureSpawn: DynamicBinder<Data?>
     var newSpawnReceived: DynamicBinder<Data?>
     var shitCoinAppeared: DynamicBinder<Void>
+    var balanceUpdated: DynamicBinder<Void>
     var socketError: DynamicBinder<Error?>
     
     
@@ -60,6 +63,7 @@ final class Socket {
         socketError = DynamicBinder(nil)
         newSpawnReceived = DynamicBinder(nil)
         shitCoinAppeared = DynamicBinder(())
+        balanceUpdated = DynamicBinder(())
         setupBindings()
     }
 }
@@ -161,6 +165,8 @@ private extension Socket {
                 newSpawnReceived.value = newSpawnData
             case .shitCoin:
                 shitCoinAppeared.value = ()
+            case .balanceUpdated:
+                balanceUpdated.value = ()
             default:
                 print("Event not being handled!")
             }

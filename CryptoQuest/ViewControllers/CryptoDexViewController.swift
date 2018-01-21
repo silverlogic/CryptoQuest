@@ -133,6 +133,12 @@ extension CryptoDexViewController: UICollectionViewDelegate {
               cryptoSection != .badCrypto,
               let cryptoCreatureSection = SupportedCryptoCreatures(rawValue: indexPath.item),
               cryptoCreatureSection == .vezt else { return }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        guard let cryptoDetailViewController = storyboard.instantiateViewController(withIdentifier: "CryptoDexDetailsViewController") as? CryptoDexDetailsViewController else {
+            return
+        }
+        cryptoDetailViewController.shouldShowCongrats = true
+        navigationController?.pushViewController(cryptoDetailViewController, animated: true)
     }
 }
 
@@ -150,7 +156,7 @@ private extension CryptoDexViewController {
     
     func updateBitcoinAmountLabel() {
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) { [weak self] in
-            self?.bitcoinAmountLabel.text = "0.0"
+            self?.bitcoinAmountLabel.text = "\(UserManager.shared.bitcoinAmount)"
         }
     }
 }

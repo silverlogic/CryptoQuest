@@ -64,3 +64,40 @@ extension UserManager {
         }
     }
 }
+
+
+// MARK: - Public Instance Methods For Updating Balance
+extension UserManager {
+    func updateBalance() {
+        let socketEventInfo: [String: Any] = [
+            "type": SocketEvent.balanceUpdate.rawValue,
+            "data": [:]
+        ]
+        do {
+            let socketData = try JSONSerialization.data(withJSONObject: socketEventInfo,
+                                                        options: .prettyPrinted)
+            guard let socketDataString = String(data: socketData, encoding: .utf8) else {
+                return
+            }
+            Socket.shared.write(with: socketDataString)
+        } catch {
+            print("Error serialization balance update socket data")
+        }
+    }
+}
+
+
+// MARK: - Private Instance Methods
+private extension UserManager {
+    func setupSocketBindings() {
+        Socket.shared.balanceUpdated.bind({ [weak self] in
+            self?.currentUser.bitcoinAmount = 0.00262964
+        }, for: self)
+    }
+    
+    func setupSpawnManagerBindings() {
+        SpawnManager.shared.spawnCaptured.bind({ [weak self] _ in
+            self?.currentUser.bitcoinAmount = 0.00141812
+        }, for: self)
+    }
+}
